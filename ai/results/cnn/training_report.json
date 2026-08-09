@@ -1,0 +1,48 @@
+{
+    "date": "2026-08-09 02:11:24.030551",
+    "model_name": "cnn",
+    "training_time": "0:04:03.021624",
+    "evaluation_time": "0:00:01.122894",
+    "inference_time_ms": 7.439502343913773,
+    "model_size_mb": 21.676255226135254,
+    "final_loss": 0.15373073518276215,
+    "final_accuracy": 0.9962499737739563,
+    "best_epoch": 1,
+    "best_validation_loss": 1.6114509105682373,
+    "best_validation_accuracy": 0.3499999940395355,
+    "total_parameters": 1878756,
+    "configuration": {
+        "epochs": 30,
+        "batch_size": 32,
+        "learning_rate": 0.001,
+        "optimizer": "AdamW",
+        "loss": "method",
+        "dropout": 0.3,
+        "weight_decay": 0.0001,
+        "image_size": [
+            224,
+            224
+        ],
+        "num_classes": 4
+    },
+    "dataset": {
+        "train_images": 800,
+        "validation_images": 160,
+        "test_images": 160,
+        "classes": [
+            "broken_large",
+            "broken_small",
+            "contamination",
+            "good"
+        ]
+    },
+    "test_metrics": {
+        "loss": 1.610337257385254,
+        "compile_metrics": 0.25
+    },
+    "sklearn_metrics": {
+        "precision_macro": 0.0625,
+        "recall_macro": 0.25,
+        "f1_score_macro_sklearn": 0.1
+    }
+}

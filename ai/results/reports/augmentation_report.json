@@ -1,0 +1,87 @@
+{
+    "generated_at": "2026-08-09 01:55:40.283280",
+    "train": {},
+    "validation": {},
+    "test": {},
+    "verification": {
+        "train": {
+            "good": 200,
+            "broken_large": 200,
+            "broken_small": 200,
+            "contamination": 200
+        },
+        "validation": {
+            "good": 40,
+            "broken_large": 40,
+            "broken_small": 40,
+            "contamination": 40
+        },
+        "test": {
+            "good": 40,
+            "broken_large": 40,
+            "broken_small": 40,
+            "contamination": 40
+        }
+    },
+    "comparison": {
+        "train": {
+            "good": {
+                "before": 157,
+                "after": 200
+            },
+            "broken_large": {
+                "before": 10,
+                "after": 200
+            },
+            "broken_small": {
+                "before": 11,
+                "after": 200
+            },
+            "contamination": {
+                "before": 10,
+                "after": 200
+            }
+        },
+        "validation": {
+            "good": {
+                "before": 52,
+                "after": 40
+            },
+            "broken_large": {
+                "before": 5,
+                "after": 40
+            },
+            "broken_small": {
+                "before": 5,
+                "after": 40
+            },
+            "contamination": {
+                "before": 5,
+                "after": 40
+            }
+        },
+        "test": {
+            "good": {
+                "before": 20,
+                "after": 40
+            },
+            "broken_large": {
+                "before": 5,
+                "after": 40
+            },
+            "broken_small": {
+                "before": 6,
+                "after": 40
+            },
+            "contamination": {
+                "before": 6,
+                "after": 40
+            }
+        }
+    },
+    "configuration": {
+        "train_target": 200,
+        "validation_target": 40,
+        "test_target": 40
+    }
+}

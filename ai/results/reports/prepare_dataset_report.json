@@ -1,0 +1,48 @@
+{
+    "project": "VisionInspectAI",
+    "generated_at": "2026-08-09 01:54:00.041754",
+    "dataset": "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\data\\raw\\mvtec_anomaly_detection\\bottle",
+    "splits": {
+        "good": {
+            "train": 157,
+            "validation": 52,
+            "test": 20
+        },
+        "broken_large": {
+            "train": 10,
+            "validation": 5,
+            "test": 5
+        },
+        "broken_small": {
+            "train": 11,
+            "validation": 5,
+            "test": 6
+        },
+        "contamination": {
+            "train": 10,
+            "validation": 5,
+            "test": 6
+        }
+    },
+    "classes": {},
+    "verification": {
+        "train": {
+            "good": 157,
+            "broken_large": 10,
+            "broken_small": 11,
+            "contamination": 10
+        },
+        "validation": {
+            "good": 52,
+            "broken_large": 5,
+            "broken_small": 5,
+            "contamination": 5
+        },
+        "test": {
+            "good": 20,
+            "broken_large": 5,
+            "broken_small": 6,
+            "contamination": 6
+        }
+    }
+}

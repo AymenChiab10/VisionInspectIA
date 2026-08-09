@@ -1,0 +1,48 @@
+{
+    "date": "2026-08-09 02:23:42.797183",
+    "model_name": "efficientnet_b0",
+    "training_time": "0:05:55.508975",
+    "evaluation_time": "0:00:01.776581",
+    "inference_time_ms": 11.451082031271653,
+    "model_size_mb": 16.31980800628662,
+    "final_loss": 0.15667906403541565,
+    "final_accuracy": 0.9762499928474426,
+    "best_epoch": 28,
+    "best_validation_loss": 0.17932985723018646,
+    "best_validation_accuracy": 1.0,
+    "total_parameters": 4054695,
+    "configuration": {
+        "epochs": 30,
+        "batch_size": 32,
+        "learning_rate": 0.001,
+        "optimizer": "Adam",
+        "loss": "method",
+        "dropout": 0.3,
+        "weight_decay": 0.0001,
+        "image_size": [
+            224,
+            224
+        ],
+        "num_classes": 4
+    },
+    "dataset": {
+        "train_images": 800,
+        "validation_images": 160,
+        "test_images": 160,
+        "classes": [
+            "broken_large",
+            "broken_small",
+            "contamination",
+            "good"
+        ]
+    },
+    "test_metrics": {
+        "loss": 0.671108067035675,
+        "compile_metrics": 0.7124999761581421
+    },
+    "sklearn_metrics": {
+        "precision_macro": 0.8256655466528818,
+        "recall_macro": 0.7125,
+        "f1_score_macro_sklearn": 0.6883412101796345
+    }
+}

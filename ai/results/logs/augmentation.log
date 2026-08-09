@@ -1,0 +1,112 @@
+2026-08-07 17:04:11,292 | INFO | ImageAugmenter initialized.
+2026-08-07 17:04:11,293 | INFO | Checking processed dataset...
+2026-08-07 17:04:11,301 | INFO | Dataset validated.
+2026-08-07 17:04:11,301 | INFO | Creating folders...
+2026-08-07 17:04:11,674 | INFO | Folders created.
+2026-08-07 17:04:11,802 | INFO | Augmenting good
+2026-08-07 17:04:14,140 | INFO | Augmented good: generated 22 images.
+2026-08-07 17:04:14,142 | INFO | Augmenting broken_large
+2026-08-07 17:04:32,428 | INFO | Augmented broken_large: generated 186 images.
+2026-08-07 17:04:32,431 | INFO | Augmenting broken_small
+2026-08-07 17:04:50,517 | INFO | Augmented broken_small: generated 185 images.
+2026-08-07 17:04:50,519 | INFO | Augmenting contamination
+2026-08-07 17:05:08,637 | INFO | Augmented contamination: generated 186 images.
+2026-08-07 17:05:08,638 | INFO | Balancing validation...
+2026-08-07 17:05:08,749 | INFO | Balanced validation/good: 31 -> 40
+2026-08-07 17:05:08,836 | INFO | Balanced validation/broken_large: 3 -> 40
+2026-08-07 17:05:08,922 | INFO | Balanced validation/broken_small: 3 -> 40
+2026-08-07 17:05:09,019 | INFO | Balanced validation/contamination: 3 -> 40
+2026-08-07 17:05:09,019 | INFO | Balancing test...
+2026-08-07 17:05:09,135 | INFO | Balanced test/good: 20 -> 40
+2026-08-07 17:05:09,233 | INFO | Balanced test/broken_large: 3 -> 40
+2026-08-07 17:05:09,324 | INFO | Balanced test/broken_small: 4 -> 40
+2026-08-07 17:05:09,423 | INFO | Balanced test/contamination: 4 -> 40
+2026-08-07 17:05:09,465 | INFO | Dataset verification completed.
+2026-08-07 17:05:09,538 | INFO | Augmentation report exported.
+2026-08-07 17:05:09,539 | INFO | Summary generated.
+2026-08-07 17:05:09,540 | INFO | Data augmentation completed successfully.
+2026-08-07 20:17:11,627 | INFO | ImageAugmenter initialized.
+2026-08-07 20:17:11,627 | INFO | Checking processed dataset...
+2026-08-07 20:17:11,635 | INFO | Dataset validated.
+2026-08-07 20:17:11,636 | INFO | Creating folders...
+2026-08-07 20:17:12,037 | INFO | Folders created.
+2026-08-07 20:17:12,182 | INFO | Augmenting good
+2026-08-07 20:17:15,654 | INFO | Augmented good: generated 22 images.
+2026-08-07 20:17:15,656 | INFO | Augmenting broken_large
+2026-08-07 20:17:35,073 | INFO | Augmented broken_large: generated 186 images.
+2026-08-07 20:17:35,075 | INFO | Augmenting broken_small
+2026-08-07 20:17:55,322 | INFO | Augmented broken_small: generated 185 images.
+2026-08-07 20:17:55,323 | INFO | Augmenting contamination
+2026-08-07 20:18:14,530 | INFO | Augmented contamination: generated 186 images.
+2026-08-07 20:18:14,532 | INFO | Balancing validation...
+2026-08-07 20:18:14,688 | INFO | Balanced validation/good: 31 -> 40
+2026-08-07 20:18:14,807 | INFO | Balanced validation/broken_large: 3 -> 40
+2026-08-07 20:18:14,922 | INFO | Balanced validation/broken_small: 3 -> 40
+2026-08-07 20:18:15,021 | INFO | Balanced validation/contamination: 3 -> 40
+2026-08-07 20:18:15,021 | INFO | Balancing test...
+2026-08-07 20:18:15,144 | INFO | Balanced test/good: 20 -> 40
+2026-08-07 20:18:15,237 | INFO | Balanced test/broken_large: 3 -> 40
+2026-08-07 20:18:15,338 | INFO | Balanced test/broken_small: 4 -> 40
+2026-08-07 20:18:15,438 | INFO | Balanced test/contamination: 4 -> 40
+2026-08-07 20:18:15,498 | INFO | Dataset verification completed.
+2026-08-07 20:18:15,548 | INFO | Augmentation report exported.
+2026-08-07 20:18:15,548 | INFO | Summary generated.
+2026-08-07 20:18:15,548 | INFO | Data augmentation completed successfully.
+2026-08-07 20:20:45,826 | INFO | ImageAugmenter initialized.
+2026-08-07 20:20:45,828 | INFO | Checking processed dataset...
+2026-08-07 20:20:45,850 | INFO | Dataset validated.
+2026-08-07 20:20:45,851 | INFO | Creating folders...
+2026-08-07 20:20:46,525 | INFO | Folders created.
+2026-08-07 20:20:46,724 | INFO | Augmenting good
+2026-08-07 20:20:54,663 | INFO | Augmented good: generated 22 images.
+2026-08-07 20:20:54,667 | INFO | Augmenting broken_large
+2026-08-07 20:21:33,307 | INFO | Augmented broken_large: generated 186 images.
+2026-08-07 20:21:33,309 | INFO | Augmenting broken_small
+2026-08-07 20:22:11,026 | INFO | Augmented broken_small: generated 185 images.
+2026-08-07 20:22:11,031 | INFO | Augmenting contamination
+2026-08-07 20:22:48,219 | INFO | Augmented contamination: generated 186 images.
+2026-08-07 20:22:48,222 | INFO | Balancing validation...
+2026-08-07 20:22:48,388 | INFO | Balanced validation/good: 31 -> 40
+2026-08-07 20:22:48,543 | INFO | Balanced validation/broken_large: 3 -> 40
+2026-08-07 20:22:48,733 | INFO | Balanced validation/broken_small: 3 -> 40
+2026-08-07 20:22:48,891 | INFO | Balanced validation/contamination: 3 -> 40
+2026-08-07 20:22:48,891 | INFO | Balancing test...
+2026-08-07 20:22:53,007 | INFO | Balanced test/good: 20 -> 40
+2026-08-07 20:22:56,253 | INFO | Balanced test/broken_large: 3 -> 40
+2026-08-07 20:22:56,495 | INFO | Balanced test/broken_small: 4 -> 40
+2026-08-07 20:22:56,666 | INFO | Balanced test/contamination: 4 -> 40
+2026-08-07 20:22:56,779 | INFO | Dataset verification completed.
+2026-08-07 20:22:56,878 | INFO | Augmentation report exported.
+2026-08-07 20:22:56,881 | INFO | Summary generated.
+2026-08-07 20:22:56,882 | INFO | Data augmentation completed successfully.
+2026-08-08 18:49:48,411 | INFO | ImageAugmenter initialized.
+2026-08-08 18:49:49,672 | INFO | ImageAugmenter initialized.
+2026-08-08 18:49:50,467 | INFO | ImageAugmenter initialized.
+2026-08-08 18:49:51,243 | INFO | ImageAugmenter initialized.
+2026-08-09 01:54:36,855 | INFO | ImageAugmenter initialized.
+2026-08-09 01:54:36,855 | INFO | Checking processed dataset...
+2026-08-09 01:54:36,862 | INFO | Dataset validated.
+2026-08-09 01:54:36,862 | INFO | Creating folders...
+2026-08-09 01:54:37,309 | INFO | Folders created.
+2026-08-09 01:54:37,443 | INFO | Augmenting good
+2026-08-09 01:54:42,292 | INFO | Augmented good: generated 43 images.
+2026-08-09 01:54:42,293 | INFO | Augmenting broken_large
+2026-08-09 01:55:00,962 | INFO | Augmented broken_large: generated 190 images.
+2026-08-09 01:55:00,964 | INFO | Augmenting broken_small
+2026-08-09 01:55:19,973 | INFO | Augmented broken_small: generated 189 images.
+2026-08-09 01:55:19,975 | INFO | Augmenting contamination
+2026-08-09 01:55:39,377 | INFO | Augmented contamination: generated 190 images.
+2026-08-09 01:55:39,378 | INFO | Balancing validation...
+2026-08-09 01:55:39,496 | INFO | Balanced validation/good: 40 -> 40
+2026-08-09 01:55:39,591 | INFO | Balanced validation/broken_large: 5 -> 40
+2026-08-09 01:55:39,681 | INFO | Balanced validation/broken_small: 5 -> 40
+2026-08-09 01:55:39,791 | INFO | Balanced validation/contamination: 5 -> 40
+2026-08-09 01:55:39,791 | INFO | Balancing test...
+2026-08-09 01:55:39,919 | INFO | Balanced test/good: 20 -> 40
+2026-08-09 01:55:40,008 | INFO | Balanced test/broken_large: 5 -> 40
+2026-08-09 01:55:40,096 | INFO | Balanced test/broken_small: 6 -> 40
+2026-08-09 01:55:40,189 | INFO | Balanced test/contamination: 6 -> 40
+2026-08-09 01:55:40,236 | INFO | Dataset verification completed.
+2026-08-09 01:55:40,284 | INFO | Augmentation report exported.
+2026-08-09 01:55:40,284 | INFO | Summary generated.
+2026-08-09 01:55:40,284 | INFO | Data augmentation completed successfully.

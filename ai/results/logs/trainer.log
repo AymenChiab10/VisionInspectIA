@@ -1,0 +1,643 @@
+2026-08-06 17:46:42,831 | INFO | Trainer initialized.
+2026-08-06 17:46:42,832 | INFO | Trainer validated.
+2026-08-06 17:46:42,832 | INFO | Starting training...
+2026-08-06 17:54:13,004 | INFO | Trainer initialized.
+2026-08-06 17:54:13,005 | INFO | Trainer validated.
+2026-08-06 17:54:13,006 | INFO | Starting training...
+2026-08-06 18:04:43,854 | INFO | Training completed in 0:10:30.848182.
+2026-08-06 18:04:43,856 | INFO | Training history saved.
+2026-08-06 18:04:43,924 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\cnn\best_model.keras
+2026-08-06 18:04:43,924 | INFO | Evaluating model...
+2026-08-06 18:04:44,176 | INFO | Metrics exported.
+2026-08-06 18:04:44,177 | INFO | Training pipeline completed.
+2026-08-07 20:59:47,731 | INFO | Trainer initialized.
+2026-08-07 20:59:47,731 | INFO | Trainer validated.
+2026-08-07 20:59:47,736 | INFO | Starting training...
+2026-08-07 21:04:29,953 | INFO | Training completed in 0:04:42.210239.
+2026-08-07 21:04:29,973 | INFO | Training history saved.
+2026-08-07 21:04:30,118 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\cnn\best_model.keras
+2026-08-07 21:04:30,119 | INFO | Evaluating model...
+2026-08-07 21:04:31,354 | INFO | Model evaluation completed.
+2026-08-07 21:04:31,356 | INFO | Metrics exported.
+2026-08-07 21:04:34,146 | INFO | Confusion matrix computed and saved.
+2026-08-07 21:04:35,470 | INFO | Classification report saved.
+2026-08-07 21:04:37,178 | INFO | Training curves saved.
+2026-08-07 21:25:17,755 | INFO | Trainer initialized.
+2026-08-07 21:25:17,756 | INFO | Trainer validated.
+2026-08-07 21:25:17,763 | INFO | Starting training...
+2026-08-07 21:30:25,887 | INFO | Training completed in 0:05:08.118094.
+2026-08-07 21:30:25,906 | INFO | Training history saved.
+2026-08-07 21:30:26,072 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\cnn\best_model.keras
+2026-08-07 21:30:26,072 | INFO | Evaluating model...
+2026-08-07 21:30:27,499 | INFO | Model evaluation completed.
+2026-08-07 21:30:27,501 | INFO | Metrics exported.
+2026-08-07 21:30:30,119 | INFO | Confusion matrix computed and saved.
+2026-08-07 21:30:31,447 | INFO | Classification report saved.
+2026-08-07 21:30:32,889 | INFO | Training curves saved.
+2026-08-07 21:30:32,893 | INFO | Training report generated.
+2026-08-07 21:30:32,893 | INFO | Training pipeline completed.
+2026-08-07 21:32:06,290 | INFO | Trainer initialized.
+2026-08-07 21:32:06,290 | INFO | Trainer validated.
+2026-08-07 21:32:06,298 | INFO | Starting training...
+2026-08-07 21:36:21,424 | INFO | Training completed in 0:04:15.120833.
+2026-08-07 21:36:21,449 | INFO | Training history saved.
+2026-08-07 21:36:21,590 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\cnn\best_model.keras
+2026-08-07 21:36:21,591 | INFO | Evaluating model...
+2026-08-07 21:36:22,841 | INFO | Model evaluation completed.
+2026-08-07 21:36:22,843 | INFO | Metrics exported.
+2026-08-07 21:36:25,244 | INFO | Confusion matrix computed and saved.
+2026-08-07 21:36:26,745 | INFO | Classification report saved.
+2026-08-07 21:36:30,702 | INFO | Training curves saved.
+2026-08-07 21:36:30,890 | INFO | Training report generated.
+2026-08-07 21:36:30,892 | INFO | Training pipeline completed.
+2026-08-07 21:55:33,517 | INFO | Trainer initialized.
+2026-08-07 21:55:33,517 | INFO | Trainer validated.
+2026-08-07 21:55:33,536 | INFO | Starting training...
+2026-08-07 22:06:52,637 | INFO | Trainer initialized.
+2026-08-07 22:06:52,637 | INFO | Trainer validated.
+2026-08-07 22:06:52,649 | INFO | Starting training...
+2026-08-07 22:11:37,442 | INFO | Trainer initialized.
+2026-08-07 22:11:37,443 | INFO | Trainer validated.
+2026-08-07 22:11:37,460 | INFO | Starting training...
+2026-08-08 00:34:59,278 | INFO | Trainer initialized.
+2026-08-08 00:34:59,279 | INFO | Trainer validated.
+2026-08-08 00:34:59,293 | INFO | Starting training...
+2026-08-08 00:47:11,361 | INFO | Trainer initialized.
+2026-08-08 00:47:11,361 | INFO | Trainer validated.
+2026-08-08 00:47:11,385 | INFO | Starting training...
+2026-08-08 00:50:23,151 | INFO | Trainer initialized.
+2026-08-08 00:50:23,151 | INFO | Trainer validated.
+2026-08-08 00:50:23,163 | INFO | Starting training...
+2026-08-08 00:50:57,962 | INFO | Training completed in 0:15:58.616705.
+2026-08-08 00:50:58,088 | INFO | Training history saved.
+2026-08-08 00:50:58,910 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\improved_cnn\best_model.keras
+2026-08-08 00:50:58,910 | INFO | Evaluating model...
+2026-08-08 00:51:01,249 | INFO | Model evaluation completed.
+2026-08-08 00:51:01,255 | INFO | Metrics exported.
+2026-08-08 00:51:11,066 | INFO | Confusion matrix computed and saved.
+2026-08-08 00:51:13,010 | INFO | Classification report saved.
+2026-08-08 00:51:19,589 | INFO | Training curves saved.
+2026-08-08 00:51:19,608 | INFO | Training report generated.
+2026-08-08 00:51:19,616 | INFO | Training pipeline completed.
+2026-08-08 00:52:25,756 | INFO | Training completed in 0:02:02.591225.
+2026-08-08 00:52:25,765 | INFO | Training history saved.
+2026-08-08 00:52:25,977 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\improved_cnn\best_model.keras
+2026-08-08 00:52:25,978 | INFO | Evaluating model...
+2026-08-08 00:52:26,446 | INFO | Model evaluation completed.
+2026-08-08 00:52:26,448 | INFO | Metrics exported.
+2026-08-08 00:52:27,819 | INFO | Confusion matrix computed and saved.
+2026-08-08 00:54:43,375 | INFO | Trainer initialized.
+2026-08-08 00:54:43,375 | INFO | Trainer validated.
+2026-08-08 00:54:43,388 | INFO | Starting training...
+2026-08-08 00:57:43,338 | INFO | Training completed in 0:02:59.947741.
+2026-08-08 00:57:43,342 | INFO | Training history saved.
+2026-08-08 00:57:43,514 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\improved_cnn\best_model.keras
+2026-08-08 00:57:43,514 | INFO | Evaluating model...
+2026-08-08 00:57:43,878 | INFO | Model evaluation completed.
+2026-08-08 00:57:43,879 | INFO | Metrics exported.
+2026-08-08 00:57:44,686 | INFO | Confusion matrix computed and saved.
+2026-08-08 00:57:45,122 | INFO | Classification report saved.
+2026-08-08 00:57:46,142 | INFO | Training curves saved.
+2026-08-08 00:57:46,144 | INFO | Training report generated.
+2026-08-08 00:57:46,144 | INFO | Training pipeline completed.
+2026-08-08 00:59:25,109 | INFO | Trainer initialized.
+2026-08-08 00:59:25,109 | INFO | Trainer validated.
+2026-08-08 00:59:25,121 | INFO | Starting training...
+2026-08-08 00:59:25,131 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 01:02:17,708 | INFO | Training completed in 0:02:52.586360.
+2026-08-08 01:02:17,709 | INFO | Training history saved.
+2026-08-08 01:02:17,915 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\improved_cnn\best_model.keras
+2026-08-08 01:02:17,915 | INFO | Evaluating model...
+2026-08-08 01:02:18,319 | INFO | Model evaluation completed.
+2026-08-08 01:02:18,320 | INFO | Metrics exported.
+2026-08-08 01:02:19,161 | INFO | Confusion matrix computed and saved.
+2026-08-08 01:02:19,613 | INFO | Classification report saved.
+2026-08-08 01:02:20,436 | INFO | Training curves saved.
+2026-08-08 01:02:20,438 | INFO | Training report generated.
+2026-08-08 01:02:20,438 | INFO | Training pipeline completed.
+2026-08-08 01:03:09,570 | INFO | Trainer initialized.
+2026-08-08 01:03:09,570 | INFO | Trainer validated.
+2026-08-08 01:03:09,583 | INFO | Starting training...
+2026-08-08 01:03:09,597 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-08 01:47:08,474 | INFO | Trainer initialized.
+2026-08-08 01:47:08,474 | INFO | Trainer validated.
+2026-08-08 01:47:08,493 | INFO | Starting training...
+2026-08-08 01:47:08,517 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-08 01:48:11,563 | INFO | Trainer initialized.
+2026-08-08 01:48:11,563 | INFO | Trainer validated.
+2026-08-08 01:48:11,589 | INFO | Starting training...
+2026-08-08 01:48:11,619 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-08 01:59:29,768 | INFO | Trainer initialized.
+2026-08-08 01:59:29,823 | INFO | Trainer validated.
+2026-08-08 01:59:29,843 | INFO | Starting training...
+2026-08-08 01:59:29,967 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 02:02:13,727 | INFO | Training completed in 0:02:43.883751.
+2026-08-08 02:02:13,729 | INFO | Training history saved.
+2026-08-08 02:02:13,918 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\improved_cnn\best_model.keras
+2026-08-08 02:02:13,918 | INFO | Evaluating model...
+2026-08-08 02:02:14,303 | INFO | Model evaluation completed.
+2026-08-08 02:02:14,304 | INFO | Metrics exported.
+2026-08-08 02:02:15,130 | INFO | Confusion matrix computed and saved.
+2026-08-08 02:02:15,590 | INFO | Classification report saved.
+2026-08-08 02:02:16,059 | INFO | Sklearn metrics computed and saved.
+2026-08-08 02:02:17,657 | INFO | Training curves saved.
+2026-08-08 02:02:17,660 | INFO | Training report generated.
+2026-08-08 02:02:17,660 | INFO | Training pipeline completed.
+2026-08-08 02:09:29,490 | INFO | Trainer initialized.
+2026-08-08 02:09:29,491 | INFO | Trainer validated.
+2026-08-08 02:09:29,509 | INFO | Starting training...
+2026-08-08 02:09:29,529 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 02:12:17,386 | INFO | Training completed in 0:02:47.855179.
+2026-08-08 02:12:17,545 | INFO | Training history saved.
+2026-08-08 02:12:17,928 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\improved_cnn\best_model.keras
+2026-08-08 02:12:17,929 | INFO | Evaluating model...
+2026-08-08 02:12:18,473 | INFO | Model evaluation completed.
+2026-08-08 02:12:18,476 | INFO | Metrics exported.
+2026-08-08 02:12:21,199 | INFO | Confusion matrix computed and saved.
+2026-08-08 02:12:22,080 | INFO | Classification report saved.
+2026-08-08 02:12:22,753 | INFO | Sklearn metrics computed and saved.
+2026-08-08 02:12:23,390 | INFO | Inference time: 14.11 ms/image (44 samples)
+2026-08-08 02:12:23,391 | INFO | Model size: 21.67 MB
+2026-08-08 02:12:32,908 | INFO | Training curves saved.
+2026-08-08 02:12:32,928 | INFO | Training report generated.
+2026-08-08 02:12:32,934 | INFO | Benchmark results updated for improved_cnn
+2026-08-08 02:12:32,934 | INFO | Training pipeline completed.
+2026-08-08 02:25:33,291 | INFO | Trainer initialized.
+2026-08-08 02:25:33,292 | INFO | Trainer validated.
+2026-08-08 02:25:33,299 | INFO | Starting training...
+2026-08-08 02:25:33,320 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 02:26:51,621 | INFO | Training completed in 0:01:18.322020.
+2026-08-08 02:26:51,624 | INFO | Training history saved.
+2026-08-08 02:26:52,191 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\mobilenet_v2\best_model.keras
+2026-08-08 02:26:52,191 | INFO | Evaluating model...
+2026-08-08 02:26:52,831 | INFO | Model evaluation completed.
+2026-08-08 02:26:52,833 | INFO | Metrics exported.
+2026-08-08 02:26:56,259 | INFO | Confusion matrix computed and saved.
+2026-08-08 02:26:56,929 | INFO | Classification report saved.
+2026-08-08 02:26:57,704 | INFO | Sklearn metrics computed and saved.
+2026-08-08 02:26:58,399 | INFO | Inference time: 15.49 ms/image (44 samples)
+2026-08-08 02:26:58,399 | INFO | Model size: 9.24 MB
+2026-08-08 02:26:59,968 | INFO | Training curves saved.
+2026-08-08 02:26:59,973 | INFO | Training report generated.
+2026-08-08 02:26:59,977 | INFO | Benchmark results updated for mobilenet_v2
+2026-08-08 02:26:59,977 | INFO | Training pipeline completed.
+2026-08-08 02:58:21,816 | INFO | Trainer initialized.
+2026-08-08 02:58:21,816 | INFO | Trainer validated.
+2026-08-08 02:58:21,824 | INFO | Starting training...
+2026-08-08 02:58:21,841 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 03:00:04,160 | INFO | Training completed in 0:01:42.335246.
+2026-08-08 03:00:04,162 | INFO | Training history saved.
+2026-08-08 03:00:05,674 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\resnet50\best_model.keras
+2026-08-08 03:00:05,674 | INFO | Evaluating model...
+2026-08-08 03:00:07,357 | INFO | Model evaluation completed.
+2026-08-08 03:00:07,361 | INFO | Metrics exported.
+2026-08-08 03:00:12,707 | INFO | Confusion matrix computed and saved.
+2026-08-08 03:00:14,276 | INFO | Classification report saved.
+2026-08-08 03:00:15,757 | INFO | Sklearn metrics computed and saved.
+2026-08-08 03:00:17,184 | INFO | Inference time: 32.11 ms/image (44 samples)
+2026-08-08 03:00:17,185 | INFO | Model size: 90.71 MB
+2026-08-08 03:00:18,829 | INFO | Training curves saved.
+2026-08-08 03:00:18,835 | INFO | Training report generated.
+2026-08-08 03:00:18,839 | INFO | Benchmark results updated for resnet50
+2026-08-08 03:00:18,839 | INFO | Training pipeline completed.
+2026-08-08 03:02:03,175 | INFO | Trainer initialized.
+2026-08-08 03:02:03,175 | INFO | Trainer validated.
+2026-08-08 03:02:03,180 | INFO | Starting training...
+2026-08-08 03:02:03,194 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 03:03:13,801 | INFO | Training completed in 0:01:10.620309.
+2026-08-08 03:03:13,803 | INFO | Training history saved.
+2026-08-08 03:03:14,286 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\efficientnet_b0\best_model.keras
+2026-08-08 03:03:14,286 | INFO | Evaluating model...
+2026-08-08 03:03:14,982 | INFO | Model evaluation completed.
+2026-08-08 03:03:14,983 | INFO | Metrics exported.
+2026-08-08 03:03:18,766 | INFO | Confusion matrix computed and saved.
+2026-08-08 03:03:19,486 | INFO | Classification report saved.
+2026-08-08 03:03:20,386 | INFO | Sklearn metrics computed and saved.
+2026-08-08 03:03:21,056 | INFO | Inference time: 14.99 ms/image (44 samples)
+2026-08-08 03:03:21,057 | INFO | Model size: 16.32 MB
+2026-08-08 03:03:21,944 | INFO | Training curves saved.
+2026-08-08 03:03:21,948 | INFO | Training report generated.
+2026-08-08 03:03:21,952 | INFO | Benchmark results updated for efficientnet_b0
+2026-08-08 03:03:21,952 | INFO | Training pipeline completed.
+2026-08-08 14:54:41,384 | INFO | Trainer initialized.
+2026-08-08 14:54:41,385 | INFO | Trainer validated.
+2026-08-08 14:54:41,458 | INFO | Starting training...
+2026-08-08 14:54:41,490 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 14:58:07,483 | INFO | Training completed in 0:03:26.024468.
+2026-08-08 14:58:07,486 | INFO | Training history saved.
+2026-08-08 14:58:07,840 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\mobilenet_v2\best_model.keras
+2026-08-08 14:58:07,840 | INFO | Evaluating model...
+2026-08-08 14:58:08,351 | INFO | Model evaluation completed.
+2026-08-08 14:58:08,440 | INFO | Metrics exported.
+2026-08-08 14:58:10,620 | INFO | Confusion matrix computed and saved.
+2026-08-08 14:58:11,180 | INFO | Classification report saved.
+2026-08-08 14:58:11,717 | INFO | Sklearn metrics computed and saved.
+2026-08-08 14:58:12,230 | INFO | Inference time: 11.44 ms/image (44 samples)
+2026-08-08 14:58:12,230 | INFO | Model size: 9.24 MB
+2026-08-08 14:58:13,207 | INFO | Training curves saved.
+2026-08-08 14:58:13,209 | INFO | Training report generated.
+2026-08-08 14:58:13,212 | INFO | Benchmark results updated for mobilenet_v2
+2026-08-08 14:58:13,212 | INFO | Training pipeline completed.
+2026-08-08 14:58:56,117 | INFO | Trainer initialized.
+2026-08-08 14:58:56,117 | INFO | Trainer validated.
+2026-08-08 14:58:59,407 | INFO | Starting training...
+2026-08-08 14:58:59,449 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 15:01:34,268 | INFO | Training completed in 0:02:34.859403.
+2026-08-08 15:01:34,270 | INFO | Training history saved.
+2026-08-08 15:01:34,698 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\efficientnet_b0\best_model.keras
+2026-08-08 15:01:34,698 | INFO | Evaluating model...
+2026-08-08 15:01:35,287 | INFO | Model evaluation completed.
+2026-08-08 15:01:35,288 | INFO | Metrics exported.
+2026-08-08 15:01:38,579 | INFO | Confusion matrix computed and saved.
+2026-08-08 15:01:39,185 | INFO | Classification report saved.
+2026-08-08 15:01:39,853 | INFO | Sklearn metrics computed and saved.
+2026-08-08 15:01:40,494 | INFO | Inference time: 14.33 ms/image (44 samples)
+2026-08-08 15:01:40,494 | INFO | Model size: 16.32 MB
+2026-08-08 15:01:41,254 | INFO | Training curves saved.
+2026-08-08 15:01:41,257 | INFO | Training report generated.
+2026-08-08 15:01:41,260 | INFO | Benchmark results updated for efficientnet_b0
+2026-08-08 15:01:41,260 | INFO | Training pipeline completed.
+2026-08-08 15:17:36,089 | INFO | Trainer initialized.
+2026-08-08 15:17:36,090 | INFO | Trainer validated.
+2026-08-08 15:17:36,148 | INFO | Starting training...
+2026-08-08 15:17:36,165 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 15:20:12,122 | INFO | Training completed in 0:02:35.974044.
+2026-08-08 15:20:12,127 | INFO | Training history saved.
+2026-08-08 15:20:12,973 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\resnet50\best_model.keras
+2026-08-08 15:20:12,974 | INFO | Evaluating model...
+2026-08-08 15:20:14,091 | INFO | Model evaluation completed.
+2026-08-08 15:20:14,093 | INFO | Metrics exported.
+2026-08-08 15:20:17,570 | INFO | Confusion matrix computed and saved.
+2026-08-08 15:20:18,796 | INFO | Classification report saved.
+2026-08-08 15:20:20,008 | INFO | Sklearn metrics computed and saved.
+2026-08-08 15:20:21,202 | INFO | Inference time: 26.89 ms/image (44 samples)
+2026-08-08 15:20:21,202 | INFO | Model size: 90.71 MB
+2026-08-08 15:20:22,082 | INFO | Training curves saved.
+2026-08-08 15:20:22,085 | INFO | Training report generated.
+2026-08-08 15:20:22,088 | INFO | Benchmark results updated for resnet50
+2026-08-08 15:20:22,088 | INFO | Training pipeline completed.
+2026-08-08 15:22:10,320 | INFO | Trainer initialized.
+2026-08-08 15:22:10,320 | INFO | Trainer validated.
+2026-08-08 15:22:10,347 | INFO | Starting training...
+2026-08-08 15:22:10,359 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 15:24:04,814 | INFO | Training completed in 0:01:54.462870.
+2026-08-08 15:24:04,824 | INFO | Training history saved.
+2026-08-08 15:24:05,002 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\improved_cnn\best_model.keras
+2026-08-08 15:24:05,002 | INFO | Evaluating model...
+2026-08-08 15:24:05,386 | INFO | Model evaluation completed.
+2026-08-08 15:24:05,387 | INFO | Metrics exported.
+2026-08-08 15:24:06,317 | INFO | Confusion matrix computed and saved.
+2026-08-08 15:24:06,766 | INFO | Classification report saved.
+2026-08-08 15:24:07,178 | INFO | Sklearn metrics computed and saved.
+2026-08-08 15:24:07,596 | INFO | Inference time: 9.27 ms/image (44 samples)
+2026-08-08 15:24:07,597 | INFO | Model size: 21.68 MB
+2026-08-08 15:24:08,811 | INFO | Training curves saved.
+2026-08-08 15:24:08,814 | INFO | Training report generated.
+2026-08-08 15:24:08,817 | INFO | Benchmark results updated for improved_cnn
+2026-08-08 15:24:08,818 | INFO | Training pipeline completed.
+2026-08-08 15:25:12,434 | INFO | Trainer initialized.
+2026-08-08 15:25:12,434 | INFO | Trainer validated.
+2026-08-08 15:25:12,461 | INFO | Starting training...
+2026-08-08 15:25:12,471 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 15:27:37,962 | INFO | Training completed in 0:02:25.500479.
+2026-08-08 15:27:37,963 | INFO | Training history saved.
+2026-08-08 15:27:38,125 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\improved_cnn\best_model.keras
+2026-08-08 15:27:38,126 | INFO | Evaluating model...
+2026-08-08 15:27:38,516 | INFO | Model evaluation completed.
+2026-08-08 15:27:38,517 | INFO | Metrics exported.
+2026-08-08 15:27:39,236 | INFO | Confusion matrix computed and saved.
+2026-08-08 15:27:39,657 | INFO | Classification report saved.
+2026-08-08 15:27:40,070 | INFO | Sklearn metrics computed and saved.
+2026-08-08 15:27:40,500 | INFO | Inference time: 9.53 ms/image (44 samples)
+2026-08-08 15:27:40,500 | INFO | Model size: 21.68 MB
+2026-08-08 15:27:41,225 | INFO | Training curves saved.
+2026-08-08 15:27:41,227 | INFO | Training report generated.
+2026-08-08 15:27:41,229 | INFO | Benchmark results updated for improved_cnn
+2026-08-08 15:27:41,229 | INFO | Training pipeline completed.
+2026-08-08 15:51:06,351 | INFO | Trainer initialized.
+2026-08-08 15:51:06,352 | INFO | Trainer validated.
+2026-08-08 15:51:06,390 | INFO | Starting training...
+2026-08-08 15:51:06,412 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-08 16:01:46,989 | INFO | Trainer initialized.
+2026-08-08 16:01:46,989 | INFO | Trainer validated.
+2026-08-08 16:01:47,021 | INFO | Starting training...
+2026-08-08 16:01:47,037 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-08 16:14:40,028 | INFO | Training completed in 0:12:53.006572.
+2026-08-08 16:14:40,030 | INFO | Training history saved.
+2026-08-08 16:14:40,192 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\improved_cnn\best_model.keras
+2026-08-08 16:14:40,192 | INFO | Evaluating model...
+2026-08-08 16:14:41,398 | INFO | Model evaluation completed.
+2026-08-08 16:14:41,400 | INFO | Metrics exported.
+2026-08-08 16:14:42,967 | INFO | Confusion matrix computed and saved.
+2026-08-08 16:14:44,228 | INFO | Classification report saved.
+2026-08-08 16:14:45,513 | INFO | Sklearn metrics computed and saved.
+2026-08-08 16:14:46,527 | INFO | Inference time: 7.84 ms/image (128 samples)
+2026-08-08 16:14:46,527 | INFO | Model size: 21.68 MB
+2026-08-08 16:14:47,296 | INFO | Training curves saved.
+2026-08-08 16:14:47,298 | INFO | Training report generated.
+2026-08-08 16:14:47,300 | INFO | Benchmark results updated for improved_cnn
+2026-08-08 16:14:47,300 | INFO | Training pipeline completed.
+2026-08-08 16:19:05,656 | INFO | Trainer initialized.
+2026-08-08 16:19:05,656 | INFO | Trainer validated.
+2026-08-08 16:19:05,685 | INFO | Starting training...
+2026-08-08 16:19:05,711 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-08 16:23:44,835 | INFO | Training completed in 0:04:39.149095.
+2026-08-08 16:23:44,836 | INFO | Training history saved.
+2026-08-08 16:23:45,195 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\mobilenet_v2\best_model.keras
+2026-08-08 16:23:45,195 | INFO | Evaluating model...
+2026-08-08 16:23:46,877 | INFO | Model evaluation completed.
+2026-08-08 16:23:46,878 | INFO | Metrics exported.
+2026-08-08 16:23:49,568 | INFO | Confusion matrix computed and saved.
+2026-08-08 16:23:51,242 | INFO | Classification report saved.
+2026-08-08 16:23:52,944 | INFO | Sklearn metrics computed and saved.
+2026-08-08 16:23:54,363 | INFO | Inference time: 11.00 ms/image (128 samples)
+2026-08-08 16:23:54,364 | INFO | Model size: 9.24 MB
+2026-08-08 16:23:55,195 | INFO | Training curves saved.
+2026-08-08 16:23:55,198 | INFO | Training report generated.
+2026-08-08 16:23:55,201 | INFO | Benchmark results updated for mobilenet_v2
+2026-08-08 16:23:55,201 | INFO | Training pipeline completed.
+2026-08-08 16:24:36,336 | INFO | Trainer initialized.
+2026-08-08 16:24:36,336 | INFO | Trainer validated.
+2026-08-08 16:24:41,503 | INFO | Starting training...
+2026-08-08 16:24:41,721 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-08 16:28:43,941 | INFO | Training completed in 0:04:02.433942.
+2026-08-08 16:28:44,049 | INFO | Training history saved.
+2026-08-08 16:28:45,208 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\efficientnet_b0\best_model.keras
+2026-08-08 16:28:45,209 | INFO | Evaluating model...
+2026-08-08 16:28:50,013 | INFO | Model evaluation completed.
+2026-08-08 16:28:50,015 | INFO | Metrics exported.
+2026-08-08 16:28:59,738 | INFO | Confusion matrix computed and saved.
+2026-08-08 16:29:03,951 | INFO | Classification report saved.
+2026-08-08 16:29:08,232 | INFO | Sklearn metrics computed and saved.
+2026-08-08 16:29:13,415 | INFO | Inference time: 26.10 ms/image (128 samples)
+2026-08-08 16:29:13,415 | INFO | Model size: 16.32 MB
+2026-08-08 16:29:20,613 | INFO | Training curves saved.
+2026-08-08 16:29:20,678 | INFO | Training report generated.
+2026-08-08 16:29:20,752 | INFO | Benchmark results updated for efficientnet_b0
+2026-08-08 16:29:20,752 | INFO | Training pipeline completed.
+2026-08-08 16:30:46,032 | INFO | Trainer initialized.
+2026-08-08 16:30:46,032 | INFO | Trainer validated.
+2026-08-08 16:30:46,170 | INFO | Starting training...
+2026-08-08 16:30:46,203 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-08 16:42:07,275 | INFO | Training completed in 0:11:21.101434.
+2026-08-08 16:42:07,283 | INFO | Training history saved.
+2026-08-08 16:42:08,027 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\resnet50\best_model.keras
+2026-08-08 16:42:08,028 | INFO | Evaluating model...
+2026-08-08 16:42:11,822 | INFO | Model evaluation completed.
+2026-08-08 16:42:11,823 | INFO | Metrics exported.
+2026-08-08 16:42:17,377 | INFO | Confusion matrix computed and saved.
+2026-08-08 16:42:21,284 | INFO | Classification report saved.
+2026-08-08 16:42:25,208 | INFO | Sklearn metrics computed and saved.
+2026-08-08 16:42:28,264 | INFO | Inference time: 23.80 ms/image (128 samples)
+2026-08-08 16:42:28,265 | INFO | Model size: 90.71 MB
+2026-08-08 16:42:29,367 | INFO | Training curves saved.
+2026-08-08 16:42:29,371 | INFO | Training report generated.
+2026-08-08 16:42:29,374 | INFO | Benchmark results updated for resnet50
+2026-08-08 16:42:29,375 | INFO | Training pipeline completed.
+2026-08-08 17:11:31,866 | INFO | Trainer initialized.
+2026-08-08 17:11:31,867 | INFO | Trainer validated.
+2026-08-08 17:11:31,889 | INFO | Starting training...
+2026-08-08 17:11:31,905 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-08 17:13:10,691 | INFO | Training completed in 0:01:38.801848.
+2026-08-08 17:13:10,693 | INFO | Training history saved.
+2026-08-08 17:13:11,023 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\mobilenet_v2\best_model.keras
+2026-08-08 17:13:11,023 | INFO | Evaluating model...
+2026-08-08 17:13:12,455 | INFO | Model evaluation completed.
+2026-08-08 17:13:12,456 | INFO | Metrics exported.
+2026-08-08 17:13:14,789 | INFO | Confusion matrix computed and saved.
+2026-08-08 17:13:16,278 | INFO | Classification report saved.
+2026-08-08 17:13:17,763 | INFO | Sklearn metrics computed and saved.
+2026-08-08 17:13:18,911 | INFO | Inference time: 8.91 ms/image (128 samples)
+2026-08-08 17:13:18,911 | INFO | Model size: 18.46 MB
+2026-08-08 17:13:19,600 | INFO | Training curves saved.
+2026-08-08 17:13:19,602 | INFO | Training report generated.
+2026-08-08 17:13:19,605 | INFO | Benchmark results updated for mobilenet_v2
+2026-08-08 17:13:19,605 | INFO | Training pipeline completed.
+2026-08-08 19:06:32,993 | INFO | Trainer initialized.
+2026-08-08 19:06:32,993 | INFO | Trainer validated.
+2026-08-08 19:06:33,025 | INFO | Starting training...
+2026-08-08 19:06:33,041 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 19:08:16,416 | INFO | Training completed in 0:01:43.390709.
+2026-08-08 19:08:16,417 | INFO | Training history saved.
+2026-08-08 19:08:16,708 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\mobilenet_v2\best_model.keras
+2026-08-08 19:08:16,708 | INFO | Evaluating model...
+2026-08-08 19:08:17,105 | INFO | Model evaluation completed.
+2026-08-08 19:08:17,106 | INFO | Metrics exported.
+2026-08-08 19:08:18,992 | INFO | Confusion matrix computed and saved.
+2026-08-08 19:08:19,429 | INFO | Classification report saved.
+2026-08-08 19:08:19,857 | INFO | Sklearn metrics computed and saved.
+2026-08-08 19:08:20,290 | INFO | Inference time: 9.67 ms/image (44 samples)
+2026-08-08 19:08:20,291 | INFO | Model size: 9.24 MB
+2026-08-08 19:08:20,999 | INFO | Training curves saved.
+2026-08-08 19:08:21,001 | INFO | Training report generated.
+2026-08-08 19:08:21,004 | INFO | Benchmark results updated for mobilenet_v2
+2026-08-08 19:08:21,004 | INFO | Training pipeline completed.
+2026-08-08 23:49:49,630 | INFO | Trainer initialized.
+2026-08-08 23:49:49,630 | INFO | Trainer validated.
+2026-08-08 23:49:49,661 | INFO | Starting training...
+2026-08-08 23:49:49,680 | INFO | Class weights: {0: 3.642857142857143, 1: 3.4, 2: 3.4, 3: 0.31875}
+2026-08-08 23:51:47,270 | INFO | Training completed in 0:01:57.607175.
+2026-08-08 23:51:47,277 | INFO | Training history saved.
+2026-08-08 23:51:47,572 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\mobilenet_v2\best_model.keras
+2026-08-08 23:51:47,572 | INFO | Evaluating model...
+2026-08-08 23:51:48,107 | INFO | Model evaluation completed.
+2026-08-08 23:51:48,108 | INFO | Metrics exported.
+2026-08-08 23:51:50,283 | INFO | Confusion matrix computed and saved.
+2026-08-08 23:51:50,856 | INFO | Classification report saved.
+2026-08-08 23:51:51,400 | INFO | Sklearn metrics computed and saved.
+2026-08-08 23:51:51,920 | INFO | Inference time: 11.59 ms/image (44 samples)
+2026-08-08 23:51:51,920 | INFO | Model size: 9.24 MB
+2026-08-08 23:51:53,029 | INFO | Training curves saved.
+2026-08-08 23:51:53,033 | INFO | Training report generated.
+2026-08-08 23:51:53,037 | INFO | Benchmark results updated for mobilenet_v2
+2026-08-08 23:51:53,038 | INFO | Training pipeline completed.
+2026-08-08 23:58:07,347 | INFO | Trainer initialized.
+2026-08-08 23:58:07,347 | INFO | Trainer validated.
+2026-08-08 23:58:07,381 | INFO | Starting training...
+2026-08-08 23:58:07,395 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-09 00:02:35,564 | INFO | Training completed in 0:04:28.183447.
+2026-08-09 00:02:35,565 | INFO | Training history saved.
+2026-08-09 00:02:35,848 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\mobilenet_v2\best_model.keras
+2026-08-09 00:02:35,848 | INFO | Evaluating model...
+2026-08-09 00:02:36,256 | INFO | Model evaluation completed.
+2026-08-09 00:02:36,257 | INFO | Metrics exported.
+2026-08-09 00:02:37,569 | INFO | Confusion matrix computed and saved.
+2026-08-09 00:02:37,920 | INFO | Classification report saved.
+2026-08-09 00:02:38,300 | INFO | Sklearn metrics computed and saved.
+2026-08-09 00:02:38,683 | INFO | Inference time: 12.04 ms/image (31 samples)
+2026-08-09 00:02:38,683 | INFO | Model size: 9.24 MB
+2026-08-09 00:02:39,451 | INFO | Training curves saved.
+2026-08-09 00:02:39,454 | INFO | Training report generated.
+2026-08-09 00:02:39,458 | INFO | Benchmark results updated for mobilenet_v2
+2026-08-09 00:02:39,458 | INFO | Training pipeline completed.
+2026-08-09 00:45:01,747 | INFO | Trainer initialized.
+2026-08-09 00:45:01,748 | INFO | Trainer validated.
+2026-08-09 00:45:01,815 | INFO | Starting training...
+2026-08-09 00:45:01,837 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-09 00:53:44,191 | INFO | Training completed in 0:08:42.370521.
+2026-08-09 00:53:44,211 | INFO | Training history saved.
+2026-08-09 00:53:44,488 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\cnn\best_model.keras
+2026-08-09 00:53:44,489 | INFO | Evaluating model...
+2026-08-09 00:53:44,956 | INFO | Model evaluation completed.
+2026-08-09 00:53:44,959 | INFO | Metrics exported.
+2026-08-09 00:53:46,667 | INFO | Confusion matrix computed and saved.
+2026-08-09 00:53:46,979 | INFO | Classification report saved.
+2026-08-09 00:53:47,271 | INFO | Sklearn metrics computed and saved.
+2026-08-09 00:53:47,556 | INFO | Inference time: 8.91 ms/image (31 samples)
+2026-08-09 00:53:47,556 | INFO | Model size: 21.68 MB
+2026-08-09 00:53:48,880 | INFO | Training curves saved.
+2026-08-09 00:53:48,887 | INFO | Training report generated.
+2026-08-09 00:53:48,891 | INFO | Benchmark results updated for cnn
+2026-08-09 00:53:48,891 | INFO | Training pipeline completed.
+2026-08-09 00:55:54,220 | INFO | Trainer initialized.
+2026-08-09 00:55:54,220 | INFO | Trainer validated.
+2026-08-09 00:55:54,244 | INFO | Starting training...
+2026-08-09 00:55:54,256 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-09 01:00:03,719 | INFO | Training completed in 0:04:09.474294.
+2026-08-09 01:00:03,720 | INFO | Training history saved.
+2026-08-09 01:00:04,013 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\mobilenet_v2\best_model.keras
+2026-08-09 01:00:04,013 | INFO | Evaluating model...
+2026-08-09 01:00:04,332 | INFO | Model evaluation completed.
+2026-08-09 01:00:04,333 | INFO | Metrics exported.
+2026-08-09 01:00:05,442 | INFO | Confusion matrix computed and saved.
+2026-08-09 01:00:05,755 | INFO | Classification report saved.
+2026-08-09 01:00:06,060 | INFO | Sklearn metrics computed and saved.
+2026-08-09 01:00:06,379 | INFO | Inference time: 10.00 ms/image (31 samples)
+2026-08-09 01:00:06,379 | INFO | Model size: 9.24 MB
+2026-08-09 01:00:07,026 | INFO | Training curves saved.
+2026-08-09 01:00:07,029 | INFO | Training report generated.
+2026-08-09 01:00:07,032 | INFO | Benchmark results updated for mobilenet_v2
+2026-08-09 01:00:07,032 | INFO | Training pipeline completed.
+2026-08-09 01:01:15,099 | INFO | Trainer initialized.
+2026-08-09 01:01:15,099 | INFO | Trainer validated.
+2026-08-09 01:01:16,951 | INFO | Starting training...
+2026-08-09 01:01:16,991 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-09 01:06:49,507 | INFO | Training completed in 0:05:32.556069.
+2026-08-09 01:06:49,513 | INFO | Training history saved.
+2026-08-09 01:06:49,935 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\efficientnet_b0\best_model.keras
+2026-08-09 01:06:49,935 | INFO | Evaluating model...
+2026-08-09 01:06:50,346 | INFO | Model evaluation completed.
+2026-08-09 01:06:50,347 | INFO | Metrics exported.
+2026-08-09 01:06:52,265 | INFO | Confusion matrix computed and saved.
+2026-08-09 01:06:52,654 | INFO | Classification report saved.
+2026-08-09 01:06:53,041 | INFO | Sklearn metrics computed and saved.
+2026-08-09 01:06:53,395 | INFO | Inference time: 11.17 ms/image (31 samples)
+2026-08-09 01:06:53,395 | INFO | Model size: 16.32 MB
+2026-08-09 01:06:54,235 | INFO | Training curves saved.
+2026-08-09 01:06:54,238 | INFO | Training report generated.
+2026-08-09 01:06:54,241 | INFO | Benchmark results updated for efficientnet_b0
+2026-08-09 01:06:54,241 | INFO | Training pipeline completed.
+2026-08-09 01:08:20,860 | INFO | Trainer initialized.
+2026-08-09 01:08:20,860 | INFO | Trainer validated.
+2026-08-09 01:08:20,898 | INFO | Starting training...
+2026-08-09 01:08:20,911 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-09 01:16:57,873 | INFO | Training completed in 0:08:36.974822.
+2026-08-09 01:16:57,875 | INFO | Training history saved.
+2026-08-09 01:16:58,519 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\resnet50\best_model.keras
+2026-08-09 01:16:58,519 | INFO | Evaluating model...
+2026-08-09 01:16:59,362 | INFO | Model evaluation completed.
+2026-08-09 01:16:59,364 | INFO | Metrics exported.
+2026-08-09 01:17:01,415 | INFO | Confusion matrix computed and saved.
+2026-08-09 01:17:02,197 | INFO | Classification report saved.
+2026-08-09 01:17:02,982 | INFO | Sklearn metrics computed and saved.
+2026-08-09 01:17:03,736 | INFO | Inference time: 24.05 ms/image (31 samples)
+2026-08-09 01:17:03,736 | INFO | Model size: 90.71 MB
+2026-08-09 01:17:04,436 | INFO | Training curves saved.
+2026-08-09 01:17:04,438 | INFO | Training report generated.
+2026-08-09 01:17:04,441 | INFO | Benchmark results updated for resnet50
+2026-08-09 01:17:04,441 | INFO | Training pipeline completed.
+2026-08-09 01:56:33,514 | INFO | Trainer initialized.
+2026-08-09 01:56:33,514 | INFO | Trainer validated.
+2026-08-09 01:56:33,549 | INFO | Starting training...
+2026-08-09 01:56:33,564 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-09 02:02:10,515 | INFO | Training completed in 0:05:36.964560.
+2026-08-09 02:02:10,524 | INFO | Training history saved.
+2026-08-09 02:02:10,687 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\cnn\best_model.keras
+2026-08-09 02:02:10,687 | INFO | Evaluating model...
+2026-08-09 02:02:11,786 | INFO | Model evaluation completed.
+2026-08-09 02:02:11,787 | INFO | Metrics exported.
+2026-08-09 02:02:13,598 | INFO | Confusion matrix computed and saved.
+2026-08-09 02:02:14,818 | INFO | Classification report saved.
+2026-08-09 02:02:16,061 | INFO | Sklearn metrics computed and saved.
+2026-08-09 02:02:17,007 | INFO | Inference time: 7.32 ms/image (128 samples)
+2026-08-09 02:02:17,008 | INFO | Model size: 21.68 MB
+2026-08-09 02:02:18,010 | INFO | Training curves saved.
+2026-08-09 02:02:18,013 | INFO | Training report generated.
+2026-08-09 02:02:18,015 | INFO | Benchmark results updated for cnn
+2026-08-09 02:02:18,015 | INFO | Training pipeline completed.
+2026-08-09 02:07:14,014 | INFO | Trainer initialized.
+2026-08-09 02:07:14,014 | INFO | Trainer validated.
+2026-08-09 02:07:14,047 | INFO | Starting training...
+2026-08-09 02:07:14,059 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-09 02:11:17,069 | INFO | Training completed in 0:04:03.021624.
+2026-08-09 02:11:17,070 | INFO | Training history saved.
+2026-08-09 02:11:17,219 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\cnn\best_model.keras
+2026-08-09 02:11:17,219 | INFO | Evaluating model...
+2026-08-09 02:11:18,342 | INFO | Model evaluation completed.
+2026-08-09 02:11:18,343 | INFO | Metrics exported.
+2026-08-09 02:11:19,903 | INFO | Confusion matrix computed and saved.
+2026-08-09 02:11:21,131 | INFO | Classification report saved.
+2026-08-09 02:11:22,386 | INFO | Sklearn metrics computed and saved.
+2026-08-09 02:11:23,347 | INFO | Inference time: 7.44 ms/image (128 samples)
+2026-08-09 02:11:23,348 | INFO | Model size: 21.68 MB
+2026-08-09 02:11:24,030 | INFO | Training curves saved.
+2026-08-09 02:11:24,031 | INFO | Training report generated.
+2026-08-09 02:11:24,033 | INFO | Benchmark results updated for cnn
+2026-08-09 02:11:24,033 | INFO | Training pipeline completed.
+2026-08-09 02:12:40,737 | INFO | Trainer initialized.
+2026-08-09 02:12:40,737 | INFO | Trainer validated.
+2026-08-09 02:12:40,764 | INFO | Starting training...
+2026-08-09 02:12:40,775 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-09 02:16:36,766 | INFO | Training completed in 0:03:56.002375.
+2026-08-09 02:16:36,768 | INFO | Training history saved.
+2026-08-09 02:16:37,054 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\mobilenet_v2\best_model.keras
+2026-08-09 02:16:37,055 | INFO | Evaluating model...
+2026-08-09 02:16:38,366 | INFO | Model evaluation completed.
+2026-08-09 02:16:38,367 | INFO | Metrics exported.
+2026-08-09 02:16:40,683 | INFO | Confusion matrix computed and saved.
+2026-08-09 02:16:42,224 | INFO | Classification report saved.
+2026-08-09 02:16:43,708 | INFO | Sklearn metrics computed and saved.
+2026-08-09 02:16:44,875 | INFO | Inference time: 9.05 ms/image (128 samples)
+2026-08-09 02:16:44,876 | INFO | Model size: 9.24 MB
+2026-08-09 02:16:45,572 | INFO | Training curves saved.
+2026-08-09 02:16:45,574 | INFO | Training report generated.
+2026-08-09 02:16:45,576 | INFO | Benchmark results updated for mobilenet_v2
+2026-08-09 02:16:45,576 | INFO | Training pipeline completed.
+2026-08-09 02:17:33,903 | INFO | Trainer initialized.
+2026-08-09 02:17:33,903 | INFO | Trainer validated.
+2026-08-09 02:17:35,583 | INFO | Starting training...
+2026-08-09 02:17:35,600 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-09 02:23:31,093 | INFO | Training completed in 0:05:55.508975.
+2026-08-09 02:23:31,102 | INFO | Training history saved.
+2026-08-09 02:23:31,533 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\efficientnet_b0\best_model.keras
+2026-08-09 02:23:31,533 | INFO | Evaluating model...
+2026-08-09 02:23:33,310 | INFO | Model evaluation completed.
+2026-08-09 02:23:33,311 | INFO | Metrics exported.
+2026-08-09 02:23:36,610 | INFO | Confusion matrix computed and saved.
+2026-08-09 02:23:38,623 | INFO | Classification report saved.
+2026-08-09 02:23:40,477 | INFO | Sklearn metrics computed and saved.
+2026-08-09 02:23:41,951 | INFO | Inference time: 11.45 ms/image (128 samples)
+2026-08-09 02:23:41,951 | INFO | Model size: 16.32 MB
+2026-08-09 02:23:42,796 | INFO | Training curves saved.
+2026-08-09 02:23:42,800 | INFO | Training report generated.
+2026-08-09 02:23:42,802 | INFO | Benchmark results updated for efficientnet_b0
+2026-08-09 02:23:42,802 | INFO | Training pipeline completed.
+2026-08-09 02:24:32,518 | INFO | Trainer initialized.
+2026-08-09 02:24:32,518 | INFO | Trainer validated.
+2026-08-09 02:24:32,557 | INFO | Starting training...
+2026-08-09 02:24:32,569 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-09 02:34:49,920 | INFO | Training completed in 0:10:17.362806.
+2026-08-09 02:34:49,921 | INFO | Training history saved.
+2026-08-09 02:34:50,673 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\resnet50\best_model.keras
+2026-08-09 02:34:50,674 | INFO | Evaluating model...
+2026-08-09 02:34:54,577 | INFO | Model evaluation completed.
+2026-08-09 02:34:54,579 | INFO | Metrics exported.
+2026-08-09 02:34:59,782 | INFO | Confusion matrix computed and saved.
+2026-08-09 02:35:03,677 | INFO | Classification report saved.
+2026-08-09 02:35:07,402 | INFO | Sklearn metrics computed and saved.
+2026-08-09 02:35:10,445 | INFO | Inference time: 23.70 ms/image (128 samples)
+2026-08-09 02:35:10,445 | INFO | Model size: 90.71 MB
+2026-08-09 02:35:11,247 | INFO | Training curves saved.
+2026-08-09 02:35:11,250 | INFO | Training report generated.
+2026-08-09 02:35:11,252 | INFO | Benchmark results updated for resnet50
+2026-08-09 02:35:11,252 | INFO | Training pipeline completed.

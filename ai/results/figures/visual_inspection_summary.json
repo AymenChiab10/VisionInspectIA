@@ -1,0 +1,16 @@
+{
+    "num_samples_per_class": 5,
+    "classes": [
+        "good",
+        "broken_large",
+        "broken_small",
+        "contamination"
+    ],
+    "output_dir": "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\results\\figures",
+    "figures": [
+        "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\results\\figures\\visual_inspection_good.png",
+        "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\results\\figures\\visual_inspection_broken_large.png",
+        "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\results\\figures\\visual_inspection_broken_small.png",
+        "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\results\\figures\\visual_inspection_contamination.png"
+    ]
+}

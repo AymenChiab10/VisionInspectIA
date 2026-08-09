@@ -1,0 +1,54 @@
+# ==========================
+# Python / Backend
+# ==========================
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# ==========================
+# Environment / Secrets
+# ==========================
+.env
+.env.local
+
+# ==========================
+# Backend runtime data
+# ==========================
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ==========================
+# Frontend
+# ==========================
+node_modules/
+frontend/dist/
+frontend/build/
+
+# ==========================
+# AI - datasets (volumineux, regenerables via ai/scripts/*)
+# ==========================
+data/raw/
+data/processed/
+data/augmented/
+
+# ==========================
+# AI - modeles non retenus (seul mobilenet_v2 est garde, modele final integre dans l'app)
+# ==========================
+ai/checkpoints/
+ai/saved_models/cnn/
+ai/saved_models/improved_cnn/
+ai/saved_models/efficientnet_b0/
+ai/saved_models/resnet50/
+ai/results/*/logs/
+
+# ==========================
+# OS / Editors
+# ==========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

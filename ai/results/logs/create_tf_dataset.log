@@ -1,0 +1,1191 @@
+2026-08-06 15:25:17,973 | INFO | DatasetLoader initialized.
+2026-08-06 15:25:17,974 | INFO | Checking dataset...
+2026-08-06 15:25:17,974 | INFO | Dataset validated.
+2026-08-06 15:25:17,974 | INFO | Report initialized.
+2026-08-06 15:25:17,974 | INFO | Creating training dataset...
+2026-08-06 15:25:18,163 | INFO | Training dataset created.
+2026-08-06 15:25:18,163 | INFO | Creating validation dataset...
+2026-08-06 15:25:18,196 | INFO | Validation dataset created.
+2026-08-06 15:25:18,197 | INFO | Creating test dataset...
+2026-08-06 15:25:18,230 | INFO | Test dataset created.
+2026-08-06 15:25:18,231 | INFO | All datasets created.
+2026-08-06 15:25:19,442 | INFO | Report updated.
+2026-08-06 15:25:19,443 | INFO | TensorFlow report exported.
+2026-08-06 15:25:19,444 | INFO | TensorFlow dataset ready.
+2026-08-06 17:46:41,189 | INFO | DatasetLoader initialized.
+2026-08-06 17:46:41,189 | INFO | Checking dataset...
+2026-08-06 17:46:41,190 | INFO | Dataset validated.
+2026-08-06 17:46:41,190 | INFO | Report initialized.
+2026-08-06 17:46:41,190 | INFO | Creating training dataset...
+2026-08-06 17:46:41,424 | INFO | Training dataset created.
+2026-08-06 17:46:41,425 | INFO | Creating validation dataset...
+2026-08-06 17:46:41,456 | INFO | Validation dataset created.
+2026-08-06 17:46:41,456 | INFO | Creating test dataset...
+2026-08-06 17:46:41,499 | INFO | Test dataset created.
+2026-08-06 17:46:41,499 | INFO | All datasets created.
+2026-08-06 17:46:42,681 | INFO | Report updated.
+2026-08-06 17:46:42,682 | INFO | TensorFlow report exported.
+2026-08-06 17:46:42,682 | INFO | TensorFlow dataset ready.
+2026-08-06 17:54:11,675 | INFO | DatasetLoader initialized.
+2026-08-06 17:54:11,676 | INFO | Checking dataset...
+2026-08-06 17:54:11,676 | INFO | Dataset validated.
+2026-08-06 17:54:11,676 | INFO | Report initialized.
+2026-08-06 17:54:11,676 | INFO | Creating training dataset...
+2026-08-06 17:54:11,795 | INFO | Training dataset created.
+2026-08-06 17:54:11,795 | INFO | Creating validation dataset...
+2026-08-06 17:54:11,826 | INFO | Validation dataset created.
+2026-08-06 17:54:11,826 | INFO | Creating test dataset...
+2026-08-06 17:54:11,856 | INFO | Test dataset created.
+2026-08-06 17:54:11,856 | INFO | All datasets created.
+2026-08-06 17:54:12,856 | INFO | Report updated.
+2026-08-06 17:54:12,857 | INFO | TensorFlow report exported.
+2026-08-06 17:54:12,858 | INFO | TensorFlow dataset ready.
+2026-08-07 16:01:15,286 | INFO | DatasetLoader initialized.
+2026-08-07 16:01:15,286 | INFO | Checking dataset...
+2026-08-07 16:01:15,287 | INFO | Dataset validated.
+2026-08-07 16:01:15,287 | INFO | Report initialized.
+2026-08-07 16:01:15,287 | INFO | Creating training dataset...
+2026-08-07 16:01:15,505 | INFO | Training dataset created.
+2026-08-07 16:01:15,505 | INFO | Creating validation dataset...
+2026-08-07 16:01:15,547 | INFO | Validation dataset created.
+2026-08-07 16:01:15,547 | INFO | Creating test dataset...
+2026-08-07 16:01:15,587 | INFO | Test dataset created.
+2026-08-07 16:01:15,587 | INFO | All datasets created.
+2026-08-07 16:01:16,858 | INFO | Report updated.
+2026-08-07 16:01:16,859 | INFO | TensorFlow report exported.
+2026-08-07 16:01:16,860 | INFO | TensorFlow dataset ready.
+2026-08-07 16:45:57,109 | INFO | DatasetLoader initialized.
+2026-08-07 16:45:57,110 | INFO | Checking dataset...
+2026-08-07 16:45:57,111 | INFO | Dataset validated.
+2026-08-07 16:45:57,111 | INFO | Report initialized.
+2026-08-07 16:45:57,111 | INFO | Creating training dataset...
+2026-08-07 16:45:57,514 | INFO | Training dataset created.
+2026-08-07 16:45:57,514 | INFO | Creating validation dataset...
+2026-08-07 16:45:57,583 | INFO | Validation dataset created.
+2026-08-07 16:45:57,584 | INFO | Creating test dataset...
+2026-08-07 16:45:57,655 | INFO | Test dataset created.
+2026-08-07 16:45:57,655 | INFO | All datasets created.
+2026-08-07 16:46:00,999 | INFO | Report updated.
+2026-08-07 16:46:01,002 | INFO | TensorFlow report exported.
+2026-08-07 16:46:01,003 | INFO | TensorFlow dataset ready.
+2026-08-07 17:03:20,633 | INFO | DatasetLoader initialized.
+2026-08-07 17:03:20,634 | INFO | Checking dataset...
+2026-08-07 17:03:20,634 | INFO | Dataset validated.
+2026-08-07 17:03:20,634 | INFO | Report initialized.
+2026-08-07 17:03:20,634 | INFO | Creating training dataset...
+2026-08-07 17:03:20,888 | INFO | Training dataset created.
+2026-08-07 17:03:20,888 | INFO | Creating validation dataset...
+2026-08-07 17:03:20,926 | INFO | Validation dataset created.
+2026-08-07 17:03:20,926 | INFO | Creating test dataset...
+2026-08-07 17:03:20,961 | INFO | Test dataset created.
+2026-08-07 17:03:20,962 | INFO | All datasets created.
+2026-08-07 17:03:22,359 | INFO | Report updated.
+2026-08-07 17:03:22,361 | INFO | TensorFlow report exported.
+2026-08-07 17:03:22,362 | INFO | TensorFlow dataset ready.
+2026-08-07 20:59:46,161 | INFO | DatasetLoader initialized.
+2026-08-07 20:59:46,161 | INFO | Checking dataset...
+2026-08-07 20:59:46,161 | INFO | Dataset validated.
+2026-08-07 20:59:46,161 | INFO | Report initialized.
+2026-08-07 20:59:46,161 | INFO | Creating training dataset...
+2026-08-07 20:59:46,425 | INFO | Training dataset created.
+2026-08-07 20:59:46,425 | INFO | Creating validation dataset...
+2026-08-07 20:59:46,458 | INFO | Validation dataset created.
+2026-08-07 20:59:46,458 | INFO | Creating test dataset...
+2026-08-07 20:59:46,493 | INFO | Test dataset created.
+2026-08-07 20:59:46,493 | INFO | All datasets created.
+2026-08-07 20:59:47,582 | INFO | Report updated.
+2026-08-07 20:59:47,583 | INFO | TensorFlow report exported.
+2026-08-07 20:59:47,583 | INFO | TensorFlow dataset ready.
+2026-08-07 21:25:15,007 | INFO | DatasetLoader initialized.
+2026-08-07 21:25:15,008 | INFO | Checking dataset...
+2026-08-07 21:25:15,008 | INFO | Dataset validated.
+2026-08-07 21:25:15,008 | INFO | Report initialized.
+2026-08-07 21:25:15,008 | INFO | Creating training dataset...
+2026-08-07 21:25:15,443 | INFO | Training dataset created.
+2026-08-07 21:25:15,443 | INFO | Creating validation dataset...
+2026-08-07 21:25:15,491 | INFO | Validation dataset created.
+2026-08-07 21:25:15,491 | INFO | Creating test dataset...
+2026-08-07 21:25:15,540 | INFO | Test dataset created.
+2026-08-07 21:25:15,540 | INFO | All datasets created.
+2026-08-07 21:25:17,518 | INFO | Report updated.
+2026-08-07 21:25:17,520 | INFO | TensorFlow report exported.
+2026-08-07 21:25:17,520 | INFO | TensorFlow dataset ready.
+2026-08-07 21:32:04,634 | INFO | DatasetLoader initialized.
+2026-08-07 21:32:04,634 | INFO | Checking dataset...
+2026-08-07 21:32:04,635 | INFO | Dataset validated.
+2026-08-07 21:32:04,635 | INFO | Report initialized.
+2026-08-07 21:32:04,635 | INFO | Creating training dataset...
+2026-08-07 21:32:04,864 | INFO | Training dataset created.
+2026-08-07 21:32:04,864 | INFO | Creating validation dataset...
+2026-08-07 21:32:04,897 | INFO | Validation dataset created.
+2026-08-07 21:32:04,897 | INFO | Creating test dataset...
+2026-08-07 21:32:04,929 | INFO | Test dataset created.
+2026-08-07 21:32:04,929 | INFO | All datasets created.
+2026-08-07 21:32:06,125 | INFO | Report updated.
+2026-08-07 21:32:06,127 | INFO | TensorFlow report exported.
+2026-08-07 21:32:06,128 | INFO | TensorFlow dataset ready.
+2026-08-07 21:49:05,225 | INFO | DatasetLoader initialized.
+2026-08-07 21:49:05,225 | INFO | Checking dataset...
+2026-08-07 21:49:05,225 | INFO | Dataset validated.
+2026-08-07 21:49:05,225 | INFO | Report initialized.
+2026-08-07 21:49:05,225 | INFO | Creating training dataset...
+2026-08-07 21:49:05,829 | ERROR | in user code:
+
+    File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 314, in augment  *
+        augmentation = DatasetLoader.build_augmentation()
+    File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 305, in build_augmentation  *
+        name="on_the_fly_augmentation",
+    File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\layers\preprocessing\image_preprocessing\random_flip.py", line 69, in __init__  **
+        self.generator = SeedGenerator(seed)
+    File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\random\seed_generator.py", line 89, in __init__
+        self.state = self.backend.Variable(
+    File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\backend\common\variables.py", line 210, in __init__
+        self._initialize_with_initializer(initializer)
+    File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\backend\tensorflow\core.py", line 53, in _initialize_with_initializer
+        self._initialize(lambda: initializer(self._shape, dtype=self._dtype))
+    File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\backend\tensorflow\core.py", line 43, in _initialize
+        self._value = tf.Variable(
+
+    ValueError: tf.function only supports singleton tf.Variables created on the first call. Make sure the tf.Variable is only created once or created outside tf.function. See https://www.tensorflow.org/guide/function#creating_tfvariables for more information.
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 784, in run
+    self.create_datasets()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 510, in create_datasets
+    self.create_train_dataset()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 430, in create_train_dataset
+            self.train_dataset = self.configure_dataset(
+                                 ~~~~~~~~~~~~~~~~~~~~~~^
+            self.train_dataset,
+            ^^^^^^^^^^^^^^^^^^^
+            training=True
+            ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 364, in configure_dataset
+    dataset = dataset.map(
+        self.augment,
+        num_parallel_calls=tf.data.AUTOTUNE,
+    )
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\data\ops\dataset_ops.py", line 2341, in map
+    return map_op._map_v2(
+           ~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<5 lines>...
+        name=name,
+        ^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\data\ops\map_op.py", line 57, in _map_v2
+    return _ParallelMapDataset(
+        input_dataset,
+    ...<4 lines>...
+        use_unbounded_threadpool=use_unbounded_threadpool,
+        name=name)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\data\ops\map_op.py", line 202, in __init__
+    self._map_func = structured_function.StructuredFunctionWrapper(
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        map_func,
+        ^^^^^^^^^
+        self._transformation_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dataset=input_dataset,
+        ^^^^^^^^^^^^^^^^^^^^^^
+        use_legacy_function=use_legacy_function)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\data\ops\structured_function.py", line 265, in __init__
+    self._function = fn_factory()
+                     ~~~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 1256, in get_concrete_function
+    concrete = self._get_concrete_function_garbage_collected(*args, **kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 1232, in _get_concrete_function_garbage_collected
+    return tracing_compilation.trace_function(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        args,
+        ^^^^^
+    ...<3 lines>...
+        ),
+        ^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 178, in trace_function
+    concrete_function = _maybe_define_function(
+        args, kwargs, tracing_options
+    )
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 283, in _maybe_define_function
+    concrete_function = _create_concrete_function(
+        target_func_type, lookup_func_context, func_graph, tracing_options
+    )
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 310, in _create_concrete_function
+    traced_func_graph = func_graph_module.func_graph_from_py_func(
+        tracing_options.name,
+    ...<7 lines>...
+        create_placeholders=False,
+    )
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\framework\func_graph.py", line 1060, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 599, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\data\ops\structured_function.py", line 231, in wrapped_fn
+    ret = wrapper_helper(*args)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\data\ops\structured_function.py", line 161, in wrapper_helper
+    ret = autograph.tf_convert(self._func, ag_ctx)(*nested_args)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 693, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 690, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Temp\__autograph_generated_filer36tlb2i.py", line 14, in tf__augment
+    augmentation = ag__.converted_call(ag__.ld(DatasetLoader).build_augmentation, (), None, fscope)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 441, in converted_call
+    result = converted_f(*effective_args)
+  File "C:\Users\Lenovo\AppData\Local\Temp\__autograph_generated_filew1qwtvir.py", line 16, in tf__build_augmentation
+    retval_ = ag__.converted_call(ag__.ld(tf).keras.Sequential, ([ag__.converted_call(ag__.ld(tf).keras.layers.RandomFlip, (), dict(mode=ag__.ld(settings).RANDOM_FLIP_MODE, seed=ag__.ld(settings).DATASET_SEED), fscope), ag__.converted_call(ag__.ld(tf).keras.layers.RandomRotation, (), dict(factor=ag__.ld(settings).RANDOM_ROTATION_FACTOR, seed=ag__.ld(settings).DATASET_SEED), fscope), ag__.converted_call(ag__.ld(tf).keras.layers.RandomZoom, (), dict(height_factor=ag__.ld(settings).RANDOM_ZOOM_HEIGHT, width_factor=ag__.ld(settings).RANDOM_ZOOM_WIDTH, seed=ag__.ld(settings).DATASET_SEED), fscope), ag__.converted_call(ag__.ld(tf).keras.layers.RandomTranslation, (), dict(height_factor=ag__.ld(settings).RANDOM_TRANSLATION_HEIGHT, width_factor=ag__.ld(settings).RANDOM_TRANSLATION_WIDTH, seed=ag__.ld(settings).DATASET_SEED), fscope), ag__.converted_call(ag__.ld(tf).keras.layers.RandomContrast, (), dict(factor=ag__.ld(settings).RANDOM_CONTRAST_FACTOR, seed=ag__.ld(settings).DATASET_SEED), fscope)],), dict(name='on_the_fly_augmentation'), fscope)
+                                                                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 331, in converted_call
+    return _call_unconverted(f, args, kwargs, options, False)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 459, in _call_unconverted
+    return f(*args, **kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\layers\preprocessing\image_preprocessing\random_flip.py", line 69, in __init__
+    self.generator = SeedGenerator(seed)
+                     ~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\random\seed_generator.py", line 89, in __init__
+    self.state = self.backend.Variable(
+                 ~~~~~~~~~~~~~~~~~~~~~^
+        seed_initializer,
+        ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        name="seed_generator_state",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\backend\common\variables.py", line 210, in __init__
+    self._initialize_with_initializer(initializer)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\backend\tensorflow\core.py", line 53, in _initialize_with_initializer
+    self._initialize(lambda: initializer(self._shape, dtype=self._dtype))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\backend\tensorflow\core.py", line 43, in _initialize
+    self._value = tf.Variable(
+                  ~~~~~~~~~~~^
+        value,
+        ^^^^^^
+    ...<4 lines>...
+        synchronization=self._map_synchronization(self.synchronization),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 167, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 702, in invalid_creator_scope
+    raise ValueError(
+    ...<4 lines>...
+        "for more information.")
+ValueError: in user code:
+
+    File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 314, in augment  *
+        augmentation = DatasetLoader.build_augmentation()
+    File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 305, in build_augmentation  *
+        name="on_the_fly_augmentation",
+    File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\layers\preprocessing\image_preprocessing\random_flip.py", line 69, in __init__  **
+        self.generator = SeedGenerator(seed)
+    File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\random\seed_generator.py", line 89, in __init__
+        self.state = self.backend.Variable(
+    File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\backend\common\variables.py", line 210, in __init__
+        self._initialize_with_initializer(initializer)
+    File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\backend\tensorflow\core.py", line 53, in _initialize_with_initializer
+        self._initialize(lambda: initializer(self._shape, dtype=self._dtype))
+    File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\keras\src\backend\tensorflow\core.py", line 43, in _initialize
+        self._value = tf.Variable(
+
+    ValueError: tf.function only supports singleton tf.Variables created on the first call. Make sure the tf.Variable is only created once or created outside tf.function. See https://www.tensorflow.org/guide/function#creating_tfvariables for more information.
+
+2026-08-07 21:50:57,682 | INFO | DatasetLoader initialized.
+2026-08-07 21:50:57,682 | INFO | Checking dataset...
+2026-08-07 21:50:57,683 | INFO | Dataset validated.
+2026-08-07 21:50:57,683 | INFO | Report initialized.
+2026-08-07 21:50:57,683 | INFO | Creating training dataset...
+2026-08-07 21:50:58,001 | INFO | Training dataset created.
+2026-08-07 21:50:58,001 | INFO | Creating validation dataset...
+2026-08-07 21:50:58,037 | INFO | Validation dataset created.
+2026-08-07 21:50:58,038 | INFO | Creating test dataset...
+2026-08-07 21:50:58,077 | INFO | Test dataset created.
+2026-08-07 21:50:58,077 | INFO | All datasets created.
+2026-08-07 21:51:00,217 | INFO | Report updated.
+2026-08-07 21:51:00,219 | INFO | TensorFlow report exported.
+2026-08-07 21:51:00,219 | INFO | TensorFlow dataset ready.
+2026-08-07 21:51:28,579 | INFO | DatasetLoader initialized.
+2026-08-07 21:51:28,579 | INFO | Checking dataset...
+2026-08-07 21:51:28,579 | INFO | Dataset validated.
+2026-08-07 21:51:28,580 | INFO | Report initialized.
+2026-08-07 21:51:28,580 | INFO | Creating training dataset...
+2026-08-07 21:51:28,894 | INFO | Training dataset created.
+2026-08-07 21:51:28,895 | INFO | Creating validation dataset...
+2026-08-07 21:51:28,931 | INFO | Validation dataset created.
+2026-08-07 21:51:28,932 | INFO | Creating test dataset...
+2026-08-07 21:51:28,968 | INFO | Test dataset created.
+2026-08-07 21:51:28,968 | INFO | All datasets created.
+2026-08-07 21:51:30,962 | INFO | Report updated.
+2026-08-07 21:51:30,963 | INFO | TensorFlow report exported.
+2026-08-07 21:51:30,963 | INFO | TensorFlow dataset ready.
+2026-08-07 21:54:12,249 | INFO | DatasetLoader initialized.
+2026-08-07 21:54:12,250 | INFO | Checking dataset...
+2026-08-07 21:54:12,250 | INFO | Dataset validated.
+2026-08-07 21:54:12,250 | INFO | Report initialized.
+2026-08-07 21:54:12,250 | INFO | Creating training dataset...
+2026-08-07 21:54:12,549 | INFO | Training dataset created.
+2026-08-07 21:54:12,549 | INFO | Creating validation dataset...
+2026-08-07 21:54:12,586 | INFO | Validation dataset created.
+2026-08-07 21:54:12,586 | INFO | Creating test dataset...
+2026-08-07 21:54:12,623 | INFO | Test dataset created.
+2026-08-07 21:54:12,623 | INFO | All datasets created.
+2026-08-07 21:54:14,630 | INFO | Report updated.
+2026-08-07 21:54:14,631 | INFO | TensorFlow report exported.
+2026-08-07 21:54:14,631 | INFO | TensorFlow dataset ready.
+2026-08-07 21:55:30,799 | INFO | DatasetLoader initialized.
+2026-08-07 21:55:30,800 | INFO | Checking dataset...
+2026-08-07 21:55:30,800 | INFO | Dataset validated.
+2026-08-07 21:55:30,800 | INFO | Report initialized.
+2026-08-07 21:55:30,800 | INFO | Creating training dataset...
+2026-08-07 21:55:31,104 | INFO | Training dataset created.
+2026-08-07 21:55:31,104 | INFO | Creating validation dataset...
+2026-08-07 21:55:31,140 | INFO | Validation dataset created.
+2026-08-07 21:55:31,141 | INFO | Creating test dataset...
+2026-08-07 21:55:31,177 | INFO | Test dataset created.
+2026-08-07 21:55:31,177 | INFO | All datasets created.
+2026-08-07 21:55:33,135 | INFO | Report updated.
+2026-08-07 21:55:33,136 | INFO | TensorFlow report exported.
+2026-08-07 21:55:33,136 | INFO | TensorFlow dataset ready.
+2026-08-07 22:06:49,193 | INFO | DatasetLoader initialized.
+2026-08-07 22:06:49,193 | INFO | Checking dataset...
+2026-08-07 22:06:49,193 | INFO | Dataset validated.
+2026-08-07 22:06:49,193 | INFO | Report initialized.
+2026-08-07 22:06:49,193 | INFO | Creating training dataset...
+2026-08-07 22:06:49,536 | INFO | Training dataset created.
+2026-08-07 22:06:49,536 | INFO | Creating validation dataset...
+2026-08-07 22:06:49,572 | INFO | Validation dataset created.
+2026-08-07 22:06:49,573 | INFO | Creating test dataset...
+2026-08-07 22:06:49,626 | INFO | Test dataset created.
+2026-08-07 22:06:49,626 | INFO | All datasets created.
+2026-08-07 22:06:52,041 | INFO | Report updated.
+2026-08-07 22:06:52,401 | INFO | TensorFlow report exported.
+2026-08-07 22:06:52,401 | INFO | TensorFlow dataset ready.
+2026-08-07 22:11:34,431 | INFO | DatasetLoader initialized.
+2026-08-07 22:11:34,431 | INFO | Checking dataset...
+2026-08-07 22:11:34,432 | INFO | Dataset validated.
+2026-08-07 22:11:34,432 | INFO | Report initialized.
+2026-08-07 22:11:34,432 | INFO | Creating training dataset...
+2026-08-07 22:11:34,775 | INFO | Training dataset created.
+2026-08-07 22:11:34,775 | INFO | Creating validation dataset...
+2026-08-07 22:11:34,812 | INFO | Validation dataset created.
+2026-08-07 22:11:34,813 | INFO | Creating test dataset...
+2026-08-07 22:11:34,851 | INFO | Test dataset created.
+2026-08-07 22:11:34,851 | INFO | All datasets created.
+2026-08-07 22:11:37,136 | INFO | Report updated.
+2026-08-07 22:11:37,138 | INFO | TensorFlow report exported.
+2026-08-07 22:11:37,138 | INFO | TensorFlow dataset ready.
+2026-08-08 00:34:55,762 | INFO | DatasetLoader initialized.
+2026-08-08 00:34:55,764 | INFO | Checking dataset...
+2026-08-08 00:34:55,764 | INFO | Dataset validated.
+2026-08-08 00:34:55,764 | INFO | Report initialized.
+2026-08-08 00:34:55,764 | INFO | Creating training dataset...
+2026-08-08 00:34:56,124 | INFO | Training dataset created.
+2026-08-08 00:34:56,125 | INFO | Creating validation dataset...
+2026-08-08 00:34:56,158 | INFO | Validation dataset created.
+2026-08-08 00:34:56,158 | INFO | Creating test dataset...
+2026-08-08 00:34:56,192 | INFO | Test dataset created.
+2026-08-08 00:34:56,193 | INFO | All datasets created.
+2026-08-08 00:34:58,999 | INFO | Report updated.
+2026-08-08 00:34:59,000 | INFO | TensorFlow report exported.
+2026-08-08 00:34:59,001 | INFO | TensorFlow dataset ready.
+2026-08-08 00:45:11,483 | INFO | DatasetLoader initialized.
+2026-08-08 00:45:11,484 | INFO | Checking dataset...
+2026-08-08 00:45:11,484 | INFO | Dataset validated.
+2026-08-08 00:45:11,484 | INFO | Report initialized.
+2026-08-08 00:45:11,485 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 00:45:11,787 | ERROR | in user code:
+
+    File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 668, in load_and_preprocess  *
+        image = tf.image.resize(image, settings.IMAGE_SIZE)
+
+    ValueError: 'images' contains no shape.
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 995, in run
+    self.create_datasets()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 717, in create_datasets
+    self.create_raw_mvtec_datasets()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 674, in create_raw_mvtec_datasets
+    self.train_dataset = self.train_dataset.map(
+                         ~~~~~~~~~~~~~~~~~~~~~~^
+        load_and_preprocess,
+        ^^^^^^^^^^^^^^^^^^^^
+        num_parallel_calls=tf.data.AUTOTUNE,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\data\ops\dataset_ops.py", line 2341, in map
+    return map_op._map_v2(
+           ~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<5 lines>...
+        name=name,
+        ^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\data\ops\map_op.py", line 57, in _map_v2
+    return _ParallelMapDataset(
+        input_dataset,
+    ...<4 lines>...
+        use_unbounded_threadpool=use_unbounded_threadpool,
+        name=name)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\data\ops\map_op.py", line 202, in __init__
+    self._map_func = structured_function.StructuredFunctionWrapper(
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        map_func,
+        ^^^^^^^^^
+        self._transformation_name(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dataset=input_dataset,
+        ^^^^^^^^^^^^^^^^^^^^^^
+        use_legacy_function=use_legacy_function)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\data\ops\structured_function.py", line 265, in __init__
+    self._function = fn_factory()
+                     ~~~~~~~~~~^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 1256, in get_concrete_function
+    concrete = self._get_concrete_function_garbage_collected(*args, **kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 1226, in _get_concrete_function_garbage_collected
+    self._initialize(args, kwargs, add_initializers_to=initializers)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 696, in _initialize
+    self._concrete_variable_creation_fn = tracing_compilation.trace_function(
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        args, kwds, self._variable_creation_config
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 178, in trace_function
+    concrete_function = _maybe_define_function(
+        args, kwargs, tracing_options
+    )
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 283, in _maybe_define_function
+    concrete_function = _create_concrete_function(
+        target_func_type, lookup_func_context, func_graph, tracing_options
+    )
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 310, in _create_concrete_function
+    traced_func_graph = func_graph_module.func_graph_from_py_func(
+        tracing_options.name,
+    ...<7 lines>...
+        create_placeholders=False,
+    )
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\framework\func_graph.py", line 1060, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 599, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\data\ops\structured_function.py", line 231, in wrapped_fn
+    ret = wrapper_helper(*args)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\data\ops\structured_function.py", line 161, in wrapper_helper
+    ret = autograph.tf_convert(self._func, ag_ctx)(*nested_args)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 693, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 690, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Temp\__autograph_generated_fileu5ox3n6f.py", line 13, in tf__load_and_preprocess
+    image = ag__.converted_call(ag__.ld(tf).image.resize, (ag__.ld(image), ag__.ld(settings).IMAGE_SIZE), None, fscope)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\autograph\impl\api.py", line 460, in _call_unconverted
+    return f(*args)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 167, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\ops\image_ops_impl.py", line 1462, in _resize_images_common
+    raise ValueError('\'images\' contains no shape.')
+ValueError: in user code:
+
+    File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 668, in load_and_preprocess  *
+        image = tf.image.resize(image, settings.IMAGE_SIZE)
+
+    ValueError: 'images' contains no shape.
+
+2026-08-08 00:47:04,817 | INFO | DatasetLoader initialized.
+2026-08-08 00:47:04,818 | INFO | Checking dataset...
+2026-08-08 00:47:04,818 | INFO | Dataset validated.
+2026-08-08 00:47:04,818 | INFO | Report initialized.
+2026-08-08 00:47:04,818 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 00:47:07,225 | INFO | Raw MVTec datasets created.
+2026-08-08 00:47:07,226 | INFO | All datasets created.
+2026-08-08 00:47:09,892 | INFO | Report updated.
+2026-08-08 00:47:09,893 | INFO | TensorFlow report exported.
+2026-08-08 00:47:09,894 | INFO | TensorFlow dataset ready.
+2026-08-08 00:50:17,601 | INFO | DatasetLoader initialized.
+2026-08-08 00:50:17,620 | INFO | Checking dataset...
+2026-08-08 00:50:17,621 | INFO | Dataset validated.
+2026-08-08 00:50:17,621 | INFO | Report initialized.
+2026-08-08 00:50:17,622 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 00:50:20,288 | INFO | Raw MVTec datasets created.
+2026-08-08 00:50:20,288 | INFO | All datasets created.
+2026-08-08 00:50:22,911 | INFO | Report updated.
+2026-08-08 00:50:22,912 | INFO | TensorFlow report exported.
+2026-08-08 00:50:22,912 | INFO | TensorFlow dataset ready.
+2026-08-08 00:54:41,811 | INFO | DatasetLoader initialized.
+2026-08-08 00:54:41,812 | INFO | Checking dataset...
+2026-08-08 00:54:41,812 | INFO | Dataset validated.
+2026-08-08 00:54:41,812 | INFO | Report initialized.
+2026-08-08 00:54:41,812 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 00:54:41,876 | INFO | Total real images loaded: 292
+2026-08-08 00:54:41,876 | INFO |   broken_large: 20 images
+2026-08-08 00:54:41,876 | INFO |   broken_small: 22 images
+2026-08-08 00:54:41,876 | INFO |   contamination: 21 images
+2026-08-08 00:54:41,876 | INFO |   good: 229 images
+2026-08-08 00:54:41,906 | INFO | Train: 204 images
+2026-08-08 00:54:41,906 | INFO | Validation: 44 images
+2026-08-08 00:54:41,906 | INFO | Test: 44 images
+2026-08-08 00:54:42,278 | INFO | Raw MVTec datasets created.
+2026-08-08 00:54:42,278 | INFO | All datasets created.
+2026-08-08 00:54:43,149 | INFO | Report updated.
+2026-08-08 00:54:43,150 | INFO | TensorFlow report exported.
+2026-08-08 00:54:43,150 | INFO | TensorFlow dataset ready.
+2026-08-08 00:59:23,530 | INFO | DatasetLoader initialized.
+2026-08-08 00:59:23,530 | INFO | Checking dataset...
+2026-08-08 00:59:23,530 | INFO | Dataset validated.
+2026-08-08 00:59:23,530 | INFO | Report initialized.
+2026-08-08 00:59:23,531 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 00:59:23,626 | INFO | Total real images loaded: 292
+2026-08-08 00:59:23,626 | INFO |   broken_large: 20 images
+2026-08-08 00:59:23,627 | INFO |   broken_small: 22 images
+2026-08-08 00:59:23,627 | INFO |   contamination: 21 images
+2026-08-08 00:59:23,627 | INFO |   good: 229 images
+2026-08-08 00:59:23,671 | INFO | Train: 204 images
+2026-08-08 00:59:23,671 | INFO | Validation: 44 images
+2026-08-08 00:59:23,671 | INFO | Test: 44 images
+2026-08-08 00:59:24,033 | INFO | Raw MVTec datasets created.
+2026-08-08 00:59:24,033 | INFO | All datasets created.
+2026-08-08 00:59:24,900 | INFO | Report updated.
+2026-08-08 00:59:24,901 | INFO | TensorFlow report exported.
+2026-08-08 00:59:24,901 | INFO | TensorFlow dataset ready.
+2026-08-08 01:03:06,823 | INFO | DatasetLoader initialized.
+2026-08-08 01:03:06,824 | INFO | Checking dataset...
+2026-08-08 01:03:06,824 | INFO | Dataset validated.
+2026-08-08 01:03:06,825 | INFO | Report initialized.
+2026-08-08 01:03:06,825 | INFO | Creating training dataset...
+2026-08-08 01:03:07,158 | INFO | Training dataset created.
+2026-08-08 01:03:07,158 | INFO | Creating validation dataset...
+2026-08-08 01:03:07,195 | INFO | Validation dataset created.
+2026-08-08 01:03:07,195 | INFO | Creating test dataset...
+2026-08-08 01:03:07,233 | INFO | Test dataset created.
+2026-08-08 01:03:07,233 | INFO | All datasets created.
+2026-08-08 01:03:09,318 | INFO | Report updated.
+2026-08-08 01:03:09,319 | INFO | TensorFlow report exported.
+2026-08-08 01:03:09,319 | INFO | TensorFlow dataset ready.
+2026-08-08 01:47:05,224 | INFO | DatasetLoader initialized.
+2026-08-08 01:47:05,224 | INFO | Checking dataset...
+2026-08-08 01:47:05,224 | INFO | Dataset validated.
+2026-08-08 01:47:05,224 | INFO | Report initialized.
+2026-08-08 01:47:05,224 | INFO | Creating training dataset...
+2026-08-08 01:47:05,624 | INFO | Training dataset created.
+2026-08-08 01:47:05,625 | INFO | Creating validation dataset...
+2026-08-08 01:47:05,665 | INFO | Validation dataset created.
+2026-08-08 01:47:05,665 | INFO | Creating test dataset...
+2026-08-08 01:47:05,707 | INFO | Test dataset created.
+2026-08-08 01:47:05,707 | INFO | All datasets created.
+2026-08-08 01:47:08,103 | INFO | Report updated.
+2026-08-08 01:47:08,105 | INFO | TensorFlow report exported.
+2026-08-08 01:47:08,105 | INFO | TensorFlow dataset ready.
+2026-08-08 01:48:04,105 | INFO | DatasetLoader initialized.
+2026-08-08 01:48:04,105 | INFO | Checking dataset...
+2026-08-08 01:48:04,106 | INFO | Dataset validated.
+2026-08-08 01:48:04,106 | INFO | Report initialized.
+2026-08-08 01:48:04,106 | INFO | Creating training dataset...
+2026-08-08 01:48:04,848 | INFO | Training dataset created.
+2026-08-08 01:48:04,848 | INFO | Creating validation dataset...
+2026-08-08 01:48:04,922 | INFO | Validation dataset created.
+2026-08-08 01:48:04,922 | INFO | Creating test dataset...
+2026-08-08 01:48:05,000 | INFO | Test dataset created.
+2026-08-08 01:48:05,000 | INFO | All datasets created.
+2026-08-08 01:48:11,090 | INFO | Report updated.
+2026-08-08 01:48:11,092 | INFO | TensorFlow report exported.
+2026-08-08 01:48:11,092 | INFO | TensorFlow dataset ready.
+2026-08-08 01:59:23,144 | INFO | DatasetLoader initialized.
+2026-08-08 01:59:23,145 | INFO | Checking dataset...
+2026-08-08 01:59:23,145 | INFO | Dataset validated.
+2026-08-08 01:59:23,145 | INFO | Report initialized.
+2026-08-08 01:59:23,145 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 01:59:23,314 | INFO | Total real images loaded: 292
+2026-08-08 01:59:23,315 | INFO |   broken_large: 20 images
+2026-08-08 01:59:23,315 | INFO |   broken_small: 22 images
+2026-08-08 01:59:23,315 | INFO |   contamination: 21 images
+2026-08-08 01:59:23,315 | INFO |   good: 229 images
+2026-08-08 01:59:23,445 | INFO | Train: 204 images
+2026-08-08 01:59:23,445 | INFO | Validation: 44 images
+2026-08-08 01:59:23,445 | INFO | Test: 44 images
+2026-08-08 01:59:24,319 | INFO | Raw MVTec datasets created.
+2026-08-08 01:59:24,319 | INFO | All datasets created.
+2026-08-08 01:59:28,914 | INFO | Report updated.
+2026-08-08 01:59:28,917 | INFO | TensorFlow report exported.
+2026-08-08 01:59:28,917 | INFO | TensorFlow dataset ready.
+2026-08-08 02:09:26,384 | INFO | DatasetLoader initialized.
+2026-08-08 02:09:26,384 | INFO | Checking dataset...
+2026-08-08 02:09:26,384 | INFO | Dataset validated.
+2026-08-08 02:09:26,385 | INFO | Report initialized.
+2026-08-08 02:09:26,385 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 02:09:26,581 | INFO | Total real images loaded: 292
+2026-08-08 02:09:26,582 | INFO |   broken_large: 20 images
+2026-08-08 02:09:26,582 | INFO |   broken_small: 22 images
+2026-08-08 02:09:26,582 | INFO |   contamination: 21 images
+2026-08-08 02:09:26,583 | INFO |   good: 229 images
+2026-08-08 02:09:26,767 | INFO | Train: 204 images
+2026-08-08 02:09:26,767 | INFO | Validation: 44 images
+2026-08-08 02:09:26,767 | INFO | Test: 44 images
+2026-08-08 02:09:27,527 | INFO | Raw MVTec datasets created.
+2026-08-08 02:09:27,527 | INFO | All datasets created.
+2026-08-08 02:09:29,148 | INFO | Report updated.
+2026-08-08 02:09:29,150 | INFO | TensorFlow report exported.
+2026-08-08 02:09:29,150 | INFO | TensorFlow dataset ready.
+2026-08-08 02:25:29,688 | INFO | DatasetLoader initialized.
+2026-08-08 02:25:29,689 | INFO | Checking dataset...
+2026-08-08 02:25:29,689 | INFO | Dataset validated.
+2026-08-08 02:25:29,689 | INFO | Report initialized.
+2026-08-08 02:25:29,689 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 02:25:29,887 | INFO | Total real images loaded: 292
+2026-08-08 02:25:29,887 | INFO |   broken_large: 20 images
+2026-08-08 02:25:29,887 | INFO |   broken_small: 22 images
+2026-08-08 02:25:29,887 | INFO |   contamination: 21 images
+2026-08-08 02:25:29,887 | INFO |   good: 229 images
+2026-08-08 02:25:30,096 | INFO | Train: 204 images
+2026-08-08 02:25:30,097 | INFO | Validation: 44 images
+2026-08-08 02:25:30,097 | INFO | Test: 44 images
+2026-08-08 02:25:30,724 | INFO | Raw MVTec datasets created.
+2026-08-08 02:25:30,724 | INFO | All datasets created.
+2026-08-08 02:25:32,009 | INFO | Report updated.
+2026-08-08 02:25:32,012 | INFO | TensorFlow report exported.
+2026-08-08 02:25:32,013 | INFO | TensorFlow dataset ready.
+2026-08-08 02:53:17,568 | INFO | DatasetLoader initialized.
+2026-08-08 02:53:17,568 | INFO | Checking dataset...
+2026-08-08 02:53:17,569 | INFO | Dataset validated.
+2026-08-08 02:53:17,569 | INFO | Report initialized.
+2026-08-08 02:53:17,569 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 02:53:17,781 | INFO | Total real images loaded: 292
+2026-08-08 02:53:17,781 | INFO |   broken_large: 20 images
+2026-08-08 02:53:17,781 | INFO |   broken_small: 22 images
+2026-08-08 02:53:17,782 | INFO |   contamination: 21 images
+2026-08-08 02:53:17,782 | INFO |   good: 229 images
+2026-08-08 02:53:17,960 | INFO | Train: 204 images
+2026-08-08 02:53:17,960 | INFO | Validation: 44 images
+2026-08-08 02:53:17,960 | INFO | Test: 44 images
+2026-08-08 02:53:18,603 | INFO | Raw MVTec datasets created.
+2026-08-08 02:53:18,603 | INFO | All datasets created.
+2026-08-08 02:53:19,849 | INFO | Report updated.
+2026-08-08 02:53:19,850 | INFO | TensorFlow report exported.
+2026-08-08 02:53:19,850 | INFO | TensorFlow dataset ready.
+2026-08-08 03:02:00,172 | INFO | DatasetLoader initialized.
+2026-08-08 03:02:00,172 | INFO | Checking dataset...
+2026-08-08 03:02:00,172 | INFO | Dataset validated.
+2026-08-08 03:02:00,172 | INFO | Report initialized.
+2026-08-08 03:02:00,172 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 03:02:00,283 | INFO | Total real images loaded: 292
+2026-08-08 03:02:00,283 | INFO |   broken_large: 20 images
+2026-08-08 03:02:00,283 | INFO |   broken_small: 22 images
+2026-08-08 03:02:00,283 | INFO |   contamination: 21 images
+2026-08-08 03:02:00,283 | INFO |   good: 229 images
+2026-08-08 03:02:00,354 | INFO | Train: 204 images
+2026-08-08 03:02:00,354 | INFO | Validation: 44 images
+2026-08-08 03:02:00,354 | INFO | Test: 44 images
+2026-08-08 03:02:00,748 | INFO | Raw MVTec datasets created.
+2026-08-08 03:02:00,748 | INFO | All datasets created.
+2026-08-08 03:02:01,769 | INFO | Report updated.
+2026-08-08 03:02:01,770 | INFO | TensorFlow report exported.
+2026-08-08 03:02:01,770 | INFO | TensorFlow dataset ready.
+2026-08-08 14:54:33,102 | INFO | DatasetLoader initialized.
+2026-08-08 14:54:33,103 | INFO | Checking dataset...
+2026-08-08 14:54:33,103 | INFO | Dataset validated.
+2026-08-08 14:54:33,104 | INFO | Report initialized.
+2026-08-08 14:54:33,104 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 14:54:33,465 | INFO | Total real images loaded: 292
+2026-08-08 14:54:33,466 | INFO |   broken_large: 20 images
+2026-08-08 14:54:33,466 | INFO |   broken_small: 22 images
+2026-08-08 14:54:33,469 | INFO |   contamination: 21 images
+2026-08-08 14:54:33,469 | INFO |   good: 229 images
+2026-08-08 14:54:33,720 | INFO | Train: 204 images
+2026-08-08 14:54:33,721 | INFO | Validation: 44 images
+2026-08-08 14:54:33,721 | INFO | Test: 44 images
+2026-08-08 14:54:34,587 | INFO | Raw MVTec datasets created.
+2026-08-08 14:54:34,587 | INFO | All datasets created.
+2026-08-08 14:54:36,859 | INFO | Report updated.
+2026-08-08 14:54:36,861 | INFO | TensorFlow report exported.
+2026-08-08 14:54:36,861 | INFO | TensorFlow dataset ready.
+2026-08-08 14:58:53,739 | INFO | DatasetLoader initialized.
+2026-08-08 14:58:53,740 | INFO | Checking dataset...
+2026-08-08 14:58:53,740 | INFO | Dataset validated.
+2026-08-08 14:58:53,740 | INFO | Report initialized.
+2026-08-08 14:58:53,740 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 14:58:53,839 | INFO | Total real images loaded: 292
+2026-08-08 14:58:53,839 | INFO |   broken_large: 20 images
+2026-08-08 14:58:53,839 | INFO |   broken_small: 22 images
+2026-08-08 14:58:53,839 | INFO |   contamination: 21 images
+2026-08-08 14:58:53,839 | INFO |   good: 229 images
+2026-08-08 14:58:53,870 | INFO | Train: 204 images
+2026-08-08 14:58:53,871 | INFO | Validation: 44 images
+2026-08-08 14:58:53,871 | INFO | Test: 44 images
+2026-08-08 14:58:54,184 | INFO | Raw MVTec datasets created.
+2026-08-08 14:58:54,184 | INFO | All datasets created.
+2026-08-08 14:58:55,001 | INFO | Report updated.
+2026-08-08 14:58:55,002 | INFO | TensorFlow report exported.
+2026-08-08 14:58:55,002 | INFO | TensorFlow dataset ready.
+2026-08-08 15:17:30,470 | INFO | DatasetLoader initialized.
+2026-08-08 15:17:30,906 | INFO | Checking dataset...
+2026-08-08 15:17:30,906 | INFO | Dataset validated.
+2026-08-08 15:17:30,906 | INFO | Report initialized.
+2026-08-08 15:17:30,906 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 15:17:31,077 | INFO | Total real images loaded: 292
+2026-08-08 15:17:31,077 | INFO |   broken_large: 20 images
+2026-08-08 15:17:31,077 | INFO |   broken_small: 22 images
+2026-08-08 15:17:31,077 | INFO |   contamination: 21 images
+2026-08-08 15:17:31,077 | INFO |   good: 229 images
+2026-08-08 15:17:31,224 | INFO | Train: 204 images
+2026-08-08 15:17:31,224 | INFO | Validation: 44 images
+2026-08-08 15:17:31,225 | INFO | Test: 44 images
+2026-08-08 15:17:31,699 | INFO | Raw MVTec datasets created.
+2026-08-08 15:17:31,699 | INFO | All datasets created.
+2026-08-08 15:17:33,039 | INFO | Report updated.
+2026-08-08 15:17:33,042 | INFO | TensorFlow report exported.
+2026-08-08 15:17:33,043 | INFO | TensorFlow dataset ready.
+2026-08-08 15:22:08,895 | INFO | DatasetLoader initialized.
+2026-08-08 15:22:08,895 | INFO | Checking dataset...
+2026-08-08 15:22:08,896 | INFO | Dataset validated.
+2026-08-08 15:22:08,896 | INFO | Report initialized.
+2026-08-08 15:22:08,896 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 15:22:08,983 | INFO | Total real images loaded: 292
+2026-08-08 15:22:08,983 | INFO |   broken_large: 20 images
+2026-08-08 15:22:08,983 | INFO |   broken_small: 22 images
+2026-08-08 15:22:08,983 | INFO |   contamination: 21 images
+2026-08-08 15:22:08,983 | INFO |   good: 229 images
+2026-08-08 15:22:09,055 | INFO | Train: 204 images
+2026-08-08 15:22:09,055 | INFO | Validation: 44 images
+2026-08-08 15:22:09,055 | INFO | Test: 44 images
+2026-08-08 15:22:09,366 | INFO | Raw MVTec datasets created.
+2026-08-08 15:22:09,366 | INFO | All datasets created.
+2026-08-08 15:22:10,106 | INFO | Report updated.
+2026-08-08 15:22:10,107 | INFO | TensorFlow report exported.
+2026-08-08 15:22:10,107 | INFO | TensorFlow dataset ready.
+2026-08-08 15:25:11,031 | INFO | DatasetLoader initialized.
+2026-08-08 15:25:11,031 | INFO | Checking dataset...
+2026-08-08 15:25:11,031 | INFO | Dataset validated.
+2026-08-08 15:25:11,031 | INFO | Report initialized.
+2026-08-08 15:25:11,032 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 15:25:11,125 | INFO | Total real images loaded: 292
+2026-08-08 15:25:11,126 | INFO |   broken_large: 20 images
+2026-08-08 15:25:11,126 | INFO |   broken_small: 22 images
+2026-08-08 15:25:11,126 | INFO |   contamination: 21 images
+2026-08-08 15:25:11,126 | INFO |   good: 229 images
+2026-08-08 15:25:11,160 | INFO | Train: 204 images
+2026-08-08 15:25:11,160 | INFO | Validation: 44 images
+2026-08-08 15:25:11,160 | INFO | Test: 44 images
+2026-08-08 15:25:11,460 | INFO | Raw MVTec datasets created.
+2026-08-08 15:25:11,460 | INFO | All datasets created.
+2026-08-08 15:25:12,226 | INFO | Report updated.
+2026-08-08 15:25:12,227 | INFO | TensorFlow report exported.
+2026-08-08 15:25:12,227 | INFO | TensorFlow dataset ready.
+2026-08-08 15:51:02,827 | INFO | DatasetLoader initialized.
+2026-08-08 15:51:02,828 | INFO | Checking dataset...
+2026-08-08 15:51:02,828 | INFO | Dataset validated.
+2026-08-08 15:51:02,828 | INFO | Report initialized.
+2026-08-08 15:51:02,828 | INFO | Creating training dataset...
+2026-08-08 15:51:03,196 | INFO | Training dataset created.
+2026-08-08 15:51:03,196 | INFO | Creating validation dataset...
+2026-08-08 15:51:03,231 | INFO | Validation dataset created.
+2026-08-08 15:51:03,231 | INFO | Creating test dataset...
+2026-08-08 15:51:03,267 | INFO | Test dataset created.
+2026-08-08 15:51:03,267 | INFO | All datasets created.
+2026-08-08 15:51:06,080 | INFO | Report updated.
+2026-08-08 15:51:06,081 | INFO | TensorFlow report exported.
+2026-08-08 15:51:06,081 | INFO | TensorFlow dataset ready.
+2026-08-08 16:01:44,328 | INFO | DatasetLoader initialized.
+2026-08-08 16:01:44,329 | INFO | Checking dataset...
+2026-08-08 16:01:44,329 | INFO | Dataset validated.
+2026-08-08 16:01:44,329 | INFO | Report initialized.
+2026-08-08 16:01:44,329 | INFO | Creating training dataset...
+2026-08-08 16:01:44,621 | INFO | Training dataset created.
+2026-08-08 16:01:44,621 | INFO | Creating validation dataset...
+2026-08-08 16:01:44,649 | INFO | Validation dataset created.
+2026-08-08 16:01:44,650 | INFO | Creating test dataset...
+2026-08-08 16:01:44,679 | INFO | Test dataset created.
+2026-08-08 16:01:44,679 | INFO | All datasets created.
+2026-08-08 16:01:46,776 | INFO | Report updated.
+2026-08-08 16:01:46,777 | INFO | TensorFlow report exported.
+2026-08-08 16:01:46,777 | INFO | TensorFlow dataset ready.
+2026-08-08 16:19:01,271 | INFO | DatasetLoader initialized.
+2026-08-08 16:19:01,271 | INFO | Checking dataset...
+2026-08-08 16:19:01,271 | INFO | Dataset validated.
+2026-08-08 16:19:01,271 | INFO | Report initialized.
+2026-08-08 16:19:01,271 | INFO | Creating training dataset...
+2026-08-08 16:19:01,577 | INFO | Training dataset created.
+2026-08-08 16:19:01,577 | INFO | Creating validation dataset...
+2026-08-08 16:19:01,606 | INFO | Validation dataset created.
+2026-08-08 16:19:01,606 | INFO | Creating test dataset...
+2026-08-08 16:19:01,636 | INFO | Test dataset created.
+2026-08-08 16:19:01,636 | INFO | All datasets created.
+2026-08-08 16:19:04,028 | INFO | Report updated.
+2026-08-08 16:19:04,029 | INFO | TensorFlow report exported.
+2026-08-08 16:19:04,029 | INFO | TensorFlow dataset ready.
+2026-08-08 16:24:32,812 | INFO | DatasetLoader initialized.
+2026-08-08 16:24:32,812 | INFO | Checking dataset...
+2026-08-08 16:24:32,813 | INFO | Dataset validated.
+2026-08-08 16:24:32,813 | INFO | Report initialized.
+2026-08-08 16:24:32,813 | INFO | Creating training dataset...
+2026-08-08 16:24:33,111 | INFO | Training dataset created.
+2026-08-08 16:24:33,112 | INFO | Creating validation dataset...
+2026-08-08 16:24:33,144 | INFO | Validation dataset created.
+2026-08-08 16:24:33,144 | INFO | Creating test dataset...
+2026-08-08 16:24:33,175 | INFO | Test dataset created.
+2026-08-08 16:24:33,175 | INFO | All datasets created.
+2026-08-08 16:24:35,228 | INFO | Report updated.
+2026-08-08 16:24:35,228 | INFO | TensorFlow report exported.
+2026-08-08 16:24:35,229 | INFO | TensorFlow dataset ready.
+2026-08-08 16:30:33,315 | INFO | DatasetLoader initialized.
+2026-08-08 16:30:33,316 | INFO | Checking dataset...
+2026-08-08 16:30:33,317 | INFO | Dataset validated.
+2026-08-08 16:30:33,317 | INFO | Report initialized.
+2026-08-08 16:30:33,317 | INFO | Creating training dataset...
+2026-08-08 16:30:34,727 | INFO | Training dataset created.
+2026-08-08 16:30:34,731 | INFO | Creating validation dataset...
+2026-08-08 16:30:34,805 | INFO | Validation dataset created.
+2026-08-08 16:30:34,805 | INFO | Creating test dataset...
+2026-08-08 16:30:34,874 | INFO | Test dataset created.
+2026-08-08 16:30:34,874 | INFO | All datasets created.
+2026-08-08 16:30:40,388 | INFO | Report updated.
+2026-08-08 16:30:40,392 | INFO | TensorFlow report exported.
+2026-08-08 16:30:40,392 | INFO | TensorFlow dataset ready.
+2026-08-08 17:11:27,753 | INFO | DatasetLoader initialized.
+2026-08-08 17:11:27,754 | INFO | Checking dataset...
+2026-08-08 17:11:27,754 | INFO | Dataset validated.
+2026-08-08 17:11:27,754 | INFO | Report initialized.
+2026-08-08 17:11:27,754 | INFO | Creating training dataset...
+2026-08-08 17:11:28,064 | INFO | Training dataset created.
+2026-08-08 17:11:28,064 | INFO | Creating validation dataset...
+2026-08-08 17:11:28,092 | INFO | Validation dataset created.
+2026-08-08 17:11:28,092 | INFO | Creating test dataset...
+2026-08-08 17:11:28,119 | INFO | Test dataset created.
+2026-08-08 17:11:28,119 | INFO | All datasets created.
+2026-08-08 17:11:30,261 | INFO | Report updated.
+2026-08-08 17:11:30,262 | INFO | TensorFlow report exported.
+2026-08-08 17:11:30,262 | INFO | TensorFlow dataset ready.
+2026-08-08 18:58:35,720 | INFO | DatasetLoader initialized.
+2026-08-08 18:59:05,070 | INFO | DatasetLoader initialized.
+2026-08-08 18:59:05,071 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 18:59:05,187 | INFO | Total real images loaded: 292
+2026-08-08 18:59:05,187 | INFO |   broken_large: 20 images
+2026-08-08 18:59:05,187 | INFO |   broken_small: 22 images
+2026-08-08 18:59:05,187 | INFO |   contamination: 21 images
+2026-08-08 18:59:05,187 | INFO |   good: 229 images
+2026-08-08 18:59:05,248 | INFO | Train: 204 images
+2026-08-08 18:59:05,248 | INFO | Validation: 44 images
+2026-08-08 18:59:05,248 | INFO | Test: 44 images
+2026-08-08 18:59:05,497 | INFO | Raw MVTec datasets created.
+2026-08-08 18:59:05,497 | INFO | All datasets created.
+2026-08-08 18:59:05,912 | INFO | DatasetLoader initialized.
+2026-08-08 18:59:05,912 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 18:59:05,916 | INFO | Total real images loaded: 292
+2026-08-08 18:59:05,916 | INFO |   broken_large: 20 images
+2026-08-08 18:59:05,916 | INFO |   broken_small: 22 images
+2026-08-08 18:59:05,916 | INFO |   contamination: 21 images
+2026-08-08 18:59:05,916 | INFO |   good: 229 images
+2026-08-08 18:59:05,919 | INFO | Train: 204 images
+2026-08-08 18:59:05,919 | INFO | Validation: 44 images
+2026-08-08 18:59:05,919 | INFO | Test: 44 images
+2026-08-08 18:59:06,168 | INFO | Raw MVTec datasets created.
+2026-08-08 18:59:06,168 | INFO | All datasets created.
+2026-08-08 18:59:06,944 | INFO | DatasetLoader initialized.
+2026-08-08 18:59:06,945 | INFO | Creating training dataset...
+2026-08-08 18:59:06,995 | INFO | Training dataset created.
+2026-08-08 18:59:06,995 | INFO | Creating validation dataset...
+2026-08-08 18:59:07,031 | INFO | Validation dataset created.
+2026-08-08 18:59:07,031 | INFO | Creating test dataset...
+2026-08-08 18:59:07,065 | INFO | Test dataset created.
+2026-08-08 18:59:07,065 | INFO | All datasets created.
+2026-08-08 19:06:30,816 | INFO | DatasetLoader initialized.
+2026-08-08 19:06:30,817 | INFO | Checking dataset...
+2026-08-08 19:06:30,817 | INFO | Dataset validated.
+2026-08-08 19:06:30,817 | INFO | Report initialized.
+2026-08-08 19:06:30,817 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 19:06:30,906 | INFO | Total real images loaded: 292
+2026-08-08 19:06:30,906 | INFO |   broken_large: 20 images
+2026-08-08 19:06:30,906 | INFO |   broken_small: 22 images
+2026-08-08 19:06:30,906 | INFO |   contamination: 21 images
+2026-08-08 19:06:30,906 | INFO |   good: 229 images
+2026-08-08 19:06:30,943 | INFO | Train: 204 images
+2026-08-08 19:06:30,943 | INFO | Validation: 44 images
+2026-08-08 19:06:30,943 | INFO | Test: 44 images
+2026-08-08 19:06:31,086 | INFO | Raw MVTec datasets created.
+2026-08-08 19:06:31,086 | INFO | All datasets created.
+2026-08-08 19:06:31,414 | INFO | Report updated.
+2026-08-08 19:06:31,415 | INFO | TensorFlow report exported.
+2026-08-08 19:06:31,415 | INFO | TensorFlow dataset ready.
+2026-08-08 23:49:46,350 | INFO | DatasetLoader initialized.
+2026-08-08 23:49:46,350 | INFO | Checking dataset...
+2026-08-08 23:49:46,350 | INFO | Dataset validated.
+2026-08-08 23:49:46,350 | INFO | Report initialized.
+2026-08-08 23:49:46,350 | INFO | Creating datasets from raw MVTec structure...
+2026-08-08 23:49:46,505 | INFO | Total real images loaded: 292
+2026-08-08 23:49:46,506 | INFO |   broken_large: 20 images
+2026-08-08 23:49:46,506 | INFO |   broken_small: 22 images
+2026-08-08 23:49:46,506 | INFO |   contamination: 21 images
+2026-08-08 23:49:46,506 | INFO |   good: 229 images
+2026-08-08 23:49:46,618 | INFO | Train: 204 images
+2026-08-08 23:49:46,618 | INFO | Validation: 44 images
+2026-08-08 23:49:46,618 | INFO | Test: 44 images
+2026-08-08 23:49:46,995 | INFO | Raw MVTec datasets created.
+2026-08-08 23:49:46,995 | INFO | All datasets created.
+2026-08-08 23:49:47,979 | INFO | Report updated.
+2026-08-08 23:49:47,981 | INFO | TensorFlow report exported.
+2026-08-08 23:49:47,981 | INFO | TensorFlow dataset ready.
+2026-08-08 23:56:05,802 | INFO | DatasetLoader initialized.
+2026-08-08 23:56:05,802 | ERROR | 'DatasetLoader' object has no attribute 'dataset_path'
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 987, in run
+    self.print_header()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Lenovo\Desktop\VisionInspectIA\ai\scripts\create_tf_dataset.py", line 192, in print_header
+    f"{self.dataset_path}"
+       ^^^^^^^^^^^^^^^^^
+AttributeError: 'DatasetLoader' object has no attribute 'dataset_path'. Did you mean: 'dataset_type'?
+2026-08-08 23:58:04,497 | INFO | DatasetLoader initialized.
+2026-08-08 23:58:04,497 | INFO | Checking dataset...
+2026-08-08 23:58:04,497 | INFO | Dataset validated.
+2026-08-08 23:58:04,497 | INFO | Report initialized.
+2026-08-08 23:58:04,497 | INFO | Creating training dataset...
+2026-08-08 23:58:04,620 | INFO | Training dataset created.
+2026-08-08 23:58:04,620 | INFO | Creating validation dataset...
+2026-08-08 23:58:04,657 | INFO | Validation dataset created.
+2026-08-08 23:58:04,657 | INFO | Creating test dataset...
+2026-08-08 23:58:04,691 | INFO | Test dataset created.
+2026-08-08 23:58:04,692 | INFO | All datasets created.
+2026-08-08 23:58:05,757 | INFO | Report updated.
+2026-08-08 23:58:05,758 | INFO | TensorFlow report exported.
+2026-08-08 23:58:05,758 | INFO | TensorFlow dataset ready.
+2026-08-09 00:28:49,698 | INFO | DatasetLoader initialized.
+2026-08-09 00:28:49,698 | INFO | Creating datasets from raw MVTec structure...
+2026-08-09 00:28:49,816 | INFO | Total real images loaded: 165
+2026-08-09 00:28:49,816 | INFO |   broken_large: 0 images
+2026-08-09 00:28:49,816 | INFO |   broken_small: 1 images
+2026-08-09 00:28:49,816 | INFO |   contamination: 1 images
+2026-08-09 00:28:49,816 | INFO |   good: 163 images
+2026-08-09 00:30:39,244 | INFO | DatasetLoader initialized.
+2026-08-09 00:30:39,244 | INFO | Creating datasets from raw MVTec structure...
+2026-08-09 00:30:40,072 | INFO | Total real images loaded: 221
+2026-08-09 00:30:40,072 | INFO |   broken_large: 14 images
+2026-08-09 00:30:40,072 | INFO |   broken_small: 15 images
+2026-08-09 00:30:40,072 | INFO |   contamination: 14 images
+2026-08-09 00:30:40,072 | INFO |   good: 178 images
+2026-08-09 00:30:40,107 | INFO | Train: 154 images
+2026-08-09 00:30:40,107 | INFO | Validation: 33 images
+2026-08-09 00:30:40,107 | INFO | Test: 34 images
+2026-08-09 00:30:40,365 | INFO | Raw MVTec datasets created.
+2026-08-09 00:30:40,365 | INFO | Creating validation dataset...
+2026-08-09 00:30:40,402 | INFO | Validation dataset created.
+2026-08-09 00:30:40,402 | INFO | Creating test dataset...
+2026-08-09 00:30:40,433 | INFO | Test dataset created.
+2026-08-09 00:30:40,433 | INFO | All datasets created.
+2026-08-09 00:31:52,151 | INFO | DatasetLoader initialized.
+2026-08-09 00:31:52,151 | INFO | Creating datasets from raw MVTec structure...
+2026-08-09 00:31:52,588 | INFO | Total real images loaded: 221
+2026-08-09 00:31:52,588 | INFO |   broken_large: 14 images
+2026-08-09 00:31:52,589 | INFO |   broken_small: 15 images
+2026-08-09 00:31:52,589 | INFO |   contamination: 14 images
+2026-08-09 00:31:52,589 | INFO |   good: 178 images
+2026-08-09 00:31:52,607 | INFO | Train: 154 images
+2026-08-09 00:31:52,607 | INFO | Validation: 33 images
+2026-08-09 00:31:52,607 | INFO | Test: 34 images
+2026-08-09 00:31:52,768 | INFO | Raw MVTec datasets created.
+2026-08-09 00:31:52,769 | INFO | Creating validation dataset...
+2026-08-09 00:31:52,806 | INFO | Validation dataset created.
+2026-08-09 00:31:52,806 | INFO | Creating test dataset...
+2026-08-09 00:31:52,832 | INFO | Test dataset created.
+2026-08-09 00:31:52,832 | INFO | All datasets created.
+2026-08-09 00:31:52,852 | INFO | DatasetLoader initialized.
+2026-08-09 00:31:52,852 | INFO | Creating datasets from raw MVTec structure...
+2026-08-09 00:31:53,237 | INFO | Total real images loaded: 221
+2026-08-09 00:31:53,237 | INFO |   broken_large: 14 images
+2026-08-09 00:31:53,238 | INFO |   broken_small: 15 images
+2026-08-09 00:31:53,238 | INFO |   contamination: 14 images
+2026-08-09 00:31:53,238 | INFO |   good: 178 images
+2026-08-09 00:31:53,240 | INFO | Train: 154 images
+2026-08-09 00:31:53,240 | INFO | Validation: 33 images
+2026-08-09 00:31:53,240 | INFO | Test: 34 images
+2026-08-09 00:31:53,500 | INFO | Raw MVTec datasets created.
+2026-08-09 00:31:53,500 | INFO | Creating validation dataset...
+2026-08-09 00:31:53,525 | INFO | Validation dataset created.
+2026-08-09 00:31:53,525 | INFO | Creating test dataset...
+2026-08-09 00:31:53,551 | INFO | Test dataset created.
+2026-08-09 00:31:53,551 | INFO | All datasets created.
+2026-08-09 00:31:53,551 | INFO | DatasetLoader initialized.
+2026-08-09 00:31:53,551 | INFO | Creating training dataset...
+2026-08-09 00:31:53,595 | INFO | Training dataset created.
+2026-08-09 00:31:53,595 | INFO | Creating validation dataset...
+2026-08-09 00:31:53,623 | INFO | Validation dataset created.
+2026-08-09 00:31:53,623 | INFO | Creating test dataset...
+2026-08-09 00:31:53,650 | INFO | Test dataset created.
+2026-08-09 00:31:53,650 | INFO | All datasets created.
+2026-08-09 00:32:18,270 | INFO | DatasetLoader initialized.
+2026-08-09 00:32:18,271 | INFO | Creating datasets from raw MVTec structure...
+2026-08-09 00:32:18,701 | INFO | Total real images loaded: 221
+2026-08-09 00:32:18,701 | INFO |   broken_large: 14 images
+2026-08-09 00:32:18,702 | INFO |   broken_small: 15 images
+2026-08-09 00:32:18,702 | INFO |   contamination: 14 images
+2026-08-09 00:32:18,702 | INFO |   good: 178 images
+2026-08-09 00:32:18,728 | INFO | Train: 154 images
+2026-08-09 00:32:18,728 | INFO | Validation: 33 images
+2026-08-09 00:32:18,728 | INFO | Test: 34 images
+2026-08-09 00:32:18,852 | INFO | Raw MVTec datasets created.
+2026-08-09 00:32:18,852 | INFO | Creating validation dataset...
+2026-08-09 00:32:18,881 | INFO | Validation dataset created.
+2026-08-09 00:32:18,881 | INFO | Creating test dataset...
+2026-08-09 00:32:18,917 | INFO | Test dataset created.
+2026-08-09 00:32:18,917 | INFO | All datasets created.
+2026-08-09 00:41:24,851 | INFO | DatasetLoader initialized.
+2026-08-09 00:41:24,851 | INFO | Checking dataset...
+2026-08-09 00:41:24,852 | INFO | Dataset validated.
+2026-08-09 00:41:24,852 | INFO | Report initialized.
+2026-08-09 00:41:24,852 | INFO | Creating training dataset...
+2026-08-09 00:41:24,967 | INFO | Training dataset created.
+2026-08-09 00:41:24,967 | INFO | Creating validation dataset...
+2026-08-09 00:41:25,014 | INFO | Validation dataset created.
+2026-08-09 00:41:25,014 | INFO | Creating test dataset...
+2026-08-09 00:41:25,044 | INFO | Test dataset created.
+2026-08-09 00:41:25,045 | INFO | All datasets created.
+2026-08-09 00:41:26,205 | INFO | Report updated.
+2026-08-09 00:41:26,207 | INFO | TensorFlow report exported.
+2026-08-09 00:41:26,207 | INFO | TensorFlow dataset ready.
+2026-08-09 00:44:59,435 | INFO | DatasetLoader initialized.
+2026-08-09 00:44:59,436 | INFO | Checking dataset...
+2026-08-09 00:44:59,436 | INFO | Dataset validated.
+2026-08-09 00:44:59,436 | INFO | Report initialized.
+2026-08-09 00:44:59,436 | INFO | Creating training dataset...
+2026-08-09 00:44:59,829 | INFO | Training dataset created.
+2026-08-09 00:44:59,829 | INFO | Creating validation dataset...
+2026-08-09 00:44:59,867 | INFO | Validation dataset created.
+2026-08-09 00:44:59,867 | INFO | Creating test dataset...
+2026-08-09 00:44:59,906 | INFO | Test dataset created.
+2026-08-09 00:44:59,906 | INFO | All datasets created.
+2026-08-09 00:45:01,334 | INFO | Report updated.
+2026-08-09 00:45:01,336 | INFO | TensorFlow report exported.
+2026-08-09 00:45:01,336 | INFO | TensorFlow dataset ready.
+2026-08-09 00:55:51,351 | INFO | DatasetLoader initialized.
+2026-08-09 00:55:51,351 | INFO | Checking dataset...
+2026-08-09 00:55:51,351 | INFO | Dataset validated.
+2026-08-09 00:55:51,351 | INFO | Report initialized.
+2026-08-09 00:55:51,351 | INFO | Creating training dataset...
+2026-08-09 00:55:51,474 | INFO | Training dataset created.
+2026-08-09 00:55:51,474 | INFO | Creating validation dataset...
+2026-08-09 00:55:51,513 | INFO | Validation dataset created.
+2026-08-09 00:55:51,513 | INFO | Creating test dataset...
+2026-08-09 00:55:51,543 | INFO | Test dataset created.
+2026-08-09 00:55:51,543 | INFO | All datasets created.
+2026-08-09 00:55:52,571 | INFO | Report updated.
+2026-08-09 00:55:52,572 | INFO | TensorFlow report exported.
+2026-08-09 00:55:52,572 | INFO | TensorFlow dataset ready.
+2026-08-09 01:01:12,912 | INFO | DatasetLoader initialized.
+2026-08-09 01:01:12,912 | INFO | Checking dataset...
+2026-08-09 01:01:12,912 | INFO | Dataset validated.
+2026-08-09 01:01:12,913 | INFO | Report initialized.
+2026-08-09 01:01:12,913 | INFO | Creating training dataset...
+2026-08-09 01:01:12,995 | INFO | Training dataset created.
+2026-08-09 01:01:12,995 | INFO | Creating validation dataset...
+2026-08-09 01:01:13,024 | INFO | Validation dataset created.
+2026-08-09 01:01:13,024 | INFO | Creating test dataset...
+2026-08-09 01:01:13,049 | INFO | Test dataset created.
+2026-08-09 01:01:13,049 | INFO | All datasets created.
+2026-08-09 01:01:13,922 | INFO | Report updated.
+2026-08-09 01:01:13,923 | INFO | TensorFlow report exported.
+2026-08-09 01:01:13,923 | INFO | TensorFlow dataset ready.
+2026-08-09 01:08:17,762 | INFO | DatasetLoader initialized.
+2026-08-09 01:08:17,762 | INFO | Checking dataset...
+2026-08-09 01:08:17,763 | INFO | Dataset validated.
+2026-08-09 01:08:17,763 | INFO | Report initialized.
+2026-08-09 01:08:17,763 | INFO | Creating training dataset...
+2026-08-09 01:08:17,886 | INFO | Training dataset created.
+2026-08-09 01:08:17,886 | INFO | Creating validation dataset...
+2026-08-09 01:08:17,914 | INFO | Validation dataset created.
+2026-08-09 01:08:17,914 | INFO | Creating test dataset...
+2026-08-09 01:08:17,937 | INFO | Test dataset created.
+2026-08-09 01:08:17,937 | INFO | All datasets created.
+2026-08-09 01:08:18,973 | INFO | Report updated.
+2026-08-09 01:08:18,974 | INFO | TensorFlow report exported.
+2026-08-09 01:08:18,974 | INFO | TensorFlow dataset ready.
+2026-08-09 01:56:32,030 | INFO | DatasetLoader initialized.
+2026-08-09 01:56:32,031 | INFO | Checking dataset...
+2026-08-09 01:56:32,031 | INFO | Dataset validated.
+2026-08-09 01:56:32,031 | INFO | Report initialized.
+2026-08-09 01:56:32,031 | INFO | Creating training dataset...
+2026-08-09 01:56:32,217 | INFO | Training dataset created.
+2026-08-09 01:56:32,217 | INFO | Creating validation dataset...
+2026-08-09 01:56:32,247 | INFO | Validation dataset created.
+2026-08-09 01:56:32,247 | INFO | Creating test dataset...
+2026-08-09 01:56:32,273 | INFO | Test dataset created.
+2026-08-09 01:56:32,273 | INFO | All datasets created.
+2026-08-09 01:56:33,272 | INFO | Report updated.
+2026-08-09 01:56:33,274 | INFO | TensorFlow report exported.
+2026-08-09 01:56:33,274 | INFO | TensorFlow dataset ready.
+2026-08-09 02:07:12,813 | INFO | DatasetLoader initialized.
+2026-08-09 02:07:12,813 | INFO | Checking dataset...
+2026-08-09 02:07:12,813 | INFO | Dataset validated.
+2026-08-09 02:07:12,813 | INFO | Report initialized.
+2026-08-09 02:07:12,813 | INFO | Creating training dataset...
+2026-08-09 02:07:12,898 | INFO | Training dataset created.
+2026-08-09 02:07:12,898 | INFO | Creating validation dataset...
+2026-08-09 02:07:12,927 | INFO | Validation dataset created.
+2026-08-09 02:07:12,927 | INFO | Creating test dataset...
+2026-08-09 02:07:12,956 | INFO | Test dataset created.
+2026-08-09 02:07:12,956 | INFO | All datasets created.
+2026-08-09 02:07:13,795 | INFO | Report updated.
+2026-08-09 02:07:13,796 | INFO | TensorFlow report exported.
+2026-08-09 02:07:13,796 | INFO | TensorFlow dataset ready.
+2026-08-09 02:12:38,070 | INFO | DatasetLoader initialized.
+2026-08-09 02:12:38,070 | INFO | Checking dataset...
+2026-08-09 02:12:38,071 | INFO | Dataset validated.
+2026-08-09 02:12:38,071 | INFO | Report initialized.
+2026-08-09 02:12:38,071 | INFO | Creating training dataset...
+2026-08-09 02:12:38,161 | INFO | Training dataset created.
+2026-08-09 02:12:38,161 | INFO | Creating validation dataset...
+2026-08-09 02:12:38,188 | INFO | Validation dataset created.
+2026-08-09 02:12:38,188 | INFO | Creating test dataset...
+2026-08-09 02:12:38,214 | INFO | Test dataset created.
+2026-08-09 02:12:38,215 | INFO | All datasets created.
+2026-08-09 02:12:39,203 | INFO | Report updated.
+2026-08-09 02:12:39,204 | INFO | TensorFlow report exported.
+2026-08-09 02:12:39,204 | INFO | TensorFlow dataset ready.
+2026-08-09 02:17:31,670 | INFO | DatasetLoader initialized.
+2026-08-09 02:17:31,671 | INFO | Checking dataset...
+2026-08-09 02:17:31,671 | INFO | Dataset validated.
+2026-08-09 02:17:31,671 | INFO | Report initialized.
+2026-08-09 02:17:31,671 | INFO | Creating training dataset...
+2026-08-09 02:17:31,786 | INFO | Training dataset created.
+2026-08-09 02:17:31,786 | INFO | Creating validation dataset...
+2026-08-09 02:17:31,820 | INFO | Validation dataset created.
+2026-08-09 02:17:31,820 | INFO | Creating test dataset...
+2026-08-09 02:17:31,850 | INFO | Test dataset created.
+2026-08-09 02:17:31,850 | INFO | All datasets created.
+2026-08-09 02:17:32,702 | INFO | Report updated.
+2026-08-09 02:17:32,703 | INFO | TensorFlow report exported.
+2026-08-09 02:17:32,703 | INFO | TensorFlow dataset ready.
+2026-08-09 02:24:29,673 | INFO | DatasetLoader initialized.
+2026-08-09 02:24:29,674 | INFO | Checking dataset...
+2026-08-09 02:24:29,674 | INFO | Dataset validated.
+2026-08-09 02:24:29,674 | INFO | Report initialized.
+2026-08-09 02:24:29,674 | INFO | Creating training dataset...
+2026-08-09 02:24:29,770 | INFO | Training dataset created.
+2026-08-09 02:24:29,770 | INFO | Creating validation dataset...
+2026-08-09 02:24:29,797 | INFO | Validation dataset created.
+2026-08-09 02:24:29,797 | INFO | Creating test dataset...
+2026-08-09 02:24:29,823 | INFO | Test dataset created.
+2026-08-09 02:24:29,823 | INFO | All datasets created.
+2026-08-09 02:24:30,681 | INFO | Report updated.
+2026-08-09 02:24:30,681 | INFO | TensorFlow report exported.
+2026-08-09 02:24:30,682 | INFO | TensorFlow dataset ready.

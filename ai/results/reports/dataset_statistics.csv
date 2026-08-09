@@ -1,0 +1,6 @@
+Class,Images
+train/good,209
+test/broken_large,20
+test/broken_small,22
+test/contamination,21
+test/good,20

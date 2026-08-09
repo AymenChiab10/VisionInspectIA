@@ -1,0 +1,39 @@
+2026-08-06 10:49:11,672 | INFO | DatasetPreparer initialized.
+2026-08-06 10:49:11,672 | INFO | Checking dataset...
+2026-08-06 10:49:11,673 | INFO | Dataset validated.
+2026-08-06 10:49:11,673 | INFO | Report initialized.
+2026-08-06 10:49:11,673 | INFO | Creating folders...
+2026-08-06 10:49:11,679 | INFO | Folders created.
+2026-08-06 10:49:11,679 | INFO | Collecting images...
+2026-08-06 10:49:11,693 | INFO | Image collection completed.
+2026-08-06 10:49:11,694 | INFO | Copying dataset...
+2026-08-06 10:49:12,938 | INFO | Dataset copied.
+2026-08-06 10:49:12,951 | INFO | Verification completed.
+2026-08-06 10:49:12,956 | INFO | Preparation report saved.
+2026-08-06 10:49:12,957 | INFO | Dataset preparation completed successfully.
+2026-08-09 01:50:40,376 | INFO | DatasetPreparer initialized.
+2026-08-09 01:50:40,376 | INFO | Checking dataset...
+2026-08-09 01:50:40,377 | INFO | Dataset validated.
+2026-08-09 01:50:40,377 | INFO | Report initialized.
+2026-08-09 01:50:40,377 | INFO | Creating folders...
+2026-08-09 01:50:40,378 | INFO | Folders created.
+2026-08-09 01:50:40,378 | INFO | Collecting images...
+2026-08-09 01:50:40,384 | INFO | Image collection completed.
+2026-08-09 01:50:40,384 | INFO | Copying dataset...
+2026-08-09 01:50:41,392 | INFO | Dataset copied.
+2026-08-09 01:50:41,402 | INFO | Verification completed.
+2026-08-09 01:50:41,402 | INFO | Preparation report saved.
+2026-08-09 01:50:41,403 | INFO | Dataset preparation completed successfully.
+2026-08-09 01:54:00,041 | INFO | DatasetPreparer initialized.
+2026-08-09 01:54:00,041 | INFO | Checking dataset...
+2026-08-09 01:54:00,041 | INFO | Dataset validated.
+2026-08-09 01:54:00,041 | INFO | Report initialized.
+2026-08-09 01:54:00,041 | INFO | Creating folders...
+2026-08-09 01:54:00,049 | INFO | Folders created.
+2026-08-09 01:54:00,049 | INFO | Collecting images...
+2026-08-09 01:54:00,055 | INFO | Image collection completed.
+2026-08-09 01:54:00,055 | INFO | Copying dataset...
+2026-08-09 01:54:00,690 | INFO | Dataset copied.
+2026-08-09 01:54:00,697 | INFO | Verification completed.
+2026-08-09 01:54:00,697 | INFO | Preparation report saved.
+2026-08-09 01:54:00,697 | INFO | Dataset preparation completed successfully.

@@ -1,0 +1,275 @@
+{
+    "benchmark_date": "2026-08-08 02:12:32.930171",
+    "dataset": "raw MVTec Bottle",
+    "models": [
+        {
+            "model_name": "improved_cnn",
+            "architecture": "improved_cnn",
+            "total_parameters": 1878756,
+            "model_size_mb": 21.676255226135254,
+            "training_time": "0:12:53.006572",
+            "inference_time_ms": 7.835945312535841,
+            "accuracy": 0.3199999928474426,
+            "precision_macro": 0.0625,
+            "recall_macro": 0.25,
+            "f1_score_macro": 0.1,
+            "best_epoch": 19,
+            "best_val_accuracy": 0.25,
+            "best_val_loss": 1.5148184299468994,
+            "model_path": "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\saved_models\\improved_cnn\\best_model.keras",
+            "results_path": "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\results\\improved_cnn",
+            "reproducibility": {
+                "tensorflow_version": "2.21.0",
+                "python_version": "3.13.5",
+                "random_seed": 42,
+                "dataset_seed": 42,
+                "augmentation_seed": 42,
+                "epochs": 30,
+                "batch_size": 32,
+                "learning_rate": 0.001,
+                "optimizer": "AdamW",
+                "loss": "method",
+                "dropout": 0.3,
+                "weight_decay": 0.0001,
+                "image_size": [
+                    224,
+                    224
+                ],
+                "num_classes": 4,
+                "classes": [
+                    "broken_large",
+                    "broken_small",
+                    "contamination",
+                    "good"
+                ]
+            },
+            "configuration": {
+                "epochs": 30,
+                "batch_size": 32,
+                "learning_rate": 0.001,
+                "optimizer": "AdamW",
+                "loss": "method",
+                "dropout": 0.3,
+                "weight_decay": 0.0001,
+                "image_size": [
+                    224,
+                    224
+                ],
+                "num_classes": 4
+            },
+            "dataset": {
+                "train_images": 800,
+                "validation_images": 160,
+                "test_images": 160,
+                "classes": [
+                    "broken_large",
+                    "broken_small",
+                    "contamination",
+                    "good"
+                ]
+            }
+        },
+        {
+            "model_name": "mobilenet_v2",
+            "architecture": "mobilenet_v2",
+            "total_parameters": 2263108,
+            "model_size_mb": 9.24138355255127,
+            "training_time": "0:04:39.149095",
+            "inference_time_ms": 10.996248437550094,
+            "accuracy": 0.8687499761581421,
+            "precision_macro": 0.6666666666666666,
+            "recall_macro": 0.625,
+            "f1_score_macro": 0.5714285714285714,
+            "best_epoch": 20,
+            "best_val_accuracy": 0.918749988079071,
+            "best_val_loss": 0.5699612498283386,
+            "model_path": "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\saved_models\\mobilenet_v2\\best_model.keras",
+            "results_path": "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\results\\mobilenet_v2",
+            "reproducibility": {
+                "tensorflow_version": "2.21.0",
+                "python_version": "3.13.5",
+                "random_seed": 42,
+                "dataset_seed": 42,
+                "augmentation_seed": 42,
+                "epochs": 30,
+                "batch_size": 32,
+                "learning_rate": 0.001,
+                "optimizer": "Adam",
+                "loss": "method",
+                "dropout": 0.3,
+                "weight_decay": 0.0001,
+                "image_size": [
+                    224,
+                    224
+                ],
+                "num_classes": 4,
+                "classes": [
+                    "broken_large",
+                    "broken_small",
+                    "contamination",
+                    "good"
+                ]
+            },
+            "configuration": {
+                "epochs": 30,
+                "batch_size": 32,
+                "learning_rate": 0.001,
+                "optimizer": "Adam",
+                "loss": "method",
+                "dropout": 0.3,
+                "weight_decay": 0.0001,
+                "image_size": [
+                    224,
+                    224
+                ],
+                "num_classes": 4
+            },
+            "dataset": {
+                "train_images": 800,
+                "validation_images": 160,
+                "test_images": 160,
+                "classes": [
+                    "broken_large",
+                    "broken_small",
+                    "contamination",
+                    "good"
+                ]
+            }
+        },
+        {
+            "model_name": "resnet50",
+            "architecture": "resnet50",
+            "total_parameters": 23595908,
+            "model_size_mb": 90.71008396148682,
+            "training_time": "0:11:21.101434",
+            "inference_time_ms": 23.804047656312832,
+            "accuracy": 0.7587500214576721,
+            "precision_macro": 0.6435185185185185,
+            "recall_macro": 0.5875,
+            "f1_score_macro": 0.5466405375139978,
+            "best_epoch": 5,
+            "best_val_accuracy": 0.637499988079071,
+            "best_val_loss": 0.9225611686706543,
+            "model_path": "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\saved_models\\resnet50\\best_model.keras",
+            "results_path": "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\results\\resnet50",
+            "reproducibility": {
+                "tensorflow_version": "2.21.0",
+                "python_version": "3.13.5",
+                "random_seed": 42,
+                "dataset_seed": 42,
+                "augmentation_seed": 42,
+                "epochs": 30,
+                "batch_size": 32,
+                "learning_rate": 0.001,
+                "optimizer": "Adam",
+                "loss": "method",
+                "dropout": 0.3,
+                "weight_decay": 0.0001,
+                "image_size": [
+                    224,
+                    224
+                ],
+                "num_classes": 4,
+                "classes": [
+                    "broken_large",
+                    "broken_small",
+                    "contamination",
+                    "good"
+                ]
+            },
+            "configuration": {
+                "epochs": 30,
+                "batch_size": 32,
+                "learning_rate": 0.001,
+                "optimizer": "Adam",
+                "loss": "method",
+                "dropout": 0.3,
+                "weight_decay": 0.0001,
+                "image_size": [
+                    224,
+                    224
+                ],
+                "num_classes": 4
+            },
+            "dataset": {
+                "train_images": 800,
+                "validation_images": 160,
+                "test_images": 160,
+                "classes": [
+                    "broken_large",
+                    "broken_small",
+                    "contamination",
+                    "good"
+                ]
+            }
+        },
+        {
+            "model_name": "efficientnet_b0",
+            "architecture": "efficientnet_b0",
+            "total_parameters": 4054695,
+            "model_size_mb": 16.319815635681152,
+            "training_time": "0:04:02.433942",
+            "inference_time_ms": 26.096270312791603,
+            "accuracy": 0.8050000071525574,
+            "precision_macro": 0.5909090909090909,
+            "recall_macro": 0.5625,
+            "f1_score_macro": 0.4833333333333333,
+            "best_epoch": 4,
+            "best_val_accuracy": 0.5,
+            "best_val_loss": 1.2914869785308838,
+            "model_path": "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\saved_models\\efficientnet_b0\\best_model.keras",
+            "results_path": "C:\\Users\\Lenovo\\Desktop\\VisionInspectIA\\ai\\results\\efficientnet_b0",
+            "reproducibility": {
+                "tensorflow_version": "2.21.0",
+                "python_version": "3.13.5",
+                "random_seed": 42,
+                "dataset_seed": 42,
+                "augmentation_seed": 42,
+                "epochs": 30,
+                "batch_size": 32,
+                "learning_rate": 0.001,
+                "optimizer": "Adam",
+                "loss": "method",
+                "dropout": 0.3,
+                "weight_decay": 0.0001,
+                "image_size": [
+                    224,
+                    224
+                ],
+                "num_classes": 4,
+                "classes": [
+                    "broken_large",
+                    "broken_small",
+                    "contamination",
+                    "good"
+                ]
+            },
+            "configuration": {
+                "epochs": 30,
+                "batch_size": 32,
+                "learning_rate": 0.001,
+                "optimizer": "Adam",
+                "loss": "method",
+                "dropout": 0.3,
+                "weight_decay": 0.0001,
+                "image_size": [
+                    224,
+                    224
+                ],
+                "num_classes": 4
+            },
+            "dataset": {
+                "train_images": 800,
+                "validation_images": 160,
+                "test_images": 160,
+                "classes": [
+                    "broken_large",
+                    "broken_small",
+                    "contamination",
+                    "good"
+                ]
+            }
+        }
+    ],
+    "last_updated": "2026-08-08 16:42:29.374063"
+}

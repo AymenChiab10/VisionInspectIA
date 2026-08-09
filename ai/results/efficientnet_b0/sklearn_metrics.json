@@ -1,0 +1,5 @@
+{
+    "precision_macro": 0.8256655466528818,
+    "recall_macro": 0.7125,
+    "f1_score_macro_sklearn": 0.6883412101796345
+}

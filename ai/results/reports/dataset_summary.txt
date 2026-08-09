@@ -1,0 +1,19 @@
+============================================================
+VisionInspectAI Dataset Report
+============================================================
+
+Dataset : C:\Users\Lenovo\Desktop\VisionInspectIA\data\raw\mvtec_anomaly_detection\bottle
+
+Total Images : 292
+
+Classes
+----------------------------------------
+train/good                    209
+test/broken_large             20
+test/broken_small             22
+test/contamination            21
+test/good                     20
+
+Corrupted Images : 0
+Duplicate Images : 0
+Generated : 2026-08-06 10:27:06.116767

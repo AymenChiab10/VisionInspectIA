@@ -1,0 +1,39 @@
+{
+    "broken_large": {
+        "precision": 0.7407407407407407,
+        "recall": 1.0,
+        "f1-score": 0.851063829787234,
+        "support": 40.0
+    },
+    "broken_small": {
+        "precision": 0.7692307692307693,
+        "recall": 0.5,
+        "f1-score": 0.6060606060606061,
+        "support": 40.0
+    },
+    "contamination": {
+        "precision": 1.0,
+        "recall": 0.525,
+        "f1-score": 0.6885245901639344,
+        "support": 40.0
+    },
+    "good": {
+        "precision": 0.6779661016949152,
+        "recall": 1.0,
+        "f1-score": 0.8080808080808081,
+        "support": 40.0
+    },
+    "accuracy": 0.75625,
+    "macro avg": {
+        "precision": 0.7969844029166063,
+        "recall": 0.75625,
+        "f1-score": 0.7384324585231457,
+        "support": 160.0
+    },
+    "weighted avg": {
+        "precision": 0.7969844029166062,
+        "recall": 0.75625,
+        "f1-score": 0.7384324585231458,
+        "support": 160.0
+    }
+}
