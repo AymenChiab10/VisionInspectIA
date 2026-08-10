@@ -72,3 +72,17 @@ Image → validation → sauvegarde disque → preprocessing (224x224)
 ## Modèle retenu
 
 **MobileNetV2**, dans les conditions expérimentales du projet, comme meilleur compromis entre performances (75,63 % accuracy, F1 macro 0,742 sur le jeu de test), taille du modèle (9,24 MB) et temps d'inférence (~9 ms). Détail du benchmark comparatif dans la documentation complète, §3.
+
+Le backend embarque sa propre copie du modèle (`backend/app/ml/model_files/best_model.keras`, poids identiques à `ai/saved_models/mobilenet_v2/best_model.keras`) et de la couche de preprocessing personnalisée, pour être déployable indépendamment du dossier `ai/`.
+
+## Déploiement
+
+```mermaid
+flowchart TD
+    U[Internet] --> F[React frontend<br/>Railway - Dockerfile]
+    F -- HTTPS / REST / JWT --> B[FastAPI backend<br/>Railway - Dockerfile]
+    B --> M[(MySQL<br/>Railway plugin, reseau prive)]
+    B --> N[MobileNetV2<br/>charge en memoire]
+```
+
+Backend et frontend sont deux services Railway distincts issus du même dépôt GitHub, chacun avec son `Dockerfile` propre et son `Root Directory` (`backend/` / `frontend/`). Détail complet (URLs, variables d'environnement, dépannage) dans le [README](../README.md#deployment).

@@ -223,3 +223,37 @@ Tests exécutés en conditions réelles (backend + MySQL + frontend build), lors
 - **Classe `contamination`** également plus difficile (rappel ~53 %), le modèle ayant tendance à la confondre avec `good` en cas d'ambiguïté visuelle — le risque le plus critique en contrôle qualité (un défaut réel classé "bon").
 - **Pas de fine-tuning** : le backbone MobileNetV2 est resté entièrement gelé (feature extraction uniquement) ; un fine-tuning des dernières couches pourrait améliorer la détection des défauts les plus subtils, au prix d'un temps d'entraînement plus long.
 - **Base de test peu diversifiée** : plusieurs classes de test ne reposent que sur 3 à 6 images sources uniques (dupliquées pour atteindre 40 images/classe), ce qui limite la significativité statistique des métriques par classe.
+- **Stockage des images uploadées non persistant en production** : sur Railway, le système de fichiers du conteneur backend est éphémère — une image uploadée reste accessible pendant la durée de vie du déploiement, mais est perdue au prochain redéploiement (build, changement de variable d'environnement, etc.). La ligne correspondante reste en base (historique, statistiques), seule l'image et la génération du PDF avec image sont affectées. Non bloquant pour une démonstration de stage ; nécessiterait un volume persistant ou un stockage objet (S3-compatible) pour une utilisation prolongée.
+
+## Deployment
+
+Déploiement réel sur [Railway](https://railway.app), retenu car seule plateforme testée (Render, Railway, Hugging Face Spaces) à proposer une base MySQL managée nativement, permettant d'héberger backend, frontend et base de données sur une seule plateforme.
+
+### Frontend
+URL : https://frontend-production-bcff.up.railway.app
+
+### Backend
+URL : https://visioninspectia-production.up.railway.app
+
+### API Documentation
+Swagger : https://visioninspectia-production.up.railway.app/docs
+ReDoc : https://visioninspectia-production.up.railway.app/redoc
+
+### Database
+MySQL managé par Railway (plugin officiel), accessible uniquement depuis le réseau privé du projet (non exposée publiquement). Tables créées automatiquement au démarrage du backend (`init_db()`, appelé depuis `app/main.py`).
+
+### Environment variables
+Définies dans le service Railway (jamais commitées) : `DATABASE_HOST/PORT/USER/PASSWORD/NAME` (référencées depuis le plugin MySQL), `SECRET_KEY`, `ALGORITHM`, `ACCESS_TOKEN_EXPIRE_MINUTES`, `DEBUG=False`, `CORS_ORIGINS` (URL du frontend), et `VITE_API_URL` côté frontend (passée comme build arg Docker, l'URL de l'API étant figée au moment du build par Vite). Voir `backend/.env.example` pour la liste complète avec description.
+
+### Local development
+Voir les sections [Installation](#installation) et [Lancement](#lancement) ci-dessus — inchangées, le développement local n'utilise ni Railway ni Docker.
+
+### Production deployment
+Backend et frontend sont chacun déployés comme un service Railway séparé à partir du même dépôt GitHub (`Root Directory` = `backend/` ou `frontend/` selon le service), chacun avec son propre `Dockerfile` (`backend/Dockerfile`, `frontend/Dockerfile`). Le backend embarque sa propre copie du modèle MobileNetV2 (`backend/app/ml/model_files/`), rendant son déploiement indépendant du dossier `ai/`. Le frontend est buildé (`npm run build`) puis servi en statique (`serve -s dist`).
+
+### Troubleshooting
+- **"Table doesn't exist" au premier déploiement** : vérifier que `init_db()` est bien appelé au démarrage (`app/main.py`, fonction `lifespan`) et que les variables `DATABASE_*` pointent vers la bonne base.
+- **Erreur CORS dans la console navigateur** : vérifier que `CORS_ORIGINS` sur le backend contient exactement l'URL du frontend déployé (sans `/` final), et redéployer le backend après modification.
+- **Frontend appelle `localhost:8000` en production** : `VITE_API_URL` n'était pas définie au moment du `npm run build` — Vite fige cette valeur dans le bundle, la redéfinir après coup ne suffit pas, il faut redéclencher un build.
+- **Image d'une inspection introuvable (404 sur `/uploads/...`)** : comportement attendu après un redéploiement du backend, voir la limitation « stockage non persistant » ci-dessus.
+- **Build backend très long / échoue par manque de mémoire** : `tensorflow` est une dépendance lourde ; s'assurer que le plan Railway utilisé dispose de suffisamment de RAM pour l'installation et le chargement du modèle.
