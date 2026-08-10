@@ -27,9 +27,24 @@ class Settings(BaseSettings):
     # Mode debug (reload, messages d'erreur detailles, etc.)
     DEBUG: bool = True
 
-    # Hote et port utilises pour lancer le serveur (python -m app.main)
-    BACKEND_HOST: str = "127.0.0.1"
+    # Hote et port utilises pour lancer le serveur (python -m app.main).
+    # 0.0.0.0 par defaut : necessaire pour etre joignable depuis l'exterieur
+    # du conteneur sur une plateforme cloud (Render/Railway), et fonctionne
+    # aussi bien en local. PORT est lu si la plateforme le fournit (variable
+    # standard sur Render/Railway) ; sinon BACKEND_PORT (defaut 8000) est
+    # utilise, pour ne pas casser le lancement local existant.
+    BACKEND_HOST: str = "0.0.0.0"
     BACKEND_PORT: int = 8000
+    PORT: int | None = None
+
+    # Chemin absolu vers le fichier .keras du modele, si l'on souhaite
+    # surcharger l'emplacement par defaut (backend/app/ml/model_files/).
+    MODEL_PATH: str | None = None
+
+    # Origines autorisees pour le CORS, separees par des virgules
+    # (ex: "https://mon-frontend.vercel.app,http://localhost:5173").
+    # Defaut : uniquement le frontend Vite local.
+    CORS_ORIGINS: str = "http://localhost:5173"
 
     # Connexion MySQL (valeurs lues depuis .env, jamais codees en dur)
     DATABASE_HOST: str = "localhost"
@@ -44,6 +59,16 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+
+    @property
+    def RUNTIME_PORT(self) -> int:
+        """Port effectif d'ecoute : PORT (fourni par la plateforme cloud) si present, sinon BACKEND_PORT."""
+        return self.PORT or self.BACKEND_PORT
+
+    @property
+    def CORS_ORIGINS_LIST(self) -> list[str]:
+        """Liste des origines CORS autorisees, obtenue en decoupant CORS_ORIGINS sur les virgules."""
+        return [origin.strip() for origin in self.CORS_ORIGINS.split(",") if origin.strip()]
 
     @property
     def DATABASE_URL(self) -> str:

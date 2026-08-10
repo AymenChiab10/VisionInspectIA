@@ -5,29 +5,28 @@ Le modele est charge une seule fois (singleton), au demarrage de
 l'application (voir app/main.py), et n'est jamais recharge par la suite.
 """
 
-import sys
 from pathlib import Path
 
 import numpy as np
 import tensorflow as tf
 
-# backend/app/ml/model_loader.py -> remonte jusqu'a la racine du projet.
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
-
-# Rend le package "ai" (racine du projet, a cote de "backend") importable,
-# quel que soit le repertoire courant depuis lequel le backend est lance.
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.append(str(PROJECT_ROOT))
-
 # Necessaire pour que Keras puisse reconstruire la couche de preprocessing
-# personnalisee integree au modele sauvegarde (x / 127.5 - 1.0), voir
-# ai/models/preprocessing_layers.py. Le backend ne depend ainsi que de la
-# definition de cette couche, pas du reste du pipeline d'entrainement.
-from ai.models.preprocessing_layers import MobileNetPreprocess  # noqa: F401,E402
+# personnalisee integree au modele sauvegarde (x / 127.5 - 1.0). Copie exacte
+# de ai/models/preprocessing_layers.py, dupliquee dans le backend pour que
+# celui-ci soit deployable de maniere autonome (voir preprocessing_layers.py
+# pour le detail de cette duplication).
+from app.ml.preprocessing_layers import MobileNetPreprocess  # noqa: F401
 
-from app.ml.labels import CLASS_NAMES  # noqa: E402
+from app.core.config import settings
+from app.ml.labels import CLASS_NAMES
 
-MODEL_PATH = PROJECT_ROOT / "ai" / "saved_models" / "mobilenet_v2" / "best_model.keras"
+# Chemin par defaut : copie du modele final embarquee dans le backend
+# (backend/app/ml/model_files/best_model.keras, poids identiques a
+# ai/saved_models/mobilenet_v2/best_model.keras). Surchargeable via la
+# variable d'environnement MODEL_PATH (ex: sur une plateforme cloud avec un
+# volume monte ailleurs).
+DEFAULT_MODEL_PATH = Path(__file__).resolve().parent / "model_files" / "best_model.keras"
+MODEL_PATH = Path(settings.MODEL_PATH) if settings.MODEL_PATH else DEFAULT_MODEL_PATH
 
 
 class ModelLoader:

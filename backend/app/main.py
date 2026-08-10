@@ -25,13 +25,11 @@ UPLOADS_DIR = Path(__file__).resolve().parent.parent / "uploads"
 # dans models/user.py), quel que soit l'ordre d'import des routes ensuite.
 from app.db import base  # noqa: F401
 
-# Origines autorisees pour le CORS.
-# A ce stade, seul le frontend React (Vite, port par defaut 5173) est autorise.
-# Liste volontairement isolee ici pour rester facile a completer plus tard
-# (environnement de staging, production, etc.).
-ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-]
+# Origines autorisees pour le CORS, lues depuis la variable d'environnement
+# CORS_ORIGINS (voir app/core/config.py). Par defaut, seul le frontend Vite
+# local (port 5173) est autorise ; en production, CORS_ORIGINS doit contenir
+# l'URL publique du frontend deploye.
+ALLOWED_ORIGINS = settings.CORS_ORIGINS_LIST
 
 
 @asynccontextmanager
@@ -84,6 +82,6 @@ if __name__ == "__main__":
     uvicorn.run(
         "app.main:app",
         host=settings.BACKEND_HOST,
-        port=settings.BACKEND_PORT,
+        port=settings.RUNTIME_PORT,
         reload=settings.DEBUG,
     )
