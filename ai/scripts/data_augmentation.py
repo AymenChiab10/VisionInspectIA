@@ -289,6 +289,15 @@ class ImageAugmenter:
     def build_pipeline(self):
         """
         Build TensorFlow augmentation pipeline.
+
+        Experimentation "Priorite 1" (amelioration de la generalisation) :
+        ajout de RandomBrightness, seule nouvelle variable introduite par
+        rapport a la baseline. Cible directement l'absence de diversite
+        photometrique du dataset MVTec (une seule seance de prise de vue,
+        un seul eclairage) - la variation la plus frequente entre une
+        photo de studio et une photo "reelle". Toutes les autres couches
+        sont inchangees par rapport a la baseline pour isoler cette seule
+        variable.
         """
 
         return tf.keras.Sequential(
@@ -313,6 +322,11 @@ class ImageAugmenter:
                 ),
                 tf.keras.layers.RandomContrast(
                     factor=0.10,
+                    seed=settings.AUGMENTATION_SEED
+                ),
+                tf.keras.layers.RandomBrightness(
+                    factor=0.15,
+                    value_range=(0, 255),
                     seed=settings.AUGMENTATION_SEED
                 )
             ],
@@ -460,11 +474,19 @@ class ImageAugmenter:
     def balance_validation(self):
         """
         Balance validation dataset.
+
+        pad=False : contrairement au test, la validation n'est jamais
+        completee par des copies dupliquees. Un signal de validation
+        base sur des doublons est bruite et fausse les decisions
+        d'early stopping / selection du meilleur checkpoint pendant
+        l'entrainement. On garde donc uniquement les images reelles
+        uniques disponibles, quitte a avoir moins que la cible.
         """
 
         self.balance_split(
             split_name="validation",
-            target=self.validation_target
+            target=self.validation_target,
+            pad=False
         )
 
     # =====================================================
@@ -474,10 +496,16 @@ class ImageAugmenter:
     def balance_split(
         self,
         split_name: str,
-        target: int
+        target: int,
+        pad: bool = True
     ):
         """
-        Balance a dataset split by duplicating images.
+        Balance a dataset split.
+
+        pad=True  : complete jusqu'a target par des copies dupliquees
+                    (comportement historique, utilise pour le test).
+        pad=False : ne copie que les images reelles disponibles, sans
+                    jamais dupliquer (utilise pour la validation).
         """
 
         self.logger.info(
@@ -496,7 +524,8 @@ class ImageAugmenter:
             self.balance_class(
                 split_name,
                 class_name,
-                target
+                target,
+                pad=pad
             )
 
     # =====================================================
@@ -507,10 +536,13 @@ class ImageAugmenter:
         self,
         split_name: str,
         class_name: str,
-        target: int
+        target: int,
+        pad: bool = True
     ):
         """
-        Duplicate images until the target is reached.
+        Copie les images reelles disponibles. Si pad=True, duplique
+        jusqu'a atteindre target ; si pad=False, ne duplique jamais
+        (le split peut alors contenir moins d'images que target).
         """
 
         input_folder = (
@@ -535,7 +567,7 @@ class ImageAugmenter:
             f"{split_name} - "
             f"{class_name} : "
             f"{current} -> "
-            f"{target}"
+            f"{target if pad else current}"
         )
 
         if current > target:
@@ -550,6 +582,13 @@ class ImageAugmenter:
                 images[idx],
                 output_folder / images[idx].name
             )
+
+        if not pad:
+            self.logger.info(
+                f"Balanced {split_name}/{class_name}: "
+                f"{current} images reelles, aucune copie dupliquee."
+            )
+            return
 
         needed = max(0, target - current)
 

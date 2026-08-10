@@ -1,15 +1,15 @@
 {
-    "date": "2026-08-09 02:16:45.572254",
+    "date": "2026-08-09 17:18:23.008474",
     "model_name": "mobilenet_v2",
-    "training_time": "0:03:56.002375",
-    "evaluation_time": "0:00:01.311581",
-    "inference_time_ms": 9.04753750000964,
+    "training_time": "0:03:56.937792",
+    "evaluation_time": "0:00:01.331747",
+    "inference_time_ms": 9.16494296870951,
     "model_size_mb": 9.241382598876953,
-    "final_loss": 0.08232385665178299,
-    "final_accuracy": 0.9912499785423279,
-    "best_epoch": 19,
-    "best_validation_loss": 0.2913765013217926,
-    "best_validation_accuracy": 0.949999988079071,
+    "final_loss": 0.07352666556835175,
+    "final_accuracy": 0.9937499761581421,
+    "best_epoch": 29,
+    "best_validation_loss": 0.1328330934047699,
+    "best_validation_accuracy": 0.9818181991577148,
     "total_parameters": 2263108,
     "configuration": {
         "epochs": 30,
@@ -27,7 +27,7 @@
     },
     "dataset": {
         "train_images": 800,
-        "validation_images": 160,
+        "validation_images": 64,
         "test_images": 160,
         "classes": [
             "broken_large",
@@ -37,12 +37,12 @@
         ]
     },
     "test_metrics": {
-        "loss": 0.791645884513855,
+        "loss": 0.8134633302688599,
         "compile_metrics": 0.7562500238418579
     },
     "sklearn_metrics": {
-        "precision_macro": 0.7969844029166063,
+        "precision_macro": 0.839031339031339,
         "recall_macro": 0.75625,
-        "f1_score_macro_sklearn": 0.7384324585231457
+        "f1_score_macro_sklearn": 0.7420399621306493
     }
 }

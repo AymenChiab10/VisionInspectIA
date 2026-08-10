@@ -1189,3 +1189,31 @@ AttributeError: 'DatasetLoader' object has no attribute 'dataset_path'. Did you 
 2026-08-09 02:24:30,681 | INFO | Report updated.
 2026-08-09 02:24:30,681 | INFO | TensorFlow report exported.
 2026-08-09 02:24:30,682 | INFO | TensorFlow dataset ready.
+2026-08-09 17:02:08,229 | INFO | DatasetLoader initialized.
+2026-08-09 17:02:08,230 | INFO | Checking dataset...
+2026-08-09 17:02:08,230 | INFO | Dataset validated.
+2026-08-09 17:02:08,230 | INFO | Report initialized.
+2026-08-09 17:02:08,230 | INFO | Creating training dataset...
+2026-08-09 17:02:08,340 | INFO | Training dataset created.
+2026-08-09 17:02:08,340 | INFO | Creating validation dataset...
+2026-08-09 17:02:08,365 | INFO | Validation dataset created.
+2026-08-09 17:02:08,365 | INFO | Creating test dataset...
+2026-08-09 17:02:08,390 | INFO | Test dataset created.
+2026-08-09 17:02:08,390 | INFO | All datasets created.
+2026-08-09 17:02:09,538 | INFO | Report updated.
+2026-08-09 17:02:09,540 | INFO | TensorFlow report exported.
+2026-08-09 17:02:09,540 | INFO | TensorFlow dataset ready.
+2026-08-09 17:14:14,620 | INFO | DatasetLoader initialized.
+2026-08-09 17:14:14,620 | INFO | Checking dataset...
+2026-08-09 17:14:14,620 | INFO | Dataset validated.
+2026-08-09 17:14:14,620 | INFO | Report initialized.
+2026-08-09 17:14:14,620 | INFO | Creating training dataset...
+2026-08-09 17:14:14,716 | INFO | Training dataset created.
+2026-08-09 17:14:14,716 | INFO | Creating validation dataset...
+2026-08-09 17:14:14,740 | INFO | Validation dataset created.
+2026-08-09 17:14:14,740 | INFO | Creating test dataset...
+2026-08-09 17:14:14,765 | INFO | Test dataset created.
+2026-08-09 17:14:14,765 | INFO | All datasets created.
+2026-08-09 17:14:15,710 | INFO | Report updated.
+2026-08-09 17:14:15,711 | INFO | TensorFlow report exported.
+2026-08-09 17:14:15,711 | INFO | TensorFlow dataset ready.

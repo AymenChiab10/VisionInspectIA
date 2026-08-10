@@ -641,3 +641,41 @@
 2026-08-09 02:35:11,250 | INFO | Training report generated.
 2026-08-09 02:35:11,252 | INFO | Benchmark results updated for resnet50
 2026-08-09 02:35:11,252 | INFO | Training pipeline completed.
+2026-08-09 17:02:11,401 | INFO | Trainer initialized.
+2026-08-09 17:02:11,402 | INFO | Trainer validated.
+2026-08-09 17:02:11,431 | INFO | Starting training...
+2026-08-09 17:02:11,448 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-09 17:06:11,179 | INFO | Training completed in 0:03:59.745306.
+2026-08-09 17:06:11,184 | INFO | Training history saved.
+2026-08-09 17:06:11,600 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\mobilenet_v2\best_model.keras
+2026-08-09 17:06:11,600 | INFO | Evaluating model...
+2026-08-09 17:06:14,049 | INFO | Model evaluation completed.
+2026-08-09 17:06:14,051 | INFO | Metrics exported.
+2026-08-09 17:06:17,482 | INFO | Confusion matrix computed and saved.
+2026-08-09 17:06:19,108 | INFO | Classification report saved.
+2026-08-09 17:06:20,689 | INFO | Sklearn metrics computed and saved.
+2026-08-09 17:06:21,921 | INFO | Inference time: 9.56 ms/image (128 samples)
+2026-08-09 17:06:21,921 | INFO | Model size: 9.24 MB
+2026-08-09 17:06:23,050 | INFO | Training curves saved.
+2026-08-09 17:06:23,053 | INFO | Training report generated.
+2026-08-09 17:06:23,056 | INFO | Benchmark results updated for mobilenet_v2
+2026-08-09 17:06:23,056 | INFO | Training pipeline completed.
+2026-08-09 17:14:17,039 | INFO | Trainer initialized.
+2026-08-09 17:14:17,040 | INFO | Trainer validated.
+2026-08-09 17:14:17,070 | INFO | Starting training...
+2026-08-09 17:14:17,085 | INFO | Class weights: {0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0}
+2026-08-09 17:18:14,008 | INFO | Training completed in 0:03:56.937792.
+2026-08-09 17:18:14,015 | INFO | Training history saved.
+2026-08-09 17:18:14,294 | INFO | Model saved successfully: C:\Users\Lenovo\Desktop\VisionInspectIA\ai\saved_models\mobilenet_v2\best_model.keras
+2026-08-09 17:18:14,294 | INFO | Evaluating model...
+2026-08-09 17:18:15,626 | INFO | Model evaluation completed.
+2026-08-09 17:18:15,629 | INFO | Metrics exported.
+2026-08-09 17:18:18,037 | INFO | Confusion matrix computed and saved.
+2026-08-09 17:18:19,530 | INFO | Classification report saved.
+2026-08-09 17:18:20,959 | INFO | Sklearn metrics computed and saved.
+2026-08-09 17:18:22,142 | INFO | Inference time: 9.16 ms/image (128 samples)
+2026-08-09 17:18:22,142 | INFO | Model size: 9.24 MB
+2026-08-09 17:18:23,007 | INFO | Training curves saved.
+2026-08-09 17:18:23,011 | INFO | Training report generated.
+2026-08-09 17:18:23,013 | INFO | Benchmark results updated for mobilenet_v2
+2026-08-09 17:18:23,014 | INFO | Training pipeline completed.

@@ -247,9 +247,9 @@ class Settings:
     # MODEL
     # ==========================================================
 
-    MODEL_TYPE = "resnet"
+    MODEL_TYPE = "mobilenet"
 
-    MODEL_NAME = "resnet50"
+    MODEL_NAME = "mobilenet_v2"
 
     DROPOUT_RATE = 0.30
 

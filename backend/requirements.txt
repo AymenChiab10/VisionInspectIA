@@ -1,13 +1,16 @@
 fastapi
 uvicorn[standard]
+pydantic-settings
 sqlalchemy
 pymysql
 alembic
-pydantic-settings
 python-jose[cryptography]
 passlib[bcrypt]
 python-multipart
 tensorflow
-pillow
 reportlab
-pytest
+
+# passlib 1.7.4 (non maintenu) est incompatible avec bcrypt>=4.1
+# (suppression de l'attribut bcrypt.__about__). Version epinglee pour
+# que le hachage des mots de passe fonctionne de maniere reproductible.
+bcrypt==4.0.1
