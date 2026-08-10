@@ -14,6 +14,7 @@ from fastapi.staticfiles import StaticFiles
 
 from app.core.config import settings
 from app.api.v1.router import api_router
+from app.db.init_db import init_db
 from app.ml.model_loader import model_loader
 
 # backend/app/main.py -> backend/uploads
@@ -34,7 +35,8 @@ ALLOWED_ORIGINS = settings.CORS_ORIGINS_LIST
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Charge le modele MobileNetV2 une seule fois, au demarrage du serveur."""
+    """Cree les tables manquantes puis charge le modele MobileNetV2, au demarrage du serveur."""
+    init_db()
     model_loader.load_model()
     print("MobileNetV2 loaded successfully", flush=True)
     yield
