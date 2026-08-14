@@ -1,0 +1,93 @@
+\chapter{D\'eploiement}
+\label{ch:deploiement}
+
+\section{Pourquoi Railway}
+
+Parmi les trois plateformes propos\'ees par le cahier des charges (Render, Railway, Hugging Face Spaces), Railway~\cite{railway} a \'et\'e retenue apr\`es comparaison~: c'est la seule \`a proposer une base de donn\'ees MySQL manag\'ee nativement (Render ne propose pas de MySQL manag\'e, seulement PostgreSQL/Redis~; Hugging Face Spaces n'est pas con\c{c}u pour une application full-stack avec authentification et base de donn\'ees relationnelle). Railway permet ainsi d'h\'eberger backend, frontend et base de donn\'ees au sein d'un unique projet.
+
+\section{Architecture de production}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.55\textwidth]{figure_12_deploiement_railway.png}
+\caption{Architecture de d\'eploiement en production sur Railway.}
+\label{fig:deploiement-railway}
+\end{figure}
+
+\section{Docker}
+
+Chaque service (backend, frontend) est d\'eploy\'e via un \texttt{Dockerfile} explicite (\texttt{backend/Dockerfile}, \texttt{frontend/Dockerfile}). Ce choix a \'et\'e fait apr\`es l'\'echec du builder automatique par d\'efaut de Railway (Railpack) sur la structure en monorepo du projet (voir \Cref{sec:problemes-deploiement}).
+
+\section{Backend}
+
+Service Railway distinct, \texttt{Root Directory = backend/}, construit \`a partir d'un \texttt{Dockerfile} (image \texttt{python:3.13-slim}, installation des d\'ependances via \texttt{pip}, lancement par \texttt{uvicorn}).
+
+\section{Frontend}
+
+Service Railway distinct, \texttt{Root Directory = frontend/}, construction en deux \'etapes (build Vite avec \texttt{VITE\_API\_URL} inject\'e comme argument de build Docker, puis service statique via le paquet \texttt{serve}).
+
+\section{MySQL}
+
+Base de donn\'ees provisionn\'ee via le plugin officiel MySQL de Railway, accessible uniquement en r\'eseau priv\'e au sein du projet.
+
+\section{Variables d'environnement}
+
+Les variables suivantes sont d\'efinies au niveau de chaque service Railway, jamais versionn\'ees dans le d\'ep\^ot Git~: \texttt{DATABASE\_HOST}, \texttt{DATABASE\_PORT}, \texttt{DATABASE\_USER}, \texttt{DATABASE\_PASSWORD}, \texttt{DATABASE\_NAME} (backend), \texttt{SECRET\_KEY}, \texttt{ALGORITHM}, \texttt{ACCESS\_TOKEN\_EXPIRE\_MINUTES}, \texttt{DEBUG}, \texttt{CORS\_ORIGINS} (backend), \texttt{VITE\_API\_URL} (frontend, en tant qu'argument de build).
+
+\begin{noteflag}{S\'ecurit\'e}
+Aucune valeur r\'eelle de ces variables n'est reproduite dans ce rapport ni dans le d\'ep\^ot (\texttt{backend/.env.example} ne contient que des placeholders).
+\end{noteflag}
+
+\section{MobileNetV2 en production}
+
+Le backend embarque sa propre copie du mod\`ele (\texttt{backend/app/ml/model\_files/best\_model.keras}), rendant son d\'eploiement ind\'ependant du dossier \texttt{ai/}. L'identit\'e de cette copie avec le mod\`ele original a \'et\'e v\'erifi\'ee par comparaison d'empreinte SHA-256~: aucune modification des poids n'a \'et\'e introduite. Les journaux du service en production confirment le chargement effectif du mod\`ele au d\'emarrage (message \texttt{MobileNetV2 loaded successfully}).
+
+\section{URLs}
+\label{sec:urls}
+
+\begin{itemize}
+  \item \textbf{Frontend~:} \href{https://frontend-production-bcff.up.railway.app}{frontend-production-bcff.up.railway.app}
+  \item \textbf{Backend~:} \href{https://visioninspectia-production.up.railway.app}{visioninspectia-production.up.railway.app}
+  \item \textbf{Swagger~:} \href{https://visioninspectia-production.up.railway.app/docs}{visioninspectia-production.up.railway.app/docs}
+  \item \textbf{ReDoc~:} \href{https://visioninspectia-production.up.railway.app/redoc}{visioninspectia-production.up.railway.app/redoc}
+\end{itemize}
+
+\section{Tests en production}
+
+D\'etaill\'es au \Cref{ch:tests} (\Cref{tab:tests-production}).
+
+\section{Performances}
+
+Mesures r\'eellement observ\'ees en production (et non des estimations)~:
+\begin{itemize}
+  \item \textbf{Cold start} (premier appel apr\`es d\'emarrage, incluant le \emph{warm-up} TensorFlow)~: environ \textbf{1,9 \`a 2,3~secondes}.
+  \item \textbf{Inf\'erence \`a chaud} (appels suivants, temps HTTP complet incluant upload, validation, pr\'etraitement, inf\'erence et \'ecriture en base)~: environ \textbf{170 \`a 210~ms}.
+\end{itemize}
+
+Ces deux valeurs sont \`a distinguer du temps d'inf\'erence pure mesur\'e lors du benchmark ($\approx$9~ms, \Cref{ch:modelisation}), qui ne couvre que l'appel au mod\`ele sur une image d\'ej\`a pr\'etrait\'ee, mod\`ele d\'ej\`a charg\'e.
+
+\section{Probl\`emes rencontr\'es}
+\label{sec:problemes-deploiement}
+
+Le d\'eploiement a n\'ecessit\'e plusieurs it\'erations correctives, document\'ees ici pour leur valeur p\'edagogique~:
+
+\begin{enumerate}
+  \item \textbf{\'Echec de d\'etection par Railpack}~: le builder par d\'efaut de Railway ne parvenait pas \`a d\'etecter l'application depuis la racine du d\'ep\^ot (structure en monorepo).
+  \item \textbf{D\'ependance du backend au dossier \texttt{ai/}}~: le chargement du mod\`ele r\'ef\'eren\c{c}ait initialement \texttt{ai/saved\_models/...} comme dossier fr\`ere de \texttt{backend/}, incompatible avec un d\'eploiement restreint \`a \texttt{backend/} seul.
+  \item \textbf{\'Echec de d\'etection de la commande de d\'emarrage} par Railpack, y compris avec la commande d\'efinie c\^ot\'e service.
+  \item \textbf{Erreur d'ordonnancement des couches de build} avec un fichier de configuration Railpack personnalis\'e.
+  \item \textbf{Absence d'expansion de la variable \texttt{\$PORT}} lors du d\'emarrage du conteneur.
+  \item \textbf{Configuration fig\'ee lors d'un red\'eploiement}~: la commande \texttt{redeploy} de Railway rejouait une configuration captur\'ee au moment du build pr\'ec\'edent.
+  \item \textbf{Absence d'appel \`a \texttt{init\_db()}} au d\'emarrage, entra\^inant une erreur \guillemotleft~table inexistante~\guillemotright\ sur une base neuve.
+  \item \textbf{Stockage non persistant} des images upload\'ees entre red\'eploiements (syst\`eme de fichiers \'eph\'em\`ere du conteneur).
+\end{enumerate}
+
+\section{Solutions appliqu\'ees}
+
+\begin{itemize}
+  \item \textbf{Points 1--2}~: le backend a \'et\'e rendu autonome par la duplication v\'erifi\'ee (empreinte SHA-256 identique) du fichier mod\`ele et de la couche de pr\'etraitement personnalis\'ee directement dans \texttt{backend/app/ml/}.
+  \item \textbf{Points 3--5}~: abandon du builder automatique au profit d'un \textbf{Dockerfile explicite} par service.
+  \item \textbf{Point 6}~: d\'eclenchement d'un nouveau commit Git (plut\^ot qu'un simple \texttt{redeploy}) pour forcer la prise en compte de la configuration \`a jour.
+  \item \textbf{Point 7}~: ajout de l'appel \`a \texttt{init\_db()} dans la fonction \texttt{lifespan()} de \texttt{backend/app/main.py} --- modification idempotente, sans impact sur l'environnement de d\'eveloppement local existant.
+  \item \textbf{Point 8}~: document\'ee explicitement comme limitation connue plut\^ot que trait\'ee par l'ajout d'une solution de stockage persistant, jug\'ee hors du p\'erim\`etre raisonnable pour une d\'emonstration de stage.
+\end{itemize}

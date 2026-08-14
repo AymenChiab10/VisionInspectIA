@@ -1,0 +1,45 @@
+\chapter{Architecture de la solution}
+\label{ch:architecture}
+
+\section{Architecture globale}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figure_01_architecture_globale.png}
+\caption{Architecture globale de la plateforme VisionInspectIA.}
+\label{fig:architecture-globale}
+\end{figure}
+
+Comme pr\'esent\'e \`a la \Cref{fig:architecture-globale}, le frontend React communique en HTTPS/JWT avec le backend FastAPI, qui est le seul point d'entr\'ee vers MySQL (donn\'ees) et vers MobileNetV2 (IA, charg\'e en m\'emoire dans le m\^eme processus backend, et non dans un service s\'epar\'e).
+
+\section{Frontend}
+
+Application React (b\^atie avec Vite), organis\'ee en couches~: \texttt{api/} (appels HTTP centralis\'es), \texttt{context/}/\texttt{hooks/} (\'etat global~: authentification, th\`eme, notifications), \texttt{components/} (par fonctionnalit\'e), \texttt{pages/} (\'ecrans), \texttt{routes/} (protection des pages priv\'ees).
+
+\section{Backend}
+
+API FastAPI organis\'ee en couches strictes~: \texttt{api/} (routes HTTP uniquement), \texttt{services/} (toute la logique m\'etier), \texttt{models/} (tables SQLAlchemy), \texttt{schemas/} (validation Pydantic), \texttt{ml/} (chargement du mod\`ele et pr\'etraitement), \texttt{db/}, \texttt{core/}.
+
+\section{IA}
+
+Le mod\`ele MobileNetV2 est charg\'e une seule fois en m\'emoire au d\'emarrage du serveur (voir \Cref{ch:ia-prediction}) et interrog\'e \`a chaque requ\^ete de pr\'ediction, sans rechargement.
+
+\section{Base de donn\'ees}
+
+MySQL, acc\'ed\'ee via SQLAlchemy (ORM), d\'etaill\'ee au \Cref{ch:database}.
+
+\section{Authentification}
+
+Authentification par jeton JWT (voir \Cref{ch:backend}), avec hachage des mots de passe par bcrypt.
+
+\section{Communication frontend/backend}
+
+Communication exclusivement via une API REST en JSON (et \texttt{multipart/form-data} pour l'upload d'image), s\'ecuris\'ee par HTTPS en production et prot\'eg\'ee par une politique CORS restreinte \`a l'origine du frontend d\'eploy\'e (voir \Cref{ch:deploiement}).
+
+\section{Gestion des fichiers}
+
+Les images upload\'ees sont stock\'ees sur le syst\`eme de fichiers du serveur backend (\texttt{backend/uploads/}), servies statiquement, et r\'ef\'erenc\'ees en base par leur chemin relatif. Cette approche pr\'esente une limite en environnement cloud, discut\'ee au \Cref{ch:deploiement} et au \Cref{ch:discussion}.
+
+\section{S\'ecurit\'e}
+
+Isolation stricte des donn\'ees entre utilisateurs (chaque requ\^ete est filtr\'ee sur l'identifiant de l'utilisateur authentifi\'e), gestion explicite des codes d'erreur HTTP (401, 400, 404), variables sensibles (\texttt{SECRET\_KEY}, identifiants de base de donn\'ees) exclusivement g\'er\'ees via variables d'environnement, jamais versionn\'ees.

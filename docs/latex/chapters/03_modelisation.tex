@@ -1,0 +1,194 @@
+\chapter{Mod\'elisation IA}
+\label{ch:modelisation}
+
+\section{Probl\`eme de classification}
+
+Il s'agit d'un probl\`eme de classification d'images multi-classes (4~classes), \`a sortie unique (chaque image appartient \`a exactement une classe).
+
+\section{CNN de base}
+
+Un r\'eseau de neurones convolutif (CNN) construit et entra\^in\'e int\'egralement \`a partir de z\'ero (sans poids pr\'e-entra\^in\'es) a \'et\'e inclus dans la comparaison, afin de disposer d'une r\'ef\'erence (\emph{baseline}) ne b\'en\'eficiant d'aucun transfert de connaissances.
+
+\section{Transfer learning}
+
+Les trois autres architectures compar\'ees (MobileNetV2, EfficientNetB0, ResNet50) exploitent le \emph{transfer learning}~: un backbone pr\'e-entra\^in\'e sur ImageNet est r\'eutilis\'e, gel\'e (\texttt{trainable=False}), seule une t\^ete de classification ajout\'ee en sortie \'etant entra\^in\'ee sur le dataset \emph{bottle} (protocole dit de \emph{feature extraction}).
+
+\section{MobileNetV2}
+
+Architecture l\'eg\`ere, fond\'ee sur des convolutions s\'eparables en profondeur (\emph{depthwise separable convolutions}), initialement con\c{c}ue pour des d\'eploiements mobiles/embarqu\'es. Retenue au final pour ce projet (justification d\'etaill\'ee en \Cref{sec:selection-mobilenet})~\cite{mobilenetv2}.
+
+\section{EfficientNetB0}
+
+Architecture fond\'ee sur un principe de \emph{compound scaling} (mise \`a l'\'echelle simultan\'ee de la profondeur, de la largeur et de la r\'esolution du r\'eseau), incluse dans la comparaison~\cite{efficientnet}.
+
+\section{ResNet50}
+
+Architecture \`a connexions r\'esiduelles, plus profonde et plus lourde que les deux pr\'ec\'edentes (23,6~millions de param\`etres contre 2,26~pour MobileNetV2), \'egalement incluse dans la comparaison~\cite{resnet}.
+
+\section{M\'ethodologie d'entra\^inement}
+
+\begin{table}[H]
+\centering
+\caption{Hyperparam\`etres d'entra\^inement}
+\label{tab:hyperparams}
+\begin{tabular}{lll}
+\toprule
+Param\`etre & MobileNetV2 / ResNet50 / EffNetB0 & CNN / CNN am\'elior\'e \\
+\midrule
+\'Epoques (max.) & 30 & 30 \\
+Taille de batch & 32 & 32 \\
+Taux d'apprentissage & 0,001 & 0,001 \\
+Optimiseur & Adam & AdamW \\
+Dropout & 0,3 & 0,3 \\
+Weight decay & 0,0001 & 0,0001 \\
+Taille d'image & 224$\times$224 & 224$\times$224 \\
+Nombre de classes & 4 & 4 \\
+Graine al\'eatoire (seed) & 42 & 42 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Fonction de perte}
+
+\texttt{SparseCategoricalCrossentropy}, utilis\'ee de fa\c{c}on identique pour les quatre architectures (source~: \texttt{ai/models/mobilenet\_model.py}, \texttt{resnet\_model.py}, \texttt{efficientnet\_model.py}, \texttt{cnn\_model.py}).
+
+\section{Optimiseur}
+
+Adam pour MobileNetV2, ResNet50 et EfficientNetB0~; AdamW pour le CNN personnalis\'e et sa variante am\'elior\'ee.
+
+\section{Callbacks}
+
+\begin{itemize}
+  \item \textbf{EarlyStopping}~: patience de 8~\'epoques, surveillance de \texttt{val\_loss}~;
+  \item \textbf{ModelCheckpoint}~: sauvegarde du meilleur mod\`ele selon \texttt{val\_loss} (\texttt{save\_best\_only=True}).
+\end{itemize}
+
+\section{\'Evaluation}
+
+Les m\'etriques calcul\'ees pour chaque mod\`ele sur le jeu de test sont~: accuracy, precision macro, recall macro, F1-score macro, ainsi qu'une matrice de confusion.
+
+\begin{noteflag}{Donn\'ee non v\'erifiable}
+Le cahier des charges demande \'egalement une courbe ROC par mod\`ele~; aucun fichier correspondant \`a une courbe ROC n'a \'et\'e retrouv\'e dans \texttt{ai/results/}. Cette visualisation n'a donc pas pu \^etre produite dans le cadre de ce rapport.
+\end{noteflag}
+
+\section{Benchmark}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Benchmark comparatif des mod\`eles (jeu de test, 160~images, 40 par classe)}
+\label{tab:benchmark}
+\begin{tabularx}{\textwidth}{lrrrrrrr}
+\toprule
+Mod\`ele & Acc. & Prec. & Rec. & F1 & Taille & T. entra\^in. & Inf\'erence \\
+\midrule
+\textbf{MobileNetV2 (retenu)} & \textbf{75,63\,\%} & \textbf{0,839} & \textbf{0,756} & \textbf{0,742} & \textbf{9,24\,Mo} & \textbf{3\,min\,57\,s} & \textbf{9,16\,ms} \\
+ResNet50 & 78,13\,\% & 0,818 & 0,781 & 0,772 & 90,71\,Mo & 10\,min\,17\,s & 23,70\,ms \\
+EfficientNetB0 & 71,25\,\% & 0,826 & 0,713 & 0,688 & 16,32\,Mo & 5\,min\,56\,s & 11,45\,ms \\
+CNN (from scratch) & 25,00\,\% & 0,063 & 0,250 & 0,100 & 21,68\,Mo & $\approx$8\,min\,40\,s & 7,4--7,8\,ms \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{noteflag}{Incoh\'erence \`a v\'erifier}
+Le fichier \texttt{ai/results/benchmark\_results.json} comporte, pour chaque mod\`ele, un champ \texttt{accuracy} de premier niveau dont la valeur ne correspond pas \`a celle du fichier \texttt{classification\_report.json} du m\^eme mod\`ele (exemple~: 99,37\,\% pour MobileNetV2 dans \texttt{benchmark\_results.json}, contre 75,63\,\% dans \texttt{classification\_report.json}, ce dernier \'etant coh\'erent avec le F1-score macro rapport\'e de 0,742). Cette incoh\'erence a \'et\'e r\'esolue en retenant les valeurs de \texttt{classification\_report.json} comme r\'ef\'erence, celles-ci \'etant seules coh\'erentes en interne avec les autres m\'etriques macro rapport\'ees.
+\end{noteflag}
+
+\textbf{R\'esultat d'un benchmark ant\'erieur, sur dataset non augment\'e.} Un premier benchmark (\texttt{ai/results/benchmark\_report.md}, dat\'e du 08/08/2026), r\'ealis\'e sur le dataset brut de 292~images (avant la construction du dataset augment\'e \'equilibr\'e), avait donn\'e des r\'esultats tr\`es d\'egrad\'es et strictement identiques pour les quatre architectures (F1-score macro de 0,2179 pour chacune), le rapport concluant \`a un sous-apprentissage g\'en\'eralis\'e li\'e \`a l'insuffisance de donn\'ees et au protocole de \emph{feature extraction} \`a backbone gel\'e sur un jeu de donn\'ees aussi r\'eduit. Ce benchmark constitue une it\'eration interm\'ediaire du projet, corrig\'ee par la suite via la construction du dataset augment\'e \'equilibr\'e, et n'est pas repr\'esentatif de la performance du mod\`ele finalement int\'egr\'e \`a l'application.
+
+\begin{table}[H]
+\centering
+\caption{Classification report d\'etaill\'e (MobileNetV2, mod\`ele retenu)}
+\label{tab:classification-report}
+\begin{tabular}{lrrrr}
+\toprule
+Classe & Precision & Recall & F1-score & Support \\
+\midrule
+\texttt{broken\_large} & 0,741 & 1,000 & 0,851 & 40 \\
+\texttt{broken\_small} & 1,000 & 0,500 & 0,667 & 40 \\
+\texttt{contamination} & 1,000 & 0,525 & 0,689 & 40 \\
+\texttt{good} & 0,615 & 1,000 & 0,762 & 40 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{figure_07_accuracy_training.png}
+  \caption{Accuracy pendant l'entra\^inement}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.48\textwidth}
+  \includegraphics[width=\textwidth]{figure_08_loss_training.png}
+  \caption{Loss pendant l'entra\^inement}
+\end{subfigure}
+\caption{Courbes d'entra\^inement de MobileNetV2 (source~: \texttt{ai/results/mobilenet\_v2/}).}
+\label{fig:courbes-entrainement}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{figure_09_matrice_confusion.png}
+\caption{Matrice de confusion de MobileNetV2 sur le jeu de test.}
+\label{fig:confusion-matrix}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{figure_10_classification_report.png}
+\caption{Precision, recall et F1-score par classe pour MobileNetV2.}
+\label{fig:classification-report-fig}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.32\textwidth}
+  \includegraphics[width=\textwidth]{figure_11a_comparaison_f1.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.32\textwidth}
+  \includegraphics[width=\textwidth]{figure_11b_comparaison_inference.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.32\textwidth}
+  \includegraphics[width=\textwidth]{figure_11c_comparaison_taille.png}
+\end{subfigure}
+\caption{Comparaison des quatre architectures~: F1-score macro, temps d'inf\'erence, taille du mod\`ele.}
+\label{fig:comparaison-modeles}
+\end{figure}
+
+\section{Analyse des r\'esultats}
+
+Les trois mod\`eles pr\'e-entra\^in\'es sur ImageNet (MobileNetV2, EfficientNetB0, ResNet50) surpassent nettement le CNN entra\^in\'e \`a partir de z\'ero, dont l'accuracy (25\,\%) reste proche du niveau du hasard pour un probl\`eme \`a quatre classes \'equilibr\'ees, ce qui met en \'evidence l'apport du transfer learning dans un contexte de donn\'ees limit\'ees.
+
+Entre les trois mod\`eles pr\'e-entra\^in\'es, ResNet50 obtient l'accuracy la plus \'elev\'ee (78,13\,\% contre 75,63\,\% pour MobileNetV2), mais cet \'ecart de 2,5~points doit \^etre interpr\'et\'e avec prudence~: le jeu de test ne comporte que quelques images sources r\'eellement uniques par classe (le reste \'etant obtenu par duplication/augmentation), ce qui limite la robustesse statistique d'un tel \'ecart.
+
+Le \Cref{tab:classification-report} met en \'evidence un comportement diff\'erenci\'e selon les classes pour MobileNetV2~: un rappel parfait (1,0) sur \texttt{broken\_large} et \texttt{good}, mais un rappel faible (0,5 et 0,525) sur \texttt{broken\_small} et \texttt{contamination}, ces deux classes \'etant plus difficiles \`a distinguer visuellement dans ce dataset.
+
+\section{S\'election de MobileNetV2}
+\label{sec:selection-mobilenet}
+
+Dans les conditions exp\'erimentales de ce projet, \textbf{MobileNetV2 a \'et\'e retenu comme meilleur compromis entre performance, taille du mod\`ele et temps d'inf\'erence}, plut\^ot que comme le mod\`ele objectivement le plus performant~:
+\begin{itemize}
+  \item \textbf{Performance}~: F1-score macro de 0,742, proche de celui de ResNet50 (0,772) et sup\'erieur \`a celui d'EfficientNetB0 (0,688).
+  \item \textbf{Taille du mod\`ele}~: 9,24~Mo, soit environ 10~fois plus l\'eger que ResNet50 (90,71~Mo).
+  \item \textbf{Rapidit\'e d'inf\'erence}~: environ 9~ms, soit 2,6~fois plus rapide que ResNet50 (23,70~ms).
+  \item \textbf{Facilit\'e de d\'eploiement}~: ces caract\'eristiques rendent le mod\`ele mieux adapt\'e \`a une int\'egration dans une application web sans infrastructure GPU d\'edi\'ee (voir \Cref{ch:deploiement}).
+\end{itemize}
+
+\section{Mod\`ele final}
+
+Le mod\`ele final retenu est sauvegard\'e au format natif Keras~3 (\texttt{.keras})~: \path{ai/saved_models/mobilenet_v2/best_model.keras}. Une copie de ce m\^eme fichier (identit\'e v\'erifi\'ee par empreinte SHA-256, voir \Cref{ch:deploiement}) est int\'egr\'ee au backend pour les besoins du d\'eploiement.
+
+\begin{noteflag}{Incoh\'erence \`a v\'erifier}
+Le cahier des charges demande explicitement un export au format \texttt{.h5} ou \texttt{.pt}. Le projet utilise le format \texttt{.keras} (format natif de Keras~3, successeur recommand\'e du format \texttt{.h5} par la biblioth\`eque elle-m\^eme), ni \texttt{.h5} ni \texttt{.pt} (ce dernier \'etant sp\'ecifique \`a PyTorch, non utilis\'e dans ce projet qui repose enti\`erement sur TensorFlow/Keras). Aucun fichier \texttt{.h5} ou \texttt{.pt} n'a \'et\'e retrouv\'e dans \texttt{ai/saved\_models/}. Ce choix technique n'a pas \'et\'e reconsid\'er\'e dans le cadre de la r\'edaction de ce rapport, conform\'ement \`a la consigne de ne modifier ni le code ni le mod\`ele~; il est signal\'e ici comme \'ecart au cahier des charges plut\^ot que dissimul\'e.
+\end{noteflag}
+
+\section{Limites}
+
+\begin{itemize}
+  \item \textbf{\texttt{broken\_small}}~: rappel de seulement 0,5, cette classe de d\'efaut \'etant r\'eguli\`erement confondue avec \texttt{broken\_large} (voir \Cref{ch:tests} et \Cref{ch:discussion}).
+  \item \textbf{Domain shift}~: le mod\`ele a \'et\'e entra\^in\'e et \'evalu\'e exclusivement sur des images issues du dataset MVTec~AD~; sa capacit\'e de g\'en\'eralisation \`a des images provenant d'un domaine diff\'erent (autre \'eclairage, autre fond, autre appareil photo) n'a pas \'et\'e \'etablie dans ce projet.
+  \item \textbf{G\'en\'eralisation}~: le jeu de test repose sur un nombre restreint d'images sources r\'eellement uniques par classe, ce qui limite la port\'ee statistique des conclusions tir\'ees du \Cref{tab:benchmark}.
+\end{itemize}

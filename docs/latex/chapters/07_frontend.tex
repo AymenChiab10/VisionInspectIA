@@ -1,0 +1,103 @@
+\chapter{Frontend React}
+\label{ch:frontend}
+
+\section{Choix de React}
+
+React a \'et\'e retenu parmi les deux options propos\'ees par le cahier des charges (React ou Angular)~\cite{react}.
+
+\section{Architecture frontend}
+
+\begin{lstlisting}[language=, basicstyle=\ttfamily\small, frame=single]
+src/
+|-- api/          # Appels HTTP centralises
+|-- components/   # Composants reutilisables, par fonctionnalite
+|-- pages/        # Ecrans
+|-- context/      # Etat global (Auth, Theme, Toast)
+|-- hooks/        # Hooks personnalises
+|-- routes/       # Routage et protection des pages privees
+|-- layouts/      # Mise en page commune
+`-- utils/        # Statistiques dashboard, export CSV
+\end{lstlisting}
+
+\section{Routing}
+
+G\'er\'e par React Router (\texttt{src/routes/AppRoutes.jsx}), avec protection des pages priv\'ees (redirection vers \texttt{/login} en l'absence de session valide).
+
+\section{AuthContext}
+
+Contexte React centralisant l'\'etat d'authentification (token, utilisateur courant), consomm\'e par l'ensemble de l'application via un hook d\'edi\'e (\texttt{useAuth}).
+
+\section{Axios}
+
+Client HTTP centralis\'e (\texttt{src/api/axiosClient.js}), injectant automatiquement le JWT dans l'en-t\^ete \texttt{Authorization} de chaque requ\^ete, et g\'erant globalement l'expiration de session (redirection automatique en cas de r\'eponse 401).
+
+\section{Login / Register}
+
+Pages d\'edi\'ees, consommant respectivement \texttt{POST /auth/login} et \texttt{POST /auth/register}.
+
+\section{Dashboard}
+
+Page affichant les statistiques agr\'eg\'ees et les graphiques.
+
+\section{Prediction}
+
+Page d'upload et d'affichage du r\'esultat de pr\'ediction.
+
+\section{History}
+
+Page listant les inspections, avec recherche, filtres, tri et pagination.
+
+\section{Profile}
+
+Page de gestion du profil (\'edition, changement de mot de passe, suppression de compte).
+
+\section{PDF et CSV}
+
+T\'el\'echargement du rapport PDF depuis l'historique~; export CSV de l'historique, g\'en\'er\'e enti\`erement c\^ot\'e client.
+
+\section{Notifications}
+
+Centre de notifications (\texttt{ToastContext}).
+
+\section{Dark mode}
+
+Basculement de th\`eme clair/sombre, persist\'e dans le \texttt{localStorage} du navigateur (\texttt{ThemeContext}).
+
+\section{Responsive design}
+
+Interface con\c{c}ue pour s'adapter aux diff\'erentes tailles d'\'ecran (desktop, tablette, mobile).
+
+\section{UX/UI --- limite importante}
+
+\begin{noteflag}{Important}
+L'environnement de d\'eveloppement utilis\'e pour ce projet ne disposait pas de navigateur graphique. Le rendu visuel effectif (mise en page, comportement du mode sombre, comportement responsive r\'eel) \textbf{n'a pas pu \^etre v\'erifi\'e visuellement} au cours du d\'eveloppement ni de la r\'edaction de ce rapport. Les fonctionnalit\'es correspondantes ont \'et\'e valid\'ees uniquement par revue du code source et par des tests fonctionnels au niveau de l'API (voir \Cref{ch:tests}). Aucune affirmation de type \guillemotleft~redesign moderne valid\'e visuellement~\guillemotright\ n'est donc formul\'ee dans ce rapport au-del\`a de ce qui a \'et\'e effectivement v\'erifi\'e.
+\end{noteflag}
+
+\section{Fonctionnalit\'es de la plateforme}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Fonctionnalit\'es implement\'ees et leur statut de v\'erification}
+\label{tab:fonctionnalites}
+\begin{tabularx}{\textwidth}{lXX}
+\toprule
+Fonctionnalit\'e & Fonctionnement & R\'esultat \\
+\midrule
+Register & \texttt{POST /auth/register}, mot de passe hach\'e (bcrypt) & Compte cr\'e\'e, v\'erifi\'e fonctionnel en local et en production \\
+Login & \texttt{POST /auth/login}, \'emission d'un JWT & JWT valide retourn\'e, v\'erifi\'e fonctionnel \\
+Logout & \texttt{POST /auth/logout} & V\'erifi\'e fonctionnel \\
+Dashboard & \texttt{GET /dashboard/statistics}, graphiques & Statistiques coh\'erentes avec les donn\'ees r\'eelles de MySQL \\
+Prediction & Upload $\rightarrow$ \texttt{POST /predictions/predict} & Fonctionnel sur les 4~classes~; limite connue sur \texttt{broken\_small} \\
+History & \texttt{GET /history}, recherche, filtres, tri, pagination & Fonctionnel \\
+Inspection details & \texttt{GET /history/\{id\}}, modal de d\'etail & Fonctionnel, isolation entre utilisateurs v\'erifi\'ee \\
+PDF & \texttt{GET /reports/\{inspection\_id\}}, g\'en\'er\'e en m\'emoire & Fonctionnel, y compris en d\'egrad\'e sans image \\
+CSV & G\'en\'eration c\^ot\'e client (Blob) & Fonctionnel \\
+Notifications & Centre de notifications (\texttt{ToastContext}) & Impl\'ement\'e~; v\'erification visuelle non r\'ealis\'ee \\
+Dark mode & Bascule de th\`eme, persist\'ee en \texttt{localStorage} & Impl\'ement\'e~; v\'erification visuelle non r\'ealis\'ee \\
+Profile & \texttt{PUT /users/me} & Test\'e en production, fonctionnel \\
+Change password & \texttt{PUT /users/me/password} & Test\'e en production, fonctionnel \\
+Delete account & \texttt{DELETE /users/me}, suppression en cascade & Test\'e en production, cascade v\'erifi\'ee \\
+\bottomrule
+\end{tabularx}
+\end{table}

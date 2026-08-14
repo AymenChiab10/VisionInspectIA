@@ -1,0 +1,117 @@
+% ============================================================
+% Preambule -- VisionInspectIA, rapport de stage
+% ============================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[a4paper,margin=2.5cm,headheight=14pt]{geometry}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,shadows}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{csquotes}
+
+% hyperref en dernier
+\usepackage[colorlinks=true,linkcolor=accentdark,citecolor=accentdark,urlcolor=accent,pdfborder={0 0 0}]{hyperref}
+% cleveref a pose un probleme de compatibilite avec cette distribution ;
+% on retombe sur \ref simple, plus robuste, plutot que de bloquer la compilation.
+\providecommand{\Cref}[1]{\ref{#1}}
+\providecommand{\cref}[1]{\ref{#1}}
+
+% ----------------------------------------------------------------
+% Palette (bleu fonce / bleu / gris / blanc)
+% ----------------------------------------------------------------
+\definecolor{accentdark}{HTML}{1F3B57}
+\definecolor{accent}{HTML}{2E5A88}
+\definecolor{accentlight}{HTML}{DCE6F0}
+\definecolor{graybg}{HTML}{F2F2F2}
+\definecolor{graytext}{HTML}{555555}
+
+% ----------------------------------------------------------------
+% Titres de chapitres/sections
+% ----------------------------------------------------------------
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\color{accentdark}}
+  {\Large\MakeUppercase{\chaptertitlename}~\thechapter}
+  {8pt}{\Huge}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{accent}}{\thesection}{0.6em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{accentdark}}{\thesubsection}{0.6em}{}
+
+% ----------------------------------------------------------------
+% En-tetes / pieds de page
+% ----------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.2pt}
+\fancyhead[L]{\small\textcolor{graytext}{VisionInspectIA --- Rapport de stage}}
+\fancyhead[R]{\small\textcolor{graytext}{\leftmark}}
+\fancyfoot[C]{\small\thepage}
+
+% ----------------------------------------------------------------
+% Listings (extraits de code)
+% ----------------------------------------------------------------
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  rulecolor=\color{graytext},
+  backgroundcolor=\color{graybg},
+  numbers=left,
+  numberstyle=\tiny\color{graytext},
+  keywordstyle=\color{accentdark}\bfseries,
+  commentstyle=\color{graytext}\itshape,
+  stringstyle=\color{accent},
+  showstringspaces=false,
+  tabsize=2,
+}
+
+% ----------------------------------------------------------------
+% Boites d'avertissement (incoherences / donnees non verifiables)
+% ----------------------------------------------------------------
+\usepackage[framemethod=default]{mdframed}
+\mdfdefinestyle{noteflagstyle}{%
+  linecolor=accent,
+  linewidth=1.2pt,
+  backgroundcolor=accentlight,
+  innertopmargin=6pt,
+  innerbottommargin=6pt,
+  innerleftmargin=8pt,
+  innerrightmargin=8pt,
+  skipabove=8pt,
+  skipbelow=8pt,
+}
+\newmdenv[style=noteflagstyle]{noteflagbox}
+
+\newenvironment{noteflag}[1]{%
+  \begin{noteflagbox}%
+  \textbf{\textcolor{accentdark}{#1 :}}\ \ignorespaces
+}{%
+  \end{noteflagbox}%
+}
+
+\newcommand{\okmark}{\checkmark}
+\newcommand{\warnmark}{\textbf{!}}
+\newcommand{\badmark}{$\times$}
+
+\setlist[itemize]{leftmargin=1.4em,itemsep=2pt,topsep=2pt}
+\setlist[enumerate]{leftmargin=1.6em,itemsep=2pt,topsep=2pt}
+\onehalfspacing
+\sloppy

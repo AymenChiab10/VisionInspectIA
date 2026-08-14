@@ -1,0 +1,14 @@
+\chapter{Conclusion g\'en\'erale}
+\label{ch:conclusion}
+
+Ce stage a permis de mener un projet complet, de la pr\'eparation d'un dataset d'images industrielles jusqu'au d\'eploiement d'une application web fonctionnelle sur une infrastructure cloud r\'eelle, en couvrant les quatre phases d\'efinies par le cahier des charges TechSkillHub.
+
+Sur le plan de l'intelligence artificielle, quatre architectures de classification d'images ont \'et\'e entra\^in\'ees et compar\'ees dans des conditions exp\'erimentales rigoureusement identiques. Cette comparaison a mis en \'evidence l'apport d\'eterminant du transfer learning face \`a un entra\^inement from scratch dans un contexte de donn\'ees limit\'ees, et a conduit \`a la s\'election de MobileNetV2, retenu non pas comme le mod\`ele le plus performant dans l'absolu, mais comme le meilleur compromis entre performance, taille et rapidit\'e d'inf\'erence pour une int\'egration dans une application web.
+
+Sur le plan applicatif, une plateforme compl\`ete a \'et\'e d\'evelopp\'ee~: une API REST FastAPI structur\'ee en couches, une base de donn\'ees MySQL, et une interface React couvrant l'ensemble des fonctionnalit\'es attendues (authentification, pr\'ediction, historique, tableau de bord, export PDF/CSV, gestion du profil).
+
+Sur le plan du d\'eploiement, l'application a \'et\'e r\'eellement mise en ligne sur Railway et test\'ee de bout en bout par des requ\^etes effectives contre les URLs publiques, d\'emarche qui a permis d'identifier et de corriger plusieurs probl\`emes concrets propres \`a un environnement de production (d\'ependances de build, gestion du port, initialisation de la base de donn\'ees), document\'es dans ce rapport \`a titre d'apprentissage technique.
+
+Ce travail pr\'esente des limites clairement identifi\'ees~: une performance de d\'etection in\'egale selon les classes de d\'efaut (notamment sur \texttt{broken\_small}), une \'evaluation de g\'en\'eralisation au monde r\'eel non r\'ealis\'ee, et une contrainte de stockage propre \`a l'environnement de d\'eploiement choisi. Ces limites ne remettent pas en cause la validit\'e de la d\'emarche mise en \oe uvre, mais d\'elimitent pr\'ecis\'ement le p\'erim\`etre dans lequel les r\'esultats obtenus peuvent \^etre interpr\'et\'es.
+
+Ce stage a permis de mettre en pratique, sur un cas d'usage industriel concret, l'ensemble d'une cha\^ine de traitement en intelligence artificielle appliqu\'ee~: de la donn\'ee brute \`a l'application d\'eploy\'ee, en passant par l'exp\'erimentation contr\^ol\'ee et l'\'evaluation critique des r\'esultats.

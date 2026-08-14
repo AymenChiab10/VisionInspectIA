@@ -1,0 +1,73 @@
+\chapter{R\'esultats, discussion, limitations et perspectives}
+\label{ch:discussion}
+
+\section{R\'esultats IA}
+
+Voir \Cref{tab:benchmark} et \Cref{tab:classification-report} (\Cref{ch:modelisation}).
+
+\section{Benchmark}
+
+Le benchmark met en \'evidence l'apport d\'eterminant du transfer learning par rapport \`a un entra\^inement from scratch dans ce contexte de donn\'ees limit\'ees.
+
+\section{Analyse par classe}
+
+Les classes \texttt{good} et \texttt{broken\_large} sont d\'etect\'ees avec un rappel parfait par MobileNetV2 sur le jeu de test. Les classes \texttt{broken\_small} et \texttt{contamination} pr\'esentent un rappel plus faible (0,5 et 0,525 respectivement), traduisant une difficult\'e de discrimination plus importante pour ces d\'efauts.
+
+\subsection*{Le cas \texttt{broken\_small}}
+
+Cette classe constitue la principale limite de performance identifi\'ee dans ce projet, confirm\'ee \`a la fois sur le jeu de test et lors des tests en production (\Cref{ch:tests}, o\`u l'unique test r\'ealis\'e sur cette classe a \'et\'e mal class\'e). La cause la plus probable, au regard des donn\'ees disponibles, est le faible nombre d'images sources r\'eelles pour cette classe (22~images brutes au total, r\'eparties entre validation et test), rendant la distinction avec \texttt{broken\_large} difficile \`a apprendre de fa\c{c}on robuste.
+
+\subsection*{Domain shift}
+
+Aucune \'evaluation formelle de la robustesse du mod\`ele \`a un changement de domaine (images hors MVTec~AD) n'a \'et\'e r\'ealis\'ee dans ce projet. Ce point reste une perspective (voir \Cref{sec:perspectives}).
+
+\section{R\'esultats applicatifs et production}
+
+L'ensemble des fonctionnalit\'es list\'ees au cahier des charges a \'et\'e impl\'ement\'e et test\'e fonctionnellement (\Cref{ch:frontend}, \Cref{ch:tests}). L'application d\'eploy\'ee a \'et\'e test\'ee de bout en bout avec des requ\^etes r\'eelles contre les URLs publiques, confirmant son fonctionnement effectif au-del\`a de l'environnement de d\'eveloppement local.
+
+\section{Discussion}
+
+Il convient de distinguer clairement deux niveaux de performance \'evalu\'es dans ce projet~:
+\begin{itemize}
+  \item \textbf{La performance sur le jeu de test du dataset MVTec~AD}, qui reste, pour les classes \texttt{good}, \texttt{broken\_large} et \texttt{contamination}, \`a un niveau satisfaisant compte tenu du volume de donn\'ees disponible, mais qui repose sur un jeu de test partiellement constitu\'e d'images dupliqu\'ees \`a partir d'un faible nombre de sources uniques, ce qui limite la port\'ee statistique de ces chiffres.
+  \item \textbf{La capacit\'e de g\'en\'eralisation au monde r\'eel}, c'est-\`a-dire \`a des photographies de bouteilles prises dans des conditions diff\'erentes de celles du dataset MVTec~AD (\'eclairage, arri\`ere-plan, appareil photo, cha\^ine de production r\'eelle), qui \textbf{n'a pas \'et\'e \'evalu\'ee} dans ce projet. Les tests r\'ealis\'es, y compris en production, utilisent exclusivement des images issues du m\^eme dataset que celui utilis\'e pour l'entra\^inement. Aucune affirmation de performance en conditions industrielles r\'eelles ne peut donc \^etre formul\'ee \`a partir des r\'esultats obtenus.
+\end{itemize}
+
+\section{Limitations}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Limitations identifi\'ees}
+\label{tab:limitations}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+Limitation & Description \\
+\midrule
+Dataset limit\'e & Le dataset MVTec~AD (\emph{bottle}) ne compte que 292~images r\'eelles, avec seulement 20 \`a 22~images par classe de d\'efaut. \\
+Difficult\'e sur \texttt{broken\_small} & Rappel de 0,5 sur le jeu de test, confirm\'e par un test en production~; confusion r\'ecurrente avec \texttt{broken\_large}. \\
+Domain shift & La capacit\'e de g\'en\'eralisation \`a des images hors du dataset MVTec~AD n'a pas \'et\'e \'evalu\'ee. \\
+Manque de photos terrain & Aucune photographie prise dans des conditions industrielles r\'eelles n'a \'et\'e utilis\'ee pour l'\'evaluation. \\
+Stockage \texttt{uploads/} non persistant sur Railway & Le syst\`eme de fichiers du conteneur backend est \'eph\'em\`ere~; une image upload\'ee est perdue au red\'eploiement suivant (confirm\'e par test). Les donn\'ees en base ne sont pas affect\'ees. \\
+Cold start TensorFlow & Premier appel apr\`es d\'emarrage sensiblement plus lent ($\approx$2~s) que les appels suivants. \\
+Limites du tier Railway & Le projet est h\'eberg\'e sur l'offre gratuite/d'essai de Railway, sans garantie de disponibilit\'e prolong\'ee. \\
+Absence de v\'erification visuelle & Le rendu effectif de l'interface (mode sombre, responsive) n'a pas pu \^etre v\'erifi\'e dans un navigateur r\'eel. \\
+Alembic non exploit\'e & Alembic est configur\'e mais aucune migration versionn\'ee n'a \'et\'e g\'en\'er\'ee. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Perspectives}
+\label{sec:perspectives}
+
+Les pistes suivantes sont pr\'esent\'ees comme des travaux futurs envisageables, \textbf{non impl\'ement\'es} dans la version actuelle du projet~:
+\begin{itemize}
+  \item enrichissement du dataset avec des photographies r\'eelles suppl\'ementaires, notamment pour la classe \texttt{broken\_small}~;
+  \item collecte d'images en conditions industrielles r\'eelles, pour \'evaluer et am\'eliorer la robustesse au domain shift~;
+  \item techniques d'augmentation plus avanc\'ees (ex. augmentation cibl\'ee sur les classes les plus faibles)~;
+  \item mise en place d'un m\'ecanisme de d\'etection \emph{out-of-distribution} (rejet des images ne correspondant \`a aucune classe connue)~;
+  \item migration vers un stockage cloud persistant (type S3) pour les images upload\'ees~;
+  \item optimisation du mod\`ele pour un d\'eploiement plus l\'eger (par exemple conversion TensorFlow~Lite)~;
+  \item mise en place de migrations Alembic versionn\'ees~;
+  \item am\'elioration du pipeline de d\'eploiement (automatisation CI/CD, environnement de staging).
+\end{itemize}

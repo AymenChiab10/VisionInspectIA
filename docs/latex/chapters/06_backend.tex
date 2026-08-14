@@ -1,0 +1,86 @@
+\chapter{Backend FastAPI}
+\label{ch:backend}
+
+\section{Pr\'esentation de FastAPI}
+
+FastAPI a \'et\'e retenu, parmi les deux options propos\'ees par le cahier des charges (FastAPI ou Flask), pour sa validation de donn\'ees native via Pydantic, sa g\'en\'eration automatique de documentation interactive (Swagger/ReDoc), et son support natif de l'asynchrone~\cite{fastapi}.
+
+\section{Architecture backend}
+
+\begin{lstlisting}[language=, basicstyle=\ttfamily\small, frame=single]
+app/
+|-- core/       # Configuration, securite (hash, JWT)
+|-- api/        # Routes HTTP uniquement
+|-- db/         # Connexion et session SQLAlchemy
+|-- models/     # Tables SQLAlchemy
+|-- schemas/    # Validation Pydantic
+|-- services/   # Toute la logique metier
+|-- ml/         # Chargement du modele et pretraitement
+`-- utils/      # Fonctions utilitaires (fichiers, PDF)
+\end{lstlisting}
+
+\section{Configuration}
+
+La configuration (\texttt{app/core/config.py}) est centralis\'ee via \texttt{pydantic-settings}, permettant une surcharge compl\`ete par variables d'environnement (base de donn\'ees, JWT, CORS, port d'\'ecoute), sans valeur sensible cod\'ee en dur.
+
+\section{Authentification JWT}
+
+Un jeton JWT (algorithme HS256) est \'emis \`a la connexion et doit \^etre fourni via l'en-t\^ete \texttt{Authorization: Bearer <token>} pour toute route prot\'eg\'ee. Sa dur\'ee de validit\'e est configurable (\texttt{ACCESS\_TOKEN\_EXPIRE\_MINUTES}).
+
+\section{Gestion des utilisateurs}
+
+Inscription, connexion, consultation et modification du profil, changement de mot de passe, suppression de compte.
+
+\section{Upload}
+
+L'upload d'image se fait en \texttt{multipart/form-data}, avec validation du format et de la taille du fichier avant tout traitement (\texttt{backend/app/utils/file\_utils.py}).
+
+\section{Pipeline de pr\'ediction}
+
+D\'etaill\'e au \Cref{ch:ia-prediction}.
+
+\section{Historique}
+
+Liste, d\'etail et suppression des inspections, filtr\'ees sur l'utilisateur courant.
+
+\section{Dashboard}
+
+Statistiques agr\'eg\'ees calcul\'ees par requ\^ete SQL (\texttt{COUNT}, \texttt{SUM} conditionnel, \texttt{AVG}) sur MySQL, jamais pr\'e-calcul\'ees ni stock\'ees (\texttt{backend/app/services/dashboard\_service.py}).
+
+\section{PDF}
+
+G\'en\'eration de rapport PDF en m\'emoire (ReportLab), sans \'ecriture de fichier temporaire sur le disque (\texttt{backend/app/utils/pdf\_utils.py}).
+
+\section{S\'ecurit\'e}
+
+Voir \Cref{ch:architecture} et \Cref{ch:database}.
+
+\section{API REST}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Endpoints de l'API REST (source~: \texttt{backend/app/api/v1/router.py})}
+\label{tab:endpoints}
+\begin{tabular}{lll l}
+\toprule
+M\'ethode & Endpoint & Auth & Fonction \\
+\midrule
+POST & \texttt{/api/v1/auth/register} & Non & Cr\'eation de compte \\
+POST & \texttt{/api/v1/auth/login} & Non & Connexion, \'emission du JWT \\
+GET & \texttt{/api/v1/auth/me} & Oui & Profil de l'utilisateur courant \\
+POST & \texttt{/api/v1/auth/logout} & Oui & D\'econnexion \\
+PUT & \texttt{/api/v1/users/me} & Oui & Modification du profil \\
+PUT & \texttt{/api/v1/users/me/password} & Oui & Changement de mot de passe \\
+DELETE & \texttt{/api/v1/users/me} & Oui & Suppression du compte \\
+POST & \texttt{/api/v1/predictions/predict} & Oui & Upload d'image + pr\'ediction \\
+GET & \texttt{/api/v1/history} & Oui & Liste des inspections \\
+GET & \texttt{/api/v1/history/\{id\}} & Oui & D\'etail d'une inspection \\
+DELETE & \texttt{/api/v1/history/\{id\}} & Oui & Suppression d'une inspection \\
+GET & \texttt{/api/v1/dashboard/statistics} & Oui & Statistiques agr\'eg\'ees \\
+GET & \texttt{/api/v1/reports/\{inspection\_id\}} & Oui & G\'en\'eration du rapport PDF \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Chaque groupe de routes dispose \'egalement d'un endpoint \texttt{GET /health} sans logique m\'etier associ\'ee.

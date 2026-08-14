@@ -1,0 +1,168 @@
+\chapter{Dataset et pr\'eparation des donn\'ees}
+\label{ch:dataset}
+
+\section{Pr\'esentation du dataset}
+
+Le dataset retenu parmi les options propos\'ees par le cahier des charges (Kaggle, Roboflow, MVTec~AD, NEU Surface Defect) est \textbf{MVTec~AD}~\cite{mvtecad}, un jeu de donn\'ees de r\'ef\'erence pour la d\'etection d'anomalies industrielles.
+
+\section{MVTec AD}
+
+MVTec~AD (\emph{MVTec Anomaly Detection Dataset}) est un dataset public con\c{c}u sp\'ecifiquement pour l'\'evaluation de m\'ethodes de d\'etection d'anomalies dans un contexte industriel. Il regroupe plusieurs cat\'egories d'objets et de textures, chacune avec un jeu d'images \guillemotleft~normales~\guillemotright\ (sans d\'efaut) destin\'ees \`a l'entra\^inement et un jeu d'images de test r\'eparties entre une classe normale et plusieurs classes de d\'efauts.
+
+\section{Classe bottle}
+
+Ce projet utilise exclusivement la cat\'egorie \textbf{bottle} du dataset MVTec~AD.
+
+\section{Classes de d\'efauts}
+
+Le jeu de donn\'ees brut (source~: \texttt{ai/results/reports/dataset\_report.json}) est structur\'e comme suit~:
+
+\begin{table}[H]
+\centering
+\caption{Classes du dataset (donn\'ees brutes)}
+\label{tab:dataset-brut}
+\begin{tabular}{lr}
+\toprule
+R\'epertoire source & Nombre d'images \\
+\midrule
+\texttt{train/good} & 209 \\
+\texttt{test/good} & 20 \\
+\texttt{test/broken\_large} & 20 \\
+\texttt{test/broken\_small} & 22 \\
+\texttt{test/contamination} & 21 \\
+\midrule
+\textbf{Total} & \textbf{292} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cette structure est typique des datasets MVTec~AD~: le r\'epertoire \texttt{train/} ne contient que des images conformes (\texttt{good}), tandis que les images d\'efectueuses n'existent que dans \texttt{test/}. Les quatre classes retenues pour la classification finale sont~: \texttt{good}, \texttt{broken\_large}, \texttt{broken\_small}, \texttt{contamination}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figure_05a_dataset_brut.png}
+\caption{Distribution du dataset brut (292 images, MVTec AD cat\'egorie bottle).}
+\label{fig:dataset-brut}
+\end{figure}
+
+\section{Analyse exploratoire}
+
+L'analyse exploratoire, r\'ealis\'ee automatiquement, a port\'e sur~:
+\begin{itemize}
+  \item le format des fichiers~: 292 images, toutes au format \texttt{.png}~;
+  \item les dimensions~: toutes les images sont de taille homog\`ene, 900~$\times$~900~pixels~;
+  \item le mode colorim\'etrique~: RGB (3 canaux) pour l'ensemble des 292 images~;
+  \item l'int\'egrit\'e des fichiers~: 0 image corrompue d\'etect\'ee sur les 292 analys\'ees~;
+  \item les doublons~: 0 doublon d\'etect\'e par le script d'analyse (\texttt{duplicate\_images: 0}).
+\end{itemize}
+
+\section{Nettoyage}
+
+Le script d'analyse n'a signal\'e aucune image corrompue ni aucun doublon exact sur le jeu brut. Le nettoyage \`a ce stade s'est donc limit\'e \`a une v\'erification de conformit\'e (format, int\'egrit\'e), sans suppression d'images.
+
+\section{V\'erification des doublons}
+
+La v\'erification automatique des doublons exacts sur les 292 images sources n'a r\'ev\'el\'e aucune occurrence. Cette v\'erification porte sur les images brutes~; la probl\'ematique distincte de similarit\'e entre images augment\'ees (trait\'ee en \Cref{sec:data-leakage}) a n\'ecessit\'e une analyse s\'epar\'ee.
+
+\section{R\'epartition des donn\'ees}
+
+Compte tenu du faible nombre d'images r\'eelles disponibles par classe de d\'efaut (20 \`a 22 images), en particulier pour l'entra\^inement o\`u seules des images \texttt{good} existent nativement dans MVTec~AD, une \'etape d'augmentation a \'et\'e n\'ecessaire pour construire un jeu d'entra\^inement \'equilibr\'e entre les quatre classes.
+
+\section{Train / Validation / Test}
+
+Le jeu de donn\'ees a \'et\'e r\'eparti en trois ensembles disjoints (train, validation, test) avant l'\'etape d'augmentation, en veillant \`a ce qu'aucune image source ne soit partag\'ee entre plusieurs ensembles (voir \Cref{sec:data-leakage}).
+
+\section{Redimensionnement 224$\times$224}
+
+Toutes les images sont redimensionn\'ees en 224~$\times$~224~pixels avant d'\^etre fournies au mod\`ele, taille d'entr\'ee standard pour les architectures MobileNetV2, EfficientNetB0 et ResNet50 utilis\'ees dans ce projet (source~: \texttt{backend/app/ml/preprocessing.py}, \texttt{ai/config/config.py}).
+
+\section{Preprocessing}
+
+Le pipeline de pr\'etraitement, identique \`a l'entra\^inement et \`a l'inf\'erence en production, est le suivant~:
+\begin{enumerate}
+  \item d\'ecodage de l'image en RGB (3 canaux)~;
+  \item redimensionnement bilin\'eaire en 224~$\times$~224~pixels~;
+  \item conversion en \texttt{float32}, valeurs dans l'intervalle $[0, 255]$.
+\end{enumerate}
+
+La normalisation propre \`a MobileNetV2 ($x / 127{,}5 - 1{,}0$) \textbf{n'est pas appliqu\'ee \`a cette \'etape}. Elle est directement int\'egr\'ee au graphe du mod\`ele sauvegard\'e, sous la forme d'une couche personnalis\'ee \texttt{MobileNetPreprocess} (source~: \texttt{ai/models/preprocessing\_layers.py}, dupliqu\'ee dans \texttt{backend/app/ml/preprocessing\_layers.py} pour l'autonomie du backend en production --- voir \Cref{ch:deploiement}). Ce choix de conception a \'et\'e v\'erifi\'e explicitement afin d'\'eviter qu'une double normalisation ne soit appliqu\'ee \`a l'image (ce qui aurait fauss\'e les pr\'edictions).
+
+\section{Data augmentation}
+
+Les techniques d'augmentation r\'eellement impl\'ement\'ees dans le pipeline (source~: \path{ai/scripts/data_augmentation.py}, m\'ethode \texttt{build\_pipeline}) reposent sur les couches Keras suivantes~:
+\begin{itemize}
+  \item \texttt{RandomFlip} (retournement horizontal/vertical)~;
+  \item \texttt{RandomRotation} (rotation al\'eatoire)~;
+  \item \texttt{RandomZoom} (zoom al\'eatoire)~;
+  \item \texttt{RandomBrightness} (variation al\'eatoire de luminosit\'e).
+\end{itemize}
+
+Le cahier des charges du programme mentionnait \'egalement des techniques de contraste et de recadrage (\emph{Contrast}, \emph{Crop}) parmi les augmentations possibles~; ces deux techniques sp\'ecifiques ne sont pas retrouv\'ees dans le pipeline impl\'ement\'e et ne sont donc pas revendiqu\'ees ici.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.55\textwidth]{figure_06_data_augmentation.png}
+\caption{Techniques d'augmentation r\'eellement impl\'ement\'ees dans le pipeline.}
+\label{fig:augmentation}
+\end{figure}
+
+\section{Dataset augment\'e}
+
+L'augmentation a \'et\'e appliqu\'ee de mani\`ere diff\'erenci\'ee selon l'ensemble concern\'e~:
+\begin{itemize}
+  \item \textbf{Train}~: compl\'et\'e par duplication/augmentation jusqu'\`a une cible uniforme de 200 images par classe.
+  \item \textbf{Test}~: compl\'et\'e de la m\^eme mani\`ere jusqu'\`a une cible de 40 images par classe.
+  \item \textbf{Validation}~: trait\'e diff\'eremment par choix de conception explicite --- voir \Cref{sec:data-leakage}.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figure_05b_dataset_augmente.png}
+\caption{Distribution du dataset augment\'e (train/test).}
+\label{fig:dataset-augmente}
+\end{figure}
+
+\section{Probl\`eme de data leakage}
+\label{sec:data-leakage}
+
+\textbf{Probl\`eme initial.} Une premi\`ere approche consistait \`a compl\'eter (\guillemotleft~padder~\guillemotright) l'ensemble de validation par duplication, \`a l'instar de l'ensemble de test, afin d'atteindre un nombre cible uniforme d'images par classe.
+
+\textbf{D\'etection du probl\`eme.} Cette approche a \'et\'e identifi\'ee comme risqu\'ee~: un signal de validation bas\'e sur des images dupliqu\'ees (quasi identiques \`a des images du jeu d'entra\^inement apr\`es augmentation) est bruit\'e et peut fausser les d\'ecisions prises pendant l'entra\^inement sur la base de ce signal, en particulier l'\emph{early stopping} et la s\'election du meilleur point de sauvegarde (\emph{checkpoint}) du mod\`ele. Cette analyse est document\'ee explicitement dans le code source (\texttt{ai/scripts/data\_augmentation.py}, m\'ethode \texttt{balance\_split})~:
+
+\begin{quote}
+\itshape \guillemotleft~pad=False~: contrairement au test, la validation n'est jamais compl\'et\'ee par des copies dupliqu\'ees. Un signal de validation bas\'e sur des doublons est bruit\'e et fausse les d\'ecisions d'early stopping / s\'election du meilleur checkpoint pendant l'entra\^inement. On garde donc uniquement les images r\'eelles uniques disponibles, quitte \`a avoir moins que la cible.~\guillemotright
+\end{quote}
+
+\textbf{Correction appliqu\'ee.} L'ensemble de validation est donc construit exclusivement \`a partir d'images r\'eelles uniques, sans compl\'etion par duplication, quitte \`a obtenir un nombre d'images inf\'erieur \`a la cible nominale de 40 par classe pour les classes disposant de peu d'images sources.
+
+\textbf{Protocole final.} Le jeu de test, en revanche, est compl\'et\'e par duplication pour atteindre 40 images par classe de fa\c{c}on homog\`ene, ce choix \'etant jug\'e acceptable dans la mesure o\`u le test n'intervient pas dans les d\'ecisions prises pendant l'entra\^inement.
+
+\textbf{Preuve indirecte de la correction.} Le d\'ep\^ot conserve plusieurs \emph{runs} exp\'erimentaux de MobileNetV2 permettant de tracer cette \'evolution~:
+\begin{itemize}
+  \item \texttt{ai/results/mobilenet\_v2\_baseline\_padded\_val/} (09/08/2026, 02:16)~: validation compos\'ee de 160 images (40 par classe --- coh\'erent avec une validation \emph{padd\'ee})~;
+  \item \texttt{ai/results/mobilenet\_v2\_exp0\_fixed\_val/} (09/08/2026, 17:06)~: validation r\'eduite \`a 64 images (\emph{fixed\_val}, coh\'erent avec la correction d\'ecrite ci-dessus)~;
+  \item \texttt{ai/results/mobilenet\_v2/} (run final retenu, 09/08/2026, 17:18)~: validation \'egalement compos\'ee de 64 images, confirmant que le mod\`ele retenu a bien \'et\'e entra\^in\'e selon le protocole corrig\'e.
+\end{itemize}
+
+\section{Dataset final}
+
+\begin{table}[H]
+\centering
+\caption{R\'epartition Train / Validation / Test (dataset augment\'e)}
+\label{tab:dataset-final}
+\begin{tabular}{lrl}
+\toprule
+Ensemble & Images totales & Par classe (cible) \\
+\midrule
+Train & 800 & 200 \\
+Test & 160 & 40 \\
+Validation & 64 (mod\`ele retenu) & non uniforme, voir ci-dessous \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{noteflag}{Incoh\'erence \`a v\'erifier}
+Le fichier \texttt{ai/results/reports/augmentation\_report.json} (g\'en\'er\'e le 09/08/2026 \`a 17:13) rapporte une composition de validation de \textbf{55 images} (40 pour \texttt{good}, 5 pour chacune des trois classes de d\'efaut), alors que le fichier \texttt{training\_report.json} du mod\`ele MobileNetV2 finalement retenu (g\'en\'er\'e \`a 17:18, soit peu apr\`es) indique \textbf{64 images} de validation. L'\'ecart de 9 images entre ces deux fichiers, g\'en\'er\'es \`a quelques minutes d'intervalle, n'a pas pu \^etre expliqu\'e \`a partir des fichiers disponibles dans le d\'ep\^ot~; il est possible qu'une r\'eg\'en\'eration partielle du split de validation soit intervenue entre les deux ex\'ecutions. Cette incoh\'erence est signal\'ee ici plut\^ot que r\'esolue arbitrairement.
+\end{noteflag}
+
+Toutes les architectures compar\'ees au \Cref{ch:modelisation} n'ont pas n\'ecessairement \'et\'e entra\^in\'ees avec la m\^eme taille de validation~: les \emph{runs} de ResNet50, EfficientNetB0, CNN et CNN am\'elior\'e rapportent chacun 160 images de validation, contre 64 pour le run MobileNetV2 finalement retenu. Cette diff\'erence de protocole entre mod\`eles compar\'es constitue une limite du benchmark, discut\'ee au \Cref{ch:discussion}.

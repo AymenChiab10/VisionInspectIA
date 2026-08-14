@@ -52,3 +52,18 @@ ai/results/*/logs/
 Thumbs.db
 .vscode/
 .idea/
+
+# ==========================
+# LaTeX build artifacts (docs/latex) - le PDF final est versionne, pas les fichiers de build
+# ==========================
+docs/latex/**/*.aux
+docs/latex/*.log
+docs/latex/*.out
+docs/latex/*.toc
+docs/latex/*.lof
+docs/latex/*.lot
+docs/latex/*.bbl
+docs/latex/*.blg
+docs/latex/*.fls
+docs/latex/*.fdb_latexmk
+docs/latex/*.synctex.gz

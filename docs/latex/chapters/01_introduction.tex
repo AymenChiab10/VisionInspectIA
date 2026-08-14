@@ -1,0 +1,80 @@
+\chapter{Contexte et probl\'ematique}
+\label{ch:introduction}
+
+\section{Contexte du projet}
+
+Ce projet a \'et\'e r\'ealis\'e dans le cadre d'un stage d'un mois au sein du programme AI/ML de TechSkillHub, organisme proposant des stages structur\'es \`a distance dans les domaines de l'intelligence artificielle et du d\'eveloppement full-stack. Le sujet assign\'e, intitul\'e \emph{\guillemotleft~VisionInspect AI -- Intelligent Product Defect Detection System~\guillemotright}, consiste \`a d\'evelopper une plateforme de contr\^ole qualit\'e industriel capable de d\'etecter automatiquement des d\'efauts sur des produits \`a partir d'images, en s'appuyant sur le Deep Learning et la vision par ordinateur.
+
+\section{Contexte de l'inspection visuelle}
+
+Dans l'industrie manufacturi\`ere, le contr\^ole qualit\'e visuel reste, dans de nombreux contextes, r\'ealis\'e manuellement par des op\'erateurs humains. Cette approche pr\'esente des limites connues~: fatigue visuelle, subjectivit\'e, variabilit\'e entre op\'erateurs, et co\^ut difficilement compressible \`a grande \'echelle. L'automatisation de cette t\^ache par des m\'ethodes de vision par ordinateur constitue un axe de recherche appliqu\'ee actif, particuli\`erement depuis la d\'emocratisation des r\'eseaux de neurones convolutifs profonds et des techniques de \emph{transfer learning}, qui permettent d'obtenir des performances satisfaisantes m\^eme avec un volume de donn\'ees d'entra\^inement limit\'e.
+
+\section{Probl\'ematique}
+
+La probl\'ematique trait\'ee dans ce projet est la suivante~: \emph{comment d\'etecter automatiquement, \`a partir d'une simple photographie, si une bouteille pr\'esente un d\'efaut, et le cas \'ech\'eant identifier le type de d\'efaut, dans un contexte o\`u le nombre d'images r\'eelles disponibles pour l'entra\^inement est restreint~?}
+
+\section{Besoin m\'etier}
+
+Le besoin m\'etier sous-jacent, tel que formul\'e dans le cahier des charges du programme~\cite{techskillhub}, est de fournir \`a une entreprise manufacturi\`ere un outil permettant~:
+\begin{itemize}
+  \item d'uploader une image de produit~;
+  \item d'obtenir automatiquement une classification (conforme / type de d\'efaut) avec un score de confiance~;
+  \item de conserver un historique des inspections r\'ealis\'ees~;
+  \item de disposer d'un tableau de bord analytique~;
+  \item de g\'en\'erer des rapports d'inspection t\'el\'echargeables.
+\end{itemize}
+
+\section{Objectifs}
+
+Les objectifs du stage, tels que d\'efinis par le document de cadrage, \'etaient organis\'es en quatre phases sur quatre semaines~:
+\begin{enumerate}
+  \item Pr\'eparer un dataset exploitable pour l'entra\^inement d'un mod\`ele de classification d'images (nettoyage, augmentation, analyse exploratoire).
+  \item Entra\^iner et comparer plusieurs architectures de Deep Learning, puis s\'electionner la plus adapt\'ee.
+  \item D\'evelopper une application web compl\`ete (frontend~+ backend~+ base de donn\'ees) int\'egrant ce mod\`ele.
+  \item D\'eployer la plateforme sur une infrastructure cloud r\'eelle et produire la documentation associ\'ee.
+\end{enumerate}
+
+\section{Cahier des charges}
+
+Le cahier des charges, extrait du document de cadrage TechSkillHub, pr\'ecise les \'el\'ements suivants~:
+\begin{itemize}
+  \item \textbf{Dataset}~: au choix parmi Kaggle, Roboflow, MVTec~AD, ou NEU Surface Defect.
+  \item \textbf{Mod\`eles \`a comparer}~: CNN personnalis\'e, MobileNetV2, EfficientNetB0, ResNet50.
+  \item \textbf{M\'etriques d'\'evaluation}~: Accuracy, Precision, Recall, F1-score, courbe ROC, matrice de confusion.
+  \item \textbf{Stack applicative}~: Frontend React ou Angular~; Backend FastAPI ou Flask~; Base de donn\'ees MySQL.
+  \item \textbf{Fonctionnalit\'es cl\'es}~: authentification et tableau de bord, upload d'image avec score de confiance, historique des pr\'edictions, export PDF.
+  \item \textbf{D\'eploiement}~: sur Render, Railway, ou Hugging Face Spaces.
+  \item \textbf{Livrables finaux}~: d\'ep\^ot GitHub, mod\`ele entra\^in\'e, API et application web, sch\'ema de base de donn\'ees et captures d'\'ecran, rapport de projet (PDF) et pr\'esentation, diagramme d'architecture, vid\'eo de d\'emonstration de 5 \`a 10 minutes.
+\end{itemize}
+
+\section{Fonctionnalit\'es attendues}
+
+Le document de cadrage liste explicitement~: d\'etection de produits d\'efectueux, classification du type de d\'efaut, scores de confiance, historique des inspections, rapports t\'el\'echargeables, tableau de bord analytique.
+
+\section{Contraintes}
+
+Les principales contraintes identifi\'ees au cours du projet sont~:
+\begin{itemize}
+  \item un volume de donn\'ees r\'eelles restreint (dataset MVTec~AD, cat\'egorie \emph{bottle}, quelques dizaines d'images r\'eelles par classe --- d\'etaill\'e au \Cref{ch:dataset})~;
+  \item une dur\'ee de r\'ealisation limit\'ee \`a quatre semaines, couvrant \`a la fois la partie recherche (dataset, mod\`eles) et la partie ing\'enierie logicielle (application web compl\`ete, d\'eploiement)~;
+  \item l'absence d'environnement de test disposant d'un navigateur graphique, limitant la v\'erification visuelle de l'interface \`a une v\'erification manuelle a posteriori (voir \Cref{ch:frontend} et \Cref{ch:tests}).
+\end{itemize}
+
+\section{M\'ethodologie}
+
+La m\'ethodologie suivie correspond \`a une d\'emarche d'ing\'enierie it\'erative~: analyse du probl\`eme, exp\'erimentation contr\^ol\'ee (protocole identique pour les quatre architectures compar\'ees), \'evaluation quantitative sur un jeu de test d\'edi\'e, s\'election argument\'ee du mod\`ele, impl\'ementation, tests fonctionnels puis tests en conditions de production r\'eelles, et documentation explicite des limitations rencontr\'ees \`a chaque \'etape plut\^ot que leur dissimulation.
+
+\section{Organisation du projet}
+
+Le projet est organis\'e en quatre grands modules correspondant aux quatre phases du programme~:
+
+\begin{lstlisting}[language=, basicstyle=\ttfamily\small, frame=single]
+ai/         -> Recherche : preparation du dataset, entrainement, benchmark
+backend/    -> API REST FastAPI
+frontend/   -> Application React
+docs/       -> Documentation technique et rapport de stage
+\end{lstlisting}
+
+\begin{noteflag}{Incoh\'erence \`a v\'erifier}
+Le document de cadrage TechSkillHub propose, \`a titre indicatif, une arborescence de d\'ep\^ot l\'eg\`erement diff\'erente (\texttt{dataset/}, \texttt{models/}, \texttt{frontend/}, \texttt{backend/}, \texttt{api/}, \texttt{reports/}, \texttt{documentation/}, \texttt{README.md}). L'arborescence effectivement retenue pour ce projet regroupe la partie recherche/IA dans un seul dossier \texttt{ai/} (incluant dataset, mod\`eles et r\'esultats plut\^ot que des dossiers s\'epar\'es \texttt{dataset/}/\texttt{models/}), n'isole pas de dossier \texttt{api/} distinct de \texttt{backend/} (les routes API \'etant un sous-module de \texttt{backend/app/api/}), et nomme \texttt{docs/} le dossier de documentation plut\^ot que \texttt{documentation/}. Cette r\'eorganisation a \'et\'e jug\'ee plus coh\'erente avec la s\'eparation en couches du backend (\Cref{ch:backend}) mais s'\'ecarte de la structure indicative du cahier des charges~; elle est signal\'ee ici plut\^ot que pr\'esent\'ee comme strictement conforme.
+\end{noteflag}

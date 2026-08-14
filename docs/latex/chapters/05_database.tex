@@ -1,0 +1,77 @@
+\chapter{Base de donn\'ees}
+\label{ch:database}
+
+\section{Choix de MySQL}
+
+MySQL a \'et\'e retenu conform\'ement au cahier des charges, qui l'imposait explicitement comme syst\`eme de gestion de base de donn\'ees pour ce projet~\cite{mysql}.
+
+\section{Mod\`ele de donn\'ees}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figure_04_bdd_erd.png}
+\caption{Sch\'ema de la base de donn\'ees MySQL (relation \texttt{users} 1--N \texttt{inspections}).}
+\label{fig:erd}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Table \texttt{users} (source~: \texttt{backend/app/models/user.py})}
+\label{tab:table-users}
+\begin{tabular}{lll}
+\toprule
+Champ & Type & Contrainte \\
+\midrule
+\texttt{id} & Integer & Cl\'e primaire \\
+\texttt{first\_name} & String(100) & Non nul \\
+\texttt{last\_name} & String(100) & Non nul \\
+\texttt{email} & String(255) & Unique, index\'e, non nul \\
+\texttt{password} & String(255) & Non nul (hash bcrypt) \\
+\texttt{role} & String(50) & Non nul, d\'efaut \texttt{"user"} \\
+\texttt{created\_at} & DateTime & Automatique \\
+\texttt{updated\_at} & DateTime & Automatique \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Table \texttt{inspections} (source~: \texttt{backend/app/models/inspection.py})}
+\label{tab:table-inspections}
+\begin{tabular}{lll}
+\toprule
+Champ & Type & Contrainte \\
+\midrule
+\texttt{id} & Integer & Cl\'e primaire \\
+\texttt{image\_path} & String(500) & Non nul \\
+\texttt{predicted\_class} & String(100) & Non nul \\
+\texttt{confidence} & Float & Non nul \\
+\texttt{created\_at} & DateTime & Automatique \\
+\texttt{user\_id} & Integer & Cl\'e \'etrang\`ere $\rightarrow$ \texttt{users.id}, non nul \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Relation~:} \texttt{users}~(1) --- (N)~\texttt{inspections}.
+
+\section{Contraintes}
+
+Cl\'e \'etrang\`ere \texttt{inspections.user\_id} $\rightarrow$ \texttt{users.id}~; contrainte d'unicit\'e sur \texttt{users.email}.
+
+\section{Isolation des utilisateurs}
+
+Toute requ\^ete portant sur les inspections filtre syst\'ematiquement sur l'identifiant de l'utilisateur authentifi\'e (extrait du JWT), emp\^echant un utilisateur d'acc\'eder aux donn\'ees d'un autre (v\'erifi\'e en production, voir \Cref{ch:tests}).
+
+\section{Gestion des inspections}
+
+La suppression d'un compte utilisateur entra\^ine, au niveau de la logique applicative (\texttt{user\_service.py}), la suppression des inspections associ\'ees ainsi que des fichiers image correspondants sur le disque, avant la suppression de la ligne \texttt{users}.
+
+\begin{noteflag}{Point important}
+Il ne s'agit \textbf{pas} d'une cascade d\'eclar\'ee au niveau du sch\'ema SQL (\texttt{ON DELETE CASCADE}), mais d'une suppression orchestr\'ee par le code applicatif.
+\end{noteflag}
+
+\section{D\'eploiement de MySQL sur Railway}
+
+En production, la base de donn\'ees est un service MySQL manag\'e par Railway (plugin officiel), accessible uniquement depuis le r\'eseau priv\'e du projet (non expos\'e publiquement). Les tables sont cr\'e\'ees automatiquement au d\'emarrage du backend via l'appel de la fonction \texttt{init\_db()} (voir \Cref{ch:deploiement}, correction apport\'ee pendant le d\'eploiement).
+
+Alembic est configur\'e dans le projet (\texttt{backend/alembic/}) mais \textbf{aucune migration versionn\'ee n'a \'et\'e g\'en\'er\'ee} \`a ce jour --- le r\'epertoire \texttt{backend/alembic/versions/} ne contient qu'un fichier \texttt{.gitkeep}. Le sch\'ema est actuellement g\'er\'e exclusivement via \texttt{Base.metadata.create\_all()}, sans historique de migrations.

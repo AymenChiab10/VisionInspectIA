@@ -1,0 +1,43 @@
+\chapter{R\'esultats IA}
+\label{annex:results}
+
+Voir \Cref{tab:benchmark} et \Cref{tab:classification-report} (\Cref{ch:modelisation}).
+
+\section*{Correspondance avec le cahier des charges}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Correspondance exigences du cahier des charges / r\'ealisation}
+\label{tab:cahier-des-charges}
+\begin{tabularx}{\textwidth}{lXl}
+\toprule
+Exigence & R\'ealisation & Preuve \\
+\midrule
+Dataset & MVTec AD, cat\'egorie bottle & \Cref{ch:dataset} \\
+4~mod\`eles & CNN / MobileNetV2 / EfficientNetB0 / ResNet50 & \Cref{ch:modelisation} \\
+Accuracy & Oui & \Cref{tab:benchmark} \\
+Precision & Oui & \Cref{tab:benchmark} \\
+Recall & Oui & \Cref{tab:benchmark} \\
+F1-score & Oui & \Cref{tab:benchmark} \\
+Matrice de confusion & Oui & \Cref{fig:confusion-matrix} \\
+Courbe ROC & \textbf{Non disponible} --- aucun fichier trouv\'e dans \texttt{ai/results/} & \Cref{ch:modelisation} \\
+React & Oui & \Cref{ch:frontend} \\
+FastAPI & Oui & \Cref{ch:backend} \\
+MySQL & Oui & \Cref{ch:database} \\
+Authentification & Oui (JWT) & \Cref{ch:backend} \\
+Upload & Oui & \Cref{ch:ia-prediction} \\
+Historique & Oui & \Cref{ch:frontend} \\
+PDF & Oui & \Cref{ch:backend}, \Cref{ch:frontend} \\
+Dashboard & Oui & \Cref{ch:frontend} \\
+D\'eploiement cloud & Railway & \Cref{ch:deploiement} \\
+Format mod\`ele \texttt{.h5}/\texttt{.pt} & \textbf{Non} --- format \texttt{.keras} utilis\'e \`a la place & \Cref{ch:modelisation} \\
+Pr\'esentation (PPT) & [\`A COMPL\'ETER] --- non produit dans le cadre de ce rapport LaTeX & --- \\
+Vid\'eo de d\'emonstration & [\`A COMPL\'ETER] --- non enregistr\'ee \`a ce jour & --- \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{noteflag}{Important}
+La courbe ROC n'est pas pr\'esent\'ee comme existante~: aucun fichier correspondant n'a \'et\'e retrouv\'e dans \texttt{ai/results/}, et aucune courbe n'a \'et\'e invent\'ee pour combler cette absence.
+\end{noteflag}

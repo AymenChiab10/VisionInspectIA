@@ -1,0 +1,136 @@
+\documentclass[11pt,a4paper]{report}
+
+\input{metadata.tex}
+\input{preamble.tex}
+
+\graphicspath{{figures/}}
+
+\title{\reportTitle}
+\author{\stagiaireNom}
+\date{}
+
+\begin{document}
+
+% ============================================================
+% PAGE DE GARDE
+% ============================================================
+\begin{titlepage}
+\centering
+\vspace*{1cm}
+{\Huge\bfseries\color{accentdark} \reportTitle\par}
+\vspace{0.4cm}
+{\Large\itshape\color{accent} \reportSubtitle\par}
+\vspace{1.2cm}
+{\large \reportKind\par}
+\vspace{2cm}
+
+\begin{tabularx}{0.85\linewidth}{@{}lX@{}}
+\textbf{Stagiaire :} & \stagiaireNom \\[4pt]
+\textbf{Organisme d'accueil :} & \organisme \\[4pt]
+\textbf{Identifiant stagiaire :} & \identifiantStagiaire \\[4pt]
+\textbf{Domaine :} & \domaineStage \\[4pt]
+\textbf{Dur\'ee :} & \dureeStage \\[4pt]
+\textbf{Date de fin :} & \dateFin \\[4pt]
+\textbf{Encadrant / tuteur :} & \encadrant \\[4pt]
+\textbf{\'Etablissement d'origine :} & \etablissement \\[4pt]
+\textbf{Ann\'ee universitaire :} & \anneeUniv \\
+\end{tabularx}
+
+\vfill
+{\small\color{graytext} Vision par ordinateur \ --\ Deep Learning (MobileNetV2) \ --\ FastAPI \ --\ MySQL \ --\ React \ --\ Railway\par}
+\end{titlepage}
+
+\pagenumbering{roman}
+
+% ============================================================
+% REMERCIEMENTS
+% ============================================================
+\chapter*{Remerciements}
+\addcontentsline{toc}{chapter}{Remerciements}
+
+Je tiens \`a remercier TechSkillHub pour l'opportunit\'e offerte de r\'ealiser ce stage dans le domaine de l'intelligence artificielle appliqu\'ee \`a l'inspection visuelle industrielle, ainsi que pour la structuration claire du programme en quatre phases (pr\'eparation des donn\'ees, mod\'elisation, d\'eveloppement applicatif, d\'eploiement) qui a guid\'e l'ensemble de la d\'emarche.
+
+Je remercie \'egalement \encadrant\ (encadrant(e) acad\'emique ou professionnel(le), le cas \'ech\'eant) pour son suivi et ses conseils au cours de ce travail.
+
+Enfin, je remercie \encadrant\ pour son soutien tout au long de cette p\'eriode.
+
+% ============================================================
+% RESUME
+% ============================================================
+\chapter*{R\'esum\'e}
+\addcontentsline{toc}{chapter}{R\'esum\'e}
+
+VisionInspectIA est une plateforme web de d\'etection automatique de d\'efauts sur des bouteilles, d\'evelopp\'ee dans le cadre d'un stage de quatre semaines au sein du programme AI/ML de TechSkillHub. Le projet r\'epond \`a une probl\'ematique de contr\^ole qualit\'e industriel~: identifier automatiquement, \`a partir d'une photographie, si une bouteille est conforme ou pr\'esente un d\'efaut, et le cas \'ech\'eant en pr\'eciser la nature.
+
+La solution retenue combine la vision par ordinateur et l'apprentissage profond par transfert (\emph{transfer learning}). Quatre architectures ont \'et\'e entra\^in\'ees et compar\'ees dans des conditions exp\'erimentales identiques sur le dataset MVTec~AD (classe \emph{bottle})~: un CNN entra\^in\'e \`a partir de z\'ero, MobileNetV2, EfficientNetB0 et ResNet50. \`A l'issue de cette comparaison, MobileNetV2 a \'et\'e retenu comme meilleur compromis entre performance (75,63~\% d'accuracy, F1-score macro de 0,742 sur le jeu de test), taille du mod\`ele (9,24~Mo) et temps d'inf\'erence (environ 9~ms), MobileNetV2 \'etant nettement plus l\'eger et plus rapide que ResNet50 pour une performance tr\`es proche.
+
+Ce mod\`ele a \'et\'e int\'egr\'e dans une application web compl\`ete~: un backend FastAPI exposant une API REST (authentification JWT, upload d'image, pr\'ediction, historique, statistiques, g\'en\'eration de rapports PDF), une base de donn\'ees MySQL (utilisateurs et inspections), et un frontend React offrant un tableau de bord, une interface de pr\'ediction, un historique filtrable, un export CSV, un mode sombre et un syst\`eme de notifications.
+
+L'application a ensuite \'et\'e d\'eploy\'ee r\'eellement sur la plateforme Railway, avec un backend et un frontend h\'eberg\'es comme deux services Docker distincts et une base MySQL manag\'ee. Le d\'eploiement a \'et\'e test\'e de bout en bout par des requ\^etes r\'eelles contre les URLs publiques (authentification, pr\'ediction sur les quatre classes, historique, tableau de bord, PDF, isolation des donn\'ees entre utilisateurs, gestion des erreurs).
+
+Les r\'esultats obtenus montrent une bonne performance de d\'etection pour les classes \texttt{good}, \texttt{broken\_large} et \texttt{contamination}, mais une limitation identifi\'ee sur la classe \texttt{broken\_small}, r\'eguli\`erement confondue avec \texttt{broken\_large}, en raison de la raret\'e des images r\'eelles disponibles pour cette classe. Une seconde limitation, propre \`a l'environnement de d\'eploiement choisi, concerne le stockage des images upload\'ees, non persistant entre les red\'eploiements. Ces limites sont document\'ees et discut\'ees, ainsi que les perspectives d'am\'elioration envisageables.
+
+% ============================================================
+% ABSTRACT
+% ============================================================
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\begin{otherlanguage}{english}
+
+VisionInspectIA is a web platform for automatic bottle defect detection, developed during a four-week internship within TechSkillHub's AI/ML program. The project addresses an industrial quality-control problem: automatically determining, from a photograph, whether a bottle is defect-free or defective, and if so, identifying the type of defect.
+
+The retained solution combines computer vision and transfer learning. Four architectures were trained and compared under identical experimental conditions on the MVTec AD dataset (\emph{bottle} category): a CNN trained from scratch, MobileNetV2, EfficientNetB0, and ResNet50. Following this comparison, MobileNetV2 was selected as the best trade-off between performance (75.63\% test accuracy, 0.742 macro F1-score), model size (9.24~MB), and inference time (about 9~ms), being substantially lighter and faster than ResNet50 for a very close performance.
+
+This model was integrated into a full web application: a FastAPI backend exposing a REST API (JWT authentication, image upload, prediction, history, statistics, PDF report generation), a MySQL database (users and inspections), and a React frontend providing a dashboard, a prediction interface, a filterable history, CSV export, dark mode, and a notification system.
+
+The application was then genuinely deployed on the Railway platform, with the backend and frontend hosted as two separate Docker services and a managed MySQL database. The deployment was tested end-to-end with real requests against the public URLs (authentication, prediction on all four classes, history, dashboard, PDF, cross-user data isolation, error handling).
+
+Results show good detection performance for the \texttt{good}, \texttt{broken\_large}, and \texttt{contamination} classes, but a limitation was identified for the \texttt{broken\_small} class, frequently confused with \texttt{broken\_large}, due to the scarcity of real images available for this class. A second, deployment-specific limitation concerns uploaded image storage, which does not persist across redeployments. These limitations are documented and discussed, along with possible directions for future improvement.
+
+\end{otherlanguage}
+
+% ============================================================
+% TABLES DES MATIERES / FIGURES / TABLEAUX
+% ============================================================
+\tableofcontents
+\listoffigures
+\listoftables
+
+\clearpage
+\pagenumbering{arabic}
+
+% ============================================================
+% CHAPITRES
+% ============================================================
+\include{chapters/01_introduction}
+\include{chapters/02_dataset}
+\include{chapters/03_modelisation}
+\include{chapters/04_architecture}
+\include{chapters/05_database}
+\include{chapters/06_backend}
+\include{chapters/07_frontend}
+\include{chapters/08_ia_prediction}
+\include{chapters/09_tests_validation}
+\include{chapters/10_deploiement}
+\include{chapters/11_discussion_limitations}
+\include{chapters/12_conclusion}
+
+% ============================================================
+% BIBLIOGRAPHIE
+% ============================================================
+\bibliographystyle{plain}
+\bibliography{bibliography}
+\addcontentsline{toc}{chapter}{Bibliographie}
+
+% ============================================================
+% ANNEXES
+% ============================================================
+\appendix
+\include{annexes/A_architecture}
+\include{annexes/B_api}
+\include{annexes/C_database}
+\include{annexes/D_results}
+\include{annexes/E_captures}
+\include{annexes/F_deploiement}
+
+\end{document}

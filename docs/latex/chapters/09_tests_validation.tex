@@ -1,0 +1,77 @@
+\chapter{Tests et validation}
+\label{ch:tests}
+
+\section{Tests backend}
+
+D\'emarrage du serveur, disponibilit\'e de la documentation interactive (\texttt{/docs}, \texttt{/redoc}), connexion \`a MySQL.
+
+\section{Tests frontend}
+
+Build de production (\texttt{npm run build})~: 2505~modules transform\'es, 0~erreur, v\'erifi\'e \`a plusieurs reprises au cours du projet.
+
+\section{Tests API}
+
+Ensemble des endpoints list\'es au \Cref{tab:endpoints}, test\'es par des requ\^etes HTTP r\'eelles (et non simul\'ees).
+
+\section{Tests IA}
+
+Pr\'ediction test\'ee sur une image de chacune des quatre classes, en local puis en production.
+
+\section{Tests s\'ecurit\'e}
+
+Acc\`es sans JWT, JWT invalide, tentative d'acc\`es aux donn\'ees d'un autre utilisateur --- tous test\'es et confirm\'es bloqu\'es (codes 401/404 appropri\'es), y compris en production.
+
+\section{Tests base de donn\'ees}
+
+V\'erification du sch\'ema, des contraintes (cl\'e \'etrang\`ere, unicit\'e de l'email), et de la coh\'erence entre les fichiers du dossier \texttt{uploads/} et les lignes correspondantes en base.
+
+\section{Tests PDF}
+
+G\'en\'eration v\'erifi\'ee sur des inspections r\'eelles, y compris en d\'egrad\'e lorsque le fichier image n'est plus disponible.
+
+\section{Tests CSV}
+
+G\'en\'eration v\'erifi\'ee sur des donn\'ees r\'eelles d'historique.
+
+\section{Tests end-to-end}
+
+Sc\'enario complet ex\'ecut\'e en local puis en production~: inscription $\rightarrow$ connexion $\rightarrow$ upload $\rightarrow$ pr\'ediction $\rightarrow$ historique $\rightarrow$ tableau de bord $\rightarrow$ PDF $\rightarrow$ modification du profil $\rightarrow$ d\'econnexion.
+
+\section{Tests en production}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Tests en production (requ\^etes HTTP r\'eelles contre les URLs publiques de d\'eploiement)}
+\label{tab:tests-production}
+\begin{tabularx}{\textwidth}{lXl}
+\toprule
+Fonctionnalit\'e & Test & R\'esultat \\
+\midrule
+Frontend accessible & \texttt{GET /} et routes SPA & \okmark\ 200 sur toutes les routes \\
+Backend accessible & \texttt{GET /} & \okmark\ 200 \\
+Swagger / ReDoc & \texttt{GET /docs}, \texttt{GET /redoc} & \okmark\ 200 / 200 \\
+Register & \texttt{POST /auth/register} & \okmark\ 201 \\
+Login & bon et mauvais mot de passe & \okmark\ 200 / 401 \\
+Prediction --- \texttt{good} & Upload r\'eel & \okmark\ correct, confiance 99,4\,\% \\
+Prediction --- \texttt{broken\_large} & Upload r\'eel & \okmark\ correct, confiance 99,8\,\% \\
+Prediction --- \texttt{broken\_small} & Upload r\'eel & \warnmark\ \textbf{incorrect}, pr\'edit \texttt{broken\_large} (80,5\,\%) \\
+Prediction --- \texttt{contamination} & Upload r\'eel & \okmark\ correct, confiance 99,3\,\% \\
+History & \texttt{GET /history} & \okmark\ coh\'erent apr\`es red\'eploiement \\
+Dashboard & \texttt{GET /dashboard/statistics} & \okmark\ coh\'erent avec les inspections r\'eelles \\
+PDF & \texttt{GET /reports/\{id\}} & \okmark\ 200, m\^eme si image absente \\
+Profile & \texttt{PUT /users/me} & \okmark\ modifi\'e et confirm\'e \\
+Change password & \texttt{PUT /users/me/password} & \okmark\ ancien rejet\'e, nouveau accept\'e \\
+Delete account & \texttt{DELETE /users/me} & \okmark\ token r\'evoqu\'e, email r\'eutilisable \\
+Logout & \texttt{POST /auth/logout} & \okmark\ 200 \\
+Isolation entre utilisateurs & acc\`es \`a une ressource d'un autre utilisateur & \okmark\ 404 \\
+Sans JWT / JWT invalide & \texttt{GET /history} & \okmark\ 401 / 401 \\
+Fichier invalide & upload \texttt{.zip} & \okmark\ 400, message explicite \\
+CORS & requ\^ete r\'eelle depuis le domaine du frontend & \okmark\ origine exacte, pas de wildcard \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{noteflag}{Sur \texttt{broken\_small}}
+Ce r\'esultat n'est pas cach\'e~: il est conforme \`a la limite d\'ej\`a identifi\'ee lors du benchmark (\Cref{ch:modelisation}) et discut\'ee au \Cref{ch:discussion}.
+\end{noteflag}

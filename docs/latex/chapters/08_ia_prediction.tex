@@ -1,0 +1,38 @@
+\chapter{Pipeline de pr\'ediction IA}
+\label{ch:ia-prediction}
+
+Le pipeline de pr\'ediction, identique en d\'eveloppement et en production, se d\'eroule comme suit (source~: \texttt{backend/app/services/prediction\_service.py})~:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{figure_02_architecture_ia.png}
+\caption{Pipeline interne du mod\`ele MobileNetV2 (\texttt{best\_model.keras}).}
+\label{fig:pipeline-ia}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.62\textwidth]{figure_03_pipeline_prediction.png}
+\caption{Pipeline de pr\'ediction~: flux applicatif complet depuis l'upload jusqu'\`a la r\'eponse.}
+\label{fig:pipeline-prediction}
+\end{figure}
+
+Comme le montre la \Cref{fig:pipeline-prediction}, les \'etapes sont~:
+\begin{enumerate}
+  \item upload de l'image (multipart/form-data)~;
+  \item validation du format et de la taille du fichier~;
+  \item sauvegarde sur disque (\texttt{backend/uploads/})~;
+  \item pr\'etraitement (224$\times$224, RGB, \texttt{float32})~;
+  \item inf\'erence MobileNetV2 (mod\`ele d\'ej\`a en m\'emoire)~;
+  \item calcul de la classe pr\'edite et du score de confiance (softmax)~;
+  \item enregistrement de l'inspection en base MySQL~;
+  \item r\'eponse JSON au frontend (classe, confiance, temps d'inf\'erence).
+\end{enumerate}
+
+\textbf{Chargement du mod\`ele.} Le fichier \texttt{best\_model.keras} est charg\'e une seule fois en m\'emoire au d\'emarrage du serveur (fonction \texttt{lifespan} de \texttt{backend/app/main.py}), via un singleton (\texttt{ModelLoader}). Il n'est jamais recharg\'e par la suite, chaque requ\^ete de pr\'ediction r\'eutilisant l'instance d\'ej\`a en m\'emoire.
+
+\textbf{Temps d'inf\'erence.} Le temps d'inf\'erence pure (appel \texttt{model.predict()} uniquement, mod\`ele d\'ej\`a charg\'e) est mesur\'e \`a chaque pr\'ediction via \texttt{time.perf\_counter()} et retourn\'e au frontend dans la r\'eponse JSON (champ \texttt{inference\_time\_ms}), sans \^etre persist\'e en base de donn\'ees. La valeur mesur\'ee lors du benchmark (\Cref{ch:modelisation}) est d'environ 9~ms~; les temps mesur\'es en production, incluant le trajet HTTP complet, sont pr\'esent\'es au \Cref{ch:deploiement}.
+
+\begin{noteflag}{Point de conception important}
+Le preprocessing MobileNetV2 (\texttt{x/127,5 -- 1,0}) est int\'egr\'e directement au graphe du mod\`ele sauvegard\'e (couche \texttt{MobileNetPreprocess}). Le backend ne r\'eapplique donc \textbf{pas} une seconde normalisation lors du pr\'etraitement --- ce point a \'et\'e v\'erifi\'e explicitement pour \'eviter de fausser les pr\'edictions (voir \Cref{ch:dataset}).
+\end{noteflag}
